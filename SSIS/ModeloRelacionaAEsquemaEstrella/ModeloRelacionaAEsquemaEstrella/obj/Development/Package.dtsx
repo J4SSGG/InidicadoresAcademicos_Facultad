@@ -1,0 +1,2216 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/21/2019 3:52:43 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5GAHTGL"
+  DTS:CreatorName="DESKTOP-5GAHTGL\Abraham"
+  DTS:DTSID="{4E99051D-0ABE-4DFF-BE56-2A523786AA28}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{DB9DA5E1-D77E-4A94-8018-1A6905AA7B61}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Admisiones]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D52A5998-7A86-4216-8D72-10E86F570ACE}"
+      DTS:ObjectName="LocalHost.Admisiones">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Admisiones;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
+      DTS:ObjectName="LocalHost.Admisiones_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Admisiones_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Actualizar Dimension Fecha"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B764ED5E-C926-4957-B7CF-9D2ADF0A9E4E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Actualizar Dimension Fecha"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Dimension Fecha Actualizado"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[Fecha]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[Day]"
+                      cachedDataType="ui1"
+                      cachedName="Day"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Day]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[DaySuffix]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DaySuffix"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[DaySuffix]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DaySuffix]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[Weekday]"
+                      cachedDataType="ui1"
+                      cachedName="Weekday"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Weekday]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[WeekDayName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="WeekDayName"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekDayName]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[WeekDayName_Short]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="WeekDayName_Short"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekDayName_Short]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_Short]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[WeekDayName_FirstLetter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="WeekDayName_FirstLetter"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekDayName_FirstLetter]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_FirstLetter]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[DOWInMonth]"
+                      cachedDataType="ui1"
+                      cachedName="DOWInMonth"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[DOWInMonth]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DOWInMonth]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[DayOfYear]"
+                      cachedDataType="i2"
+                      cachedName="DayOfYear"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYear]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DayOfYear]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[WeekOfMonth]"
+                      cachedDataType="ui1"
+                      cachedName="WeekOfMonth"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfMonth]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfMonth]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[WeekOfYear]"
+                      cachedDataType="ui1"
+                      cachedName="WeekOfYear"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfYear]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfYear]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[Month]"
+                      cachedDataType="ui1"
+                      cachedName="Month"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Month]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[MonthName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MonthName"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[MonthName_Short]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="MonthName_Short"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MonthName_Short]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_Short]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[MonthName_FirstLetter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MonthName_FirstLetter"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MonthName_FirstLetter]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_FirstLetter]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[Quarter]"
+                      cachedDataType="ui1"
+                      cachedName="Quarter"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Quarter]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[QuarterName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="QuarterName"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[QuarterName]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[QuarterName]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[MMYYYY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="MMYYYY"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MMYYYY]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MMYYYY]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[MonthYear]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="MonthYear"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MonthYear]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthYear]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[IsWeekend]"
+                      cachedDataType="bool"
+                      cachedName="IsWeekend"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[IsWeekend]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[IsWeekend]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      dataType="ui1"
+                      name="Day" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[DaySuffix]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DaySuffix" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
+                      dataType="ui1"
+                      name="Weekday" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekDayName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="WeekDayName" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekDayName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="WeekDayName_Short" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekDayName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="WeekDayName_FirstLetter" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[DOWInMonth]"
+                      dataType="ui1"
+                      name="DOWInMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYear]"
+                      dataType="i2"
+                      name="DayOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfMonth]"
+                      dataType="ui1"
+                      name="WeekOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfYear]"
+                      dataType="ui1"
+                      name="WeekOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      dataType="ui1"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MonthName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="MonthName_Short" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MonthName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MonthName_FirstLetter" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      dataType="ui1"
+                      name="Quarter" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[QuarterName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="QuarterName" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MMYYYY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="MMYYYY" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[MonthYear]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="MonthYear" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[IsWeekend]"
+                      dataType="bool"
+                      name="IsWeekend" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Dimension Fecha\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Dimension].[Fecha]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Dimension].[Fecha]) [refTable]
+where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = ? and [refTable].[DaySuffix] = ? and [refTable].[Weekday] = ? and [refTable].[WeekDayName] = ? and [refTable].[WeekDayName_Short] = ? and [refTable].[WeekDayName_FirstLetter] = ? and [refTable].[DOWInMonth] = ? and [refTable].[DayOfYear] = ? and [refTable].[WeekOfMonth] = ? and [refTable].[WeekOfYear] = ? and [refTable].[Month] = ? and [refTable].[MonthName] = ? and [refTable].[MonthName_Short] = ? and [refTable].[MonthName_FirstLetter] = ? and [refTable].[Quarter] = ? and [refTable].[QuarterName] = ? and [refTable].[Year] = ? and [refTable].[MMYYYY] = ? and [refTable].[MonthYear] = ? and [refTable].[IsWeekend] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Day" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DaySuffix" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Weekday" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekDayName" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WeekDayName_Short" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WeekDayName_FirstLetter" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DOWInMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekOfMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Month" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthName" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthName_Short" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthName_FirstLetter" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Quarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QuarterName" dataType="DT_STR" length="6" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MMYYYY" dataType="DT_STR" length="6" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthYear" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IsWeekend" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DateKey]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Date]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Day]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DaySuffix]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Weekday]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_Short]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_FirstLetter]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DOWInMonth]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DayOfYear]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfMonth]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfYear]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Month]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_Short]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_FirstLetter]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Quarter]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[QuarterName]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Year]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MMYYYY]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthYear]};#{Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[IsWeekend]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Dimension Fecha\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DateKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">DateKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Date</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[Day]"
+                      cachedDataType="ui1"
+                      cachedName="Day"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Day]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Day</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[DaySuffix]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DaySuffix"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DaySuffix]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">DaySuffix</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[Weekday]"
+                      cachedDataType="ui1"
+                      cachedName="Weekday"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Weekday]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Weekday</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[WeekDayName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="WeekDayName"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WeekDayName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[WeekDayName_Short]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="WeekDayName_Short"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_Short]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WeekDayName_Short</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[WeekDayName_FirstLetter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="WeekDayName_FirstLetter"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_FirstLetter]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WeekDayName_FirstLetter</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[DOWInMonth]"
+                      cachedDataType="ui1"
+                      cachedName="DOWInMonth"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DOWInMonth]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">DOWInMonth</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[DayOfYear]"
+                      cachedDataType="i2"
+                      cachedName="DayOfYear"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DayOfYear]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">DayOfYear</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[WeekOfMonth]"
+                      cachedDataType="ui1"
+                      cachedName="WeekOfMonth"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfMonth]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WeekOfMonth</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[WeekOfYear]"
+                      cachedDataType="ui1"
+                      cachedName="WeekOfYear"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfYear]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WeekOfYear</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[Month]"
+                      cachedDataType="ui1"
+                      cachedName="Month"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Month]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Month</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[MonthName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MonthName"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MonthName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[MonthName_Short]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="MonthName_Short"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_Short]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MonthName_Short</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[MonthName_FirstLetter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MonthName_FirstLetter"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_FirstLetter]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MonthName_FirstLetter</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[Quarter]"
+                      cachedDataType="ui1"
+                      cachedName="Quarter"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Quarter]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Quarter</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[QuarterName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="QuarterName"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[QuarterName]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">QuarterName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Year]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Year</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[MMYYYY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="MMYYYY"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MMYYYY]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MMYYYY</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[MonthYear]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="MonthYear"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthYear]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MonthYear</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input].Columns[IsWeekend]"
+                      cachedDataType="bool"
+                      cachedName="IsWeekend"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[IsWeekend]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">IsWeekend</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DateKey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Date</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Day]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Day]"
+                      name="Day"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Day</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[DaySuffix]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="2"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[DaySuffix]"
+                      name="DaySuffix"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DaySuffix</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Weekday]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Weekday]"
+                      name="Weekday"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Weekday</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekDayName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekDayName]"
+                      name="WeekDayName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">WeekDayName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekDayName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="3"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekDayName_Short]"
+                      name="WeekDayName_Short"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">WeekDayName_Short</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekDayName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekDayName_FirstLetter]"
+                      name="WeekDayName_FirstLetter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">WeekDayName_FirstLetter</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[DOWInMonth]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[DOWInMonth]"
+                      name="DOWInMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DOWInMonth</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[DayOfYear]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[DayOfYear]"
+                      name="DayOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DayOfYear</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekOfMonth]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekOfMonth]"
+                      name="WeekOfMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">WeekOfMonth</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekOfYear]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[WeekOfYear]"
+                      name="WeekOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">WeekOfYear</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Month]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Month]"
+                      name="Month"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Month</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MonthName]"
+                      name="MonthName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">MonthName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MonthName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="3"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MonthName_Short]"
+                      name="MonthName_Short"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">MonthName_Short</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MonthName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MonthName_FirstLetter]"
+                      name="MonthName_FirstLetter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">MonthName_FirstLetter</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Quarter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Quarter]"
+                      name="Quarter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Quarter</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[QuarterName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="6"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[QuarterName]"
+                      name="QuarterName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">QuarterName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Year</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MMYYYY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="6"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MMYYYY]"
+                      name="MMYYYY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">MMYYYY</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MonthYear]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="7"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[MonthYear]"
+                      name="MonthYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">MonthYear</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[IsWeekend]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Match Output].Columns[IsWeekend]"
+                      name="IsWeekend"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">IsWeekend</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Dimension Fecha\Stagin Fecha"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Stagin Fecha"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Staging].[Fecha]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[DateKey]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Day]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Day]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Day]"
+                      name="Day"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DaySuffix]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[DaySuffix]"
+                      length="2"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DaySuffix]"
+                      name="DaySuffix"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Weekday]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Weekday]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Weekday]"
+                      name="Weekday"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekDayName]"
+                      length="10"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName]"
+                      name="WeekDayName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekDayName_Short]"
+                      length="3"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_Short]"
+                      name="WeekDayName_Short"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekDayName_FirstLetter]"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekDayName_FirstLetter]"
+                      name="WeekDayName_FirstLetter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DOWInMonth]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[DOWInMonth]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DOWInMonth]"
+                      name="DOWInMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DayOfYear]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[DayOfYear]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[DayOfYear]"
+                      name="DayOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfMonth]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekOfMonth]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfMonth]"
+                      name="WeekOfMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfYear]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekOfYear]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[WeekOfYear]"
+                      name="WeekOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Month]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Month]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Month]"
+                      name="Month"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MonthName]"
+                      length="10"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName]"
+                      name="MonthName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MonthName_Short]"
+                      length="3"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_Short]"
+                      name="MonthName_Short"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MonthName_FirstLetter]"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthName_FirstLetter]"
+                      name="MonthName_FirstLetter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Quarter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Quarter]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Quarter]"
+                      name="Quarter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[QuarterName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[QuarterName]"
+                      length="6"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[QuarterName]"
+                      name="QuarterName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MMYYYY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MMYYYY]"
+                      length="6"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MMYYYY]"
+                      name="MMYYYY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthYear]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MonthYear]"
+                      length="7"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[MonthYear]"
+                      name="MonthYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[IsWeekend]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[IsWeekend]"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].Columns[IsWeekend]"
+                      name="IsWeekend"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Day]"
+                      dataType="ui1"
+                      name="Day" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[DaySuffix]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DaySuffix" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Weekday]"
+                      dataType="ui1"
+                      name="Weekday" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekDayName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="WeekDayName" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekDayName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="WeekDayName_Short" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekDayName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="WeekDayName_FirstLetter" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[DOWInMonth]"
+                      dataType="ui1"
+                      name="DOWInMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[DayOfYear]"
+                      dataType="i2"
+                      name="DayOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekOfMonth]"
+                      dataType="ui1"
+                      name="WeekOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[WeekOfYear]"
+                      dataType="ui1"
+                      name="WeekOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Month]"
+                      dataType="ui1"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MonthName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="MonthName_Short" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MonthName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MonthName_FirstLetter" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Quarter]"
+                      dataType="ui1"
+                      name="Quarter" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[QuarterName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="QuarterName" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MMYYYY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="MMYYYY" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[MonthYear]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="MonthYear" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[IsWeekend]"
+                      dataType="bool"
+                      name="IsWeekend" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[DateKey]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[DateKey]"
+                      name="DateKey" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Day]"
+                      dataType="ui1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Day]"
+                      name="Day" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[DaySuffix]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[DaySuffix]"
+                      name="DaySuffix" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Weekday]"
+                      dataType="ui1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Weekday]"
+                      name="Weekday" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekDayName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekDayName]"
+                      name="WeekDayName" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekDayName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekDayName_Short]"
+                      name="WeekDayName_Short" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekDayName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekDayName_FirstLetter]"
+                      name="WeekDayName_FirstLetter" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[DOWInMonth]"
+                      dataType="ui1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[DOWInMonth]"
+                      name="DOWInMonth" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[DayOfYear]"
+                      dataType="i2"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[DayOfYear]"
+                      name="DayOfYear" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekOfMonth]"
+                      dataType="ui1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekOfMonth]"
+                      name="WeekOfMonth" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekOfYear]"
+                      dataType="ui1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[WeekOfYear]"
+                      name="WeekOfYear" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Month]"
+                      dataType="ui1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Month]"
+                      name="Month" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MonthName]"
+                      name="MonthName" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MonthName_Short]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MonthName_Short]"
+                      name="MonthName_Short" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MonthName_FirstLetter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MonthName_FirstLetter]"
+                      name="MonthName_FirstLetter" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Quarter]"
+                      dataType="ui1"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Quarter]"
+                      name="Quarter" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[QuarterName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[QuarterName]"
+                      name="QuarterName" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Year]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MMYYYY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MMYYYY]"
+                      name="MMYYYY" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MonthYear]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[MonthYear]"
+                      name="MonthYear" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[IsWeekend]"
+                      dataType="bool"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[IsWeekend]"
+                      name="IsWeekend" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Actualizar Dimension Fecha.Paths[Lookup No Match Output]"
+              endId="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Actualizar Dimension Fecha\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Actualizar Dimension Fecha.Paths[OLE DB Source Output]"
+              endId="Package\Actualizar Dimension Fecha\Lookup.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Dimension Fecha\Stagin Fecha.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Crear Schema Stating"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5B8871FC-E88D-4D9A-AFF2-C21BEE4A7E6B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Crear Schema Stating"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
+          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;IF NOT EXISTS ( SELECT  *&#xA;                FROM    sys.schemas&#xA;                WHERE   name = N'Staging' )&#xA;    EXEC('CREATE SCHEMA [Staging]');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Crear Stagin Candidato"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A7364E45-84BD-4830-B636-189AC5CF4701}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Crear Stagin Candidato"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
+          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Candidato;&#xA;&#xA;CREATE TABLE Staging.[Candidato](&#xA;&#x9;[SK_Candidato] [dbo].[UDT_SK] IDENTITY(1,1) PRIMARY KEY,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Colegio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Diversificado] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Pais] [int] NULL,&#xA;&#x9;[ID_Departamento] [int] NULL,&#xA;&#x9;[ID_Municipio] [int] NULL,&#xA;&#x9;[NombreCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[ApellidoCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[Genero] [dbo].[UDT_UnCaracter] NULL,&#xA;&#x9;[FechaNacimiento] [dbo].[UDT_DateTime] NULL,&#xA;&#x9;[NombreColegio] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[NombreDiversificado] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[NombrePais] [varchar](300) NULL,&#xA;&#x9;[NombreDepartamento] [varchar](300) NULL,&#xA;&#x9;[NombreMunicipio] [varchar](300) NULL);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Crear Stagin Carrera"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{84ee65f9-28d4-4adf-add0-3e41c0b461f3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Crear Stagin Carrera"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
+          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Carrera;&#xA;&#xA;&#xA;CREATE TABLE Staging.[Carrera](&#xA;&#x9;[SK_Carrera] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[ID_Carrera] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Facultad] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombreCarrera] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[NombreFacultad] [dbo].[UDT_VarcharMediano] NULL);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Crear Stagin Fecha"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6DE9DF7F-40EE-43D7-A409-81B84593499B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Crear Stagin Fecha"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
+          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Fecha;&#xA;&#xA;CREATE TABLE Staging.[Fecha](&#xA;&#x9;[DateKey] [int] NOT NULL PRIMARY KEY,&#xA;&#x9;[Date] [date] NOT NULL,&#xA;&#x9;[Day] [tinyint] NOT NULL,&#xA;&#x9;[DaySuffix] [char](2) NOT NULL,&#xA;&#x9;[Weekday] [tinyint] NOT NULL,&#xA;&#x9;[WeekDayName] [varchar](10) NOT NULL,&#xA;&#x9;[WeekDayName_Short] [char](3) NOT NULL,&#xA;&#x9;[WeekDayName_FirstLetter] [char](1) NOT NULL,&#xA;&#x9;[DOWInMonth] [tinyint] NOT NULL,&#xA;&#x9;[DayOfYear] [smallint] NOT NULL,&#xA;&#x9;[WeekOfMonth] [tinyint] NOT NULL,&#xA;&#x9;[WeekOfYear] [tinyint] NOT NULL,&#xA;&#x9;[Month] [tinyint] NOT NULL,&#xA;&#x9;[MonthName] [varchar](10) NOT NULL,&#xA;&#x9;[MonthName_Short] [char](3) NOT NULL,&#xA;&#x9;[MonthName_FirstLetter] [char](1) NOT NULL,&#xA;&#x9;[Quarter] [tinyint] NOT NULL,&#xA;&#x9;[QuarterName] [varchar](6) NOT NULL,&#xA;&#x9;[Year] [int] NOT NULL,&#xA;&#x9;[MMYYYY] [char](6) NOT NULL,&#xA;&#x9;[MonthYear] [char](7) NOT NULL,&#xA;&#x9;[IsWeekend] [bit] NOT NULL);&#xA;&#xA;DECLARE @INICIO DATE = '2022-01-01';&#xA;DECLARE @ACTUAL DATE = '2022-01-06';&#xA;&#xA;WHILE (@INICIO &lt; @ACTUAL)&#xA;&#x9;BEGIN&#xA;&#x9;&#x9;INSERT INTO Staging.Fecha&#xA;                ([DateKey], &#xA;                 [Date], &#xA;                 [Day], &#xA;                 [DaySuffix], &#xA;                 [Weekday], &#xA;                 [WeekDayName], &#xA;                 [WeekDayName_Short], &#xA;                 [WeekDayName_FirstLetter], &#xA;                 [DOWInMonth], &#xA;                 [DayOfYear], &#xA;                 [WeekOfMonth], &#xA;                 [WeekOfYear], &#xA;                 [Month], &#xA;                 [MonthName], &#xA;                 [MonthName_Short], &#xA;                 [MonthName_FirstLetter], &#xA;                 [Quarter], &#xA;                 [QuarterName], &#xA;                 [Year], &#xA;                 [MMYYYY], &#xA;                 [MonthYear], &#xA;                 [IsWeekend]&#xA;                )&#xA;                       SELECT DateKey = YEAR(@INICIO) * 10000 + MONTH(@INICIO) * 100 + DAY(@INICIO), &#xA;                              DATE = @INICIO, &#xA;                              Day = DAY(@INICIO), &#xA;                              [DaySuffix] = CASE&#xA;                                                WHEN DAY(@INICIO) = 1&#xA;                                                     OR DAY(@INICIO) = 21&#xA;                                                     OR DAY(@INICIO) = 31&#xA;                                                THEN 'st'&#xA;                                                WHEN DAY(@INICIO) = 2&#xA;                                                     OR DAY(@INICIO) = 22&#xA;                                                THEN 'nd'&#xA;                                                WHEN DAY(@INICIO) = 3&#xA;                                                     OR DAY(@INICIO) = 23&#xA;                                                THEN 'rd'&#xA;                                                ELSE 'th'&#xA;                                            END, &#xA;                              WEEKDAY = DATEPART(dw, @INICIO), &#xA;                              WeekDayName = DATENAME(dw, @INICIO), &#xA;                              WeekDayName_Short = UPPER(LEFT(DATENAME(dw, @INICIO), 3)), &#xA;                              WeekDayName_FirstLetter = LEFT(DATENAME(dw, @INICIO), 1), &#xA;                              [DOWInMonth] = DAY(@INICIO), &#xA;                              [DayOfYear] = DATENAME(dy, @INICIO), &#xA;                              [WeekOfMonth] = DATEPART(WEEK, @INICIO) - DATEPART(WEEK, DATEADD(MM, DATEDIFF(MM, 0, @INICIO), 0)) + 1, &#xA;                              [WeekOfYear] = DATEPART(wk, @INICIO), &#xA;                              [Month] = MONTH(@INICIO), &#xA;                              [MonthName] = DATENAME(mm, @INICIO), &#xA;                              [MonthName_Short] = UPPER(LEFT(DATENAME(mm, @INICIO), 3)), &#xA;                              [MonthName_FirstLetter] = LEFT(DATENAME(mm, @INICIO), 1), &#xA;                              [Quarter] = DATEPART(q, @INICIO), &#xA;                              [QuarterName] = CASE&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 1&#xA;                                                  THEN 'First'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 2&#xA;                                                  THEN 'Second'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 3&#xA;                                                  THEN 'Third'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 4&#xA;                                                  THEN 'Fourth'&#xA;                                              END, &#xA;                              [Year] = YEAR(@INICIO), &#xA;                              [MMYYYY] = RIGHT('0' + CAST(MONTH(@INICIO) AS VARCHAR(2)), 2) + CAST(YEAR(@INICIO) AS VARCHAR(4)), &#xA;                              [MonthYear] = CAST(YEAR(@INICIO) AS VARCHAR(4)) + UPPER(LEFT(DATENAME(mm, @INICIO), 3)), &#xA;                              [IsWeekend] = CASE&#xA;                                                WHEN DATENAME(dw, @INICIO) = 'Sunday'&#xA;                                                     OR DATENAME(dw, @INICIO) = 'Saturday'&#xA;                                                THEN 1&#xA;                                                ELSE 0&#xA;                                            END     ;&#xA;                SET @INICIO = DATEADD(DD, 1, @INICIO);&#xA;&#x9;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D01B9305-E97C-43B9-A274-44BDF520D860}"
+      DTS:From="Package\Crear Schema Stating"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Crear Stagin Candidato" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D781C111-00B3-4ADC-BDA6-46ECE1F6F085}"
+      DTS:From="Package\Crear Stagin Candidato"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Crear Stagin Carrera" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{DE4188EA-D76D-4625-9673-5C9A780EA174}"
+      DTS:From="Package\Crear Stagin Carrera"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Crear Stagin Fecha" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{6EC02B55-B435-4833-9E2D-44E305EB5E5D}"
+      DTS:From="Package\Crear Stagin Fecha"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Actualizar Dimension Fecha" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Crear Stagin Candidato"
+          TopLeft="129,149" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Crear Stagin Carrera"
+          TopLeft="252,249" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Crear Schema Stating"
+          TopLeft="46,57" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="136.5,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.5,50"
+              Start="0,0"
+              End="86.5,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="4,25" />
+                  <mssgle:LineSegment
+                    End="82.5,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.5,25"
+                    Point2="86.5,25"
+                    Point3="86.5,29" />
+                  <mssgle:LineSegment
+                    End="86.5,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="223,191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116.5,58"
+              Start="0,0"
+              End="116.5,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
+                  <mssgle:LineSegment
+                    End="112.5,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112.5,29"
+                    Point2="116.5,29"
+                    Point3="116.5,33" />
+                  <mssgle:LineSegment
+                    End="116.5,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Crear Stagin Fecha"
+          TopLeft="375,356" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="339.5,291">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.5,65"
+              Start="0,0"
+              End="119.5,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
+                  <mssgle:LineSegment
+                    End="115.5,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="115.5,32.5"
+                    Point2="119.5,32.5"
+                    Point3="119.5,36.5" />
+                  <mssgle:LineSegment
+                    End="119.5,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Actualizar Dimension Fecha"
+          TopLeft="499,441" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="459,398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="144,43"
+              Start="0,0"
+              End="144,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="4,21.5" />
+                  <mssgle:LineSegment
+                    End="140,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="140,21.5"
+                    Point2="144,21.5"
+                    Point3="144,25.5" />
+                  <mssgle:LineSegment
+                    End="144,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Actualizar Dimension Fecha">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Actualizar Dimension Fecha\Stagin Fecha"
+          TopLeft="259,74" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado"
+          TopLeft="274,380" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Actualizar Dimension Fecha\Lookup"
+          TopLeft="361,226" />
+        <EdgeLayout
+          Id="Package\Actualizar Dimension Fecha.Paths[OLE DB Source Output]"
+          TopLeft="328.5,116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89,110"
+              Start="0,0"
+              End="89,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51"
+                    Point2="0,55"
+                    Point3="4,55" />
+                  <mssgle:LineSegment
+                    End="85,55" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85,55"
+                    Point2="89,55"
+                    Point3="89,59" />
+                  <mssgle:LineSegment
+                    End="89,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Dimension Fecha.Paths[Lookup No Match Output]"
+          TopLeft="417.5,268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-35.5,112"
+              Start="0,0"
+              End="-35.5,104.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52"
+                    Point2="0,56"
+                    Point3="-4,56" />
+                  <mssgle:LineSegment
+                    End="-31.5,56" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.5,56"
+                    Point2="-35.5,56"
+                    Point3="-35.5,60" />
+                  <mssgle:LineSegment
+                    End="-35.5,104.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-73.55638671875,61,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Fecha\Stagin Fecha">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Fecha\Dimension Fecha Actualizado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Fecha\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Dimension].[Fecha]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ModeloRelacionaAEsquemaEstrella", "ModeloRelacionaAEsquemaEstrella\ModeloRelacionaAEsquemaEstrella.dtproj", "{95FFC47B-8CE2-4D80-B1D2-96371474793C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95FFC47B-8CE2-4D80-B1D2-96371474793C}.Development|Default.ActiveCfg = Development
+		{95FFC47B-8CE2-4D80-B1D2-96371474793C}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D22917A1-F225-4EA8-A0F8-83528A15D45E}
+	EndGlobalSection
+EndGlobal

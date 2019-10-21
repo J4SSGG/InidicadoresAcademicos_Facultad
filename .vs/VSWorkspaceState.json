@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SSAS",
+    "\\SSAS\\Cubo"
   ],
-  "SelectedNode": "\\SSAS",
+  "SelectedNode": "\\SSAS\\Cubo\\Cubo.sln",
   "PreviewInSolutionExplorer": false
 }
