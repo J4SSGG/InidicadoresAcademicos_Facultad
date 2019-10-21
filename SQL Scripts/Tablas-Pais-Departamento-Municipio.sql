@@ -1,0 +1,31 @@
+use Admisiones;
+
+DROP TABLE IF EXISTS Pais;
+DROP TABLE IF EXISTS Departamento;
+DROP TABLE IF EXISTS Municipio;
+
+CREATE TABLE Pais (
+	ID_Pais INT IDENTITY (1,1) PRIMARY KEY,
+	Nombre VARCHAR(300) NOT NULL
+);
+CREATE TABLE Departamento (
+	ID_Departamento INT IDENTITY (1,1) PRIMARY KEY,
+	ID_Pais INT NOT NULL,
+	Nombre VARCHAR(300) NOT NULL
+);
+
+ALTER TABLE Departamento 
+ADD	CONSTRAINT FK_departamento_pais FOREIGN KEY (ID_Pais) REFERENCES Pais (ID_Pais)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+CREATE TABLE Municipio (
+	ID_Municipio INT IDENTITY (1,1) PRIMARY KEY,
+	ID_Departamento INT NOT NULL,
+	Nombre VARCHAR(300) NOT NULL
+);
+
+ALTER TABLE Municipio 
+ADD CONSTRAINT FK_municipio_departamento FOREIGN KEY (ID_Departamento) REFERENCES dbo.Departamento (ID_Departamento)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
