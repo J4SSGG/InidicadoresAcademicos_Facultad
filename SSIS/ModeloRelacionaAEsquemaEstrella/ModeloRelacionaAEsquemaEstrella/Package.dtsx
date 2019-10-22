@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{DB9DA5E1-D77E-4A94-8018-1A6905AA7B61}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{B94E611F-9887-4EB6-A20E-D5EFBE12A99C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,6 +39,1388 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Actualizar Dimension Candidatos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{5ac24ba3-52c6-42ff-93ca-28093cd438b6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Actualizar Dimension Candidatos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Dimension Fecha Actualizado"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[Candidato]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[ID_Candidato]"
+                      cachedDataType="i4"
+                      cachedName="ID_Candidato"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Candidato]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Candidato]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[ID_Colegio]"
+                      cachedDataType="i4"
+                      cachedName="ID_Colegio"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Colegio]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Colegio]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[ID_Diversificado]"
+                      cachedDataType="i4"
+                      cachedName="ID_Diversificado"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Diversificado]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Diversificado]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[ID_Pais]"
+                      cachedDataType="i4"
+                      cachedName="ID_Pais"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Pais]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Pais]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[ID_Departamento]"
+                      cachedDataType="i4"
+                      cachedName="ID_Departamento"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Departamento]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Departamento]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[ID_Municipio]"
+                      cachedDataType="i4"
+                      cachedName="ID_Municipio"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Municipio]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Municipio]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[NombreCandidato]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="NombreCandidato"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreCandidato]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreCandidato]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[ApellidoCandidato]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ApellidoCandidato"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ApellidoCandidato]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ApellidoCandidato]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[Genero]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Genero"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Genero]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Genero]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[FechaNacimiento]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaNacimiento"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[FechaNacimiento]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[FechaNacimiento]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[NombreColegio]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="600"
+                      cachedName="NombreColegio"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreColegio]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreColegio]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[NombreDiversificado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="600"
+                      cachedName="NombreDiversificado"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreDiversificado]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDiversificado]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[NombrePais]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="NombrePais"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombrePais]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombrePais]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[NombreDepartamento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="NombreDepartamento"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreDepartamento]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDepartamento]" />
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].Columns[NombreMunicipio]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="NombreMunicipio"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreMunicipio]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreMunicipio]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[SK_Candidato]"
+                      dataType="i4"
+                      name="SK_Candidato" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Candidato]"
+                      dataType="i4"
+                      name="ID_Candidato" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Colegio]"
+                      dataType="i4"
+                      name="ID_Colegio" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Diversificado]"
+                      dataType="i4"
+                      name="ID_Diversificado" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="NombreCandidato" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ApellidoCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="ApellidoCandidato" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[Genero]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Genero" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[FechaNacimiento]"
+                      dataType="dbTimeStamp"
+                      name="FechaNacimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreColegio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="600"
+                      name="NombreColegio" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreDiversificado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="600"
+                      name="NombreDiversificado" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Pais]"
+                      dataType="i4"
+                      name="ID_Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Departamento]"
+                      dataType="i4"
+                      name="ID_Departamento" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[ID_Municipio]"
+                      dataType="i4"
+                      name="ID_Municipio" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombrePais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="NombrePais" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="NombreDepartamento" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input].ExternalColumns[NombreMunicipio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="NombreMunicipio" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Dimension Candidatos\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Staging].[Candidato]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Staging].[Candidato]) [refTable]
+where [refTable].[SK_Candidato] = ? and [refTable].[ID_Candidato] = ? and [refTable].[ID_Colegio] = ? and [refTable].[ID_Diversificado] = ? and [refTable].[ID_Pais] = ? and [refTable].[ID_Departamento] = ? and [refTable].[ID_Municipio] = ? and [refTable].[NombreCandidato] = ? and [refTable].[ApellidoCandidato] = ? and [refTable].[Genero] = ? and [refTable].[FechaNacimiento] = ? and [refTable].[NombreColegio] = ? and [refTable].[NombreDiversificado] = ? and [refTable].[NombrePais] = ? and [refTable].[NombreDepartamento] = ? and [refTable].[NombreMunicipio] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_Candidato" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_Candidato" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_Colegio" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_Diversificado" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_Pais" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_Departamento" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_Municipio" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NombreCandidato" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ApellidoCandidato" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Genero" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FechaNacimiento" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NombreColegio" dataType="DT_STR" length="600" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreDiversificado" dataType="DT_STR" length="600" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombrePais" dataType="DT_STR" length="300" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreDepartamento" dataType="DT_STR" length="300" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NombreMunicipio" dataType="DT_STR" length="300" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[SK_Candidato]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Candidato]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Colegio]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Diversificado]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Pais]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Departamento]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Municipio]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreCandidato]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ApellidoCandidato]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Genero]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[FechaNacimiento]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreColegio]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDiversificado]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombrePais]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDepartamento]};#{Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreMunicipio]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Dimension Candidatos\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[SK_Candidato]"
+                      cachedDataType="i4"
+                      cachedName="SK_Candidato"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[SK_Candidato]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">SK_Candidato</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[ID_Candidato]"
+                      cachedDataType="i4"
+                      cachedName="ID_Candidato"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Candidato]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_Candidato</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[ID_Colegio]"
+                      cachedDataType="i4"
+                      cachedName="ID_Colegio"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Colegio]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_Colegio</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[ID_Diversificado]"
+                      cachedDataType="i4"
+                      cachedName="ID_Diversificado"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Diversificado]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_Diversificado</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[ID_Pais]"
+                      cachedDataType="i4"
+                      cachedName="ID_Pais"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Pais]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_Pais</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[ID_Departamento]"
+                      cachedDataType="i4"
+                      cachedName="ID_Departamento"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Departamento]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_Departamento</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[ID_Municipio]"
+                      cachedDataType="i4"
+                      cachedName="ID_Municipio"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Municipio]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_Municipio</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[NombreCandidato]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="NombreCandidato"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreCandidato]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NombreCandidato</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[ApellidoCandidato]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ApellidoCandidato"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ApellidoCandidato]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ApellidoCandidato</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[Genero]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Genero"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Genero]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Genero</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[FechaNacimiento]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaNacimiento"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[FechaNacimiento]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">FechaNacimiento</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[NombreDiversificado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="600"
+                      cachedName="NombreDiversificado"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDiversificado]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NombreDiversificado</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[NombreColegio]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="600"
+                      cachedName="NombreColegio"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreColegio]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NombreColegio</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[NombrePais]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="NombrePais"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombrePais]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NombrePais</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[NombreDepartamento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="NombreDepartamento"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDepartamento]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NombreDepartamento</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input].Columns[NombreMunicipio]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="NombreMunicipio"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreMunicipio]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NombreMunicipio</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[SK_Candidato]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[SK_Candidato]"
+                      name="SK_Candidato"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_Candidato</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Candidato]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Candidato]"
+                      name="ID_Candidato"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_Candidato</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Colegio]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Colegio]"
+                      name="ID_Colegio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_Colegio</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Diversificado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Diversificado]"
+                      name="ID_Diversificado"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_Diversificado</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Pais]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Pais]"
+                      name="ID_Pais"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_Pais</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Departamento]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Departamento]"
+                      name="ID_Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_Departamento</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Municipio]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ID_Municipio]"
+                      name="ID_Municipio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_Municipio</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreCandidato]"
+                      name="NombreCandidato"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">NombreCandidato</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ApellidoCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[ApellidoCandidato]"
+                      name="ApellidoCandidato"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ApellidoCandidato</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[Genero]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[Genero]"
+                      name="Genero"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Genero</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[FechaNacimiento]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[FechaNacimiento]"
+                      name="FechaNacimiento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">FechaNacimiento</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreColegio]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="600"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreColegio]"
+                      name="NombreColegio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">NombreColegio</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreDiversificado]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="600"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreDiversificado]"
+                      name="NombreDiversificado"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">NombreDiversificado</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombrePais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombrePais]"
+                      name="NombrePais"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">NombrePais</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreDepartamento]"
+                      name="NombreDepartamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">NombreDepartamento</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreMunicipio]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Match Output].Columns[NombreMunicipio]"
+                      name="NombreMunicipio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">NombreMunicipio</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Dimension Candidatos\Stagin Fecha"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Stagin Fecha"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Staging].[Candidato]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[SK_Candidato]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[SK_Candidato]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[SK_Candidato]"
+                      name="SK_Candidato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Candidato]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Candidato]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Candidato]"
+                      name="ID_Candidato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Colegio]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Colegio]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Colegio]"
+                      name="ID_Colegio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Diversificado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Diversificado]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Diversificado]"
+                      name="ID_Diversificado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Pais]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Pais]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Pais]"
+                      name="ID_Pais"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Departamento]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Departamento]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Departamento]"
+                      name="ID_Departamento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Municipio]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Municipio]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ID_Municipio]"
+                      name="ID_Municipio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreCandidato]"
+                      length="100"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreCandidato]"
+                      name="NombreCandidato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ApellidoCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ApellidoCandidato]"
+                      length="100"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[ApellidoCandidato]"
+                      name="ApellidoCandidato"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Genero]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Genero]"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[Genero]"
+                      name="Genero"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[FechaNacimiento]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[FechaNacimiento]"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[FechaNacimiento]"
+                      name="FechaNacimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreColegio]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreColegio]"
+                      length="600"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreColegio]"
+                      name="NombreColegio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDiversificado]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreDiversificado]"
+                      length="600"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDiversificado]"
+                      name="NombreDiversificado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombrePais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombrePais]"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombrePais]"
+                      name="NombrePais"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreDepartamento]"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreDepartamento]"
+                      name="NombreDepartamento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreMunicipio]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreMunicipio]"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].Columns[NombreMunicipio]"
+                      name="NombreMunicipio"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[SK_Candidato]"
+                      dataType="i4"
+                      name="SK_Candidato" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Candidato]"
+                      dataType="i4"
+                      name="ID_Candidato" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Colegio]"
+                      dataType="i4"
+                      name="ID_Colegio" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Diversificado]"
+                      dataType="i4"
+                      name="ID_Diversificado" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Pais]"
+                      dataType="i4"
+                      name="ID_Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Departamento]"
+                      dataType="i4"
+                      name="ID_Departamento" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ID_Municipio]"
+                      dataType="i4"
+                      name="ID_Municipio" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="NombreCandidato" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[ApellidoCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="ApellidoCandidato" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[Genero]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Genero" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[FechaNacimiento]"
+                      dataType="dbTimeStamp"
+                      name="FechaNacimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreColegio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="600"
+                      name="NombreColegio" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreDiversificado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="600"
+                      name="NombreDiversificado" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombrePais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="NombrePais" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="NombreDepartamento" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output].ExternalColumns[NombreMunicipio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="NombreMunicipio" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[SK_Candidato]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[SK_Candidato]"
+                      name="SK_Candidato" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Candidato]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Candidato]"
+                      name="ID_Candidato" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Colegio]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Colegio]"
+                      name="ID_Colegio" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Diversificado]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Diversificado]"
+                      name="ID_Diversificado" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Pais]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Pais]"
+                      name="ID_Pais" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Departamento]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Departamento]"
+                      name="ID_Departamento" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Municipio]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ID_Municipio]"
+                      name="ID_Municipio" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreCandidato]"
+                      name="NombreCandidato" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ApellidoCandidato]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ApellidoCandidato]"
+                      name="ApellidoCandidato" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Genero]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[Genero]"
+                      name="Genero" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[FechaNacimiento]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[FechaNacimiento]"
+                      name="FechaNacimiento" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreColegio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="600"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreColegio]"
+                      name="NombreColegio" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreDiversificado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="600"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreDiversificado]"
+                      name="NombreDiversificado" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombrePais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombrePais]"
+                      name="NombrePais" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreDepartamento]"
+                      name="NombreDepartamento" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreMunicipio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[NombreMunicipio]"
+                      name="NombreMunicipio" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Actualizar Dimension Candidatos.Paths[Lookup No Match Output]"
+              endId="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Actualizar Dimension Candidatos\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Actualizar Dimension Candidatos.Paths[OLE DB Source Output]"
+              endId="Package\Actualizar Dimension Candidatos\Lookup.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Dimension Candidatos\Stagin Fecha.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Actualizar Dimension Fecha"
       DTS:CreationName="Microsoft.Pipeline"
@@ -1804,6 +3186,849 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Actualizar Stagin Carrera"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FC2B024F-6EA5-465D-A7CF-2EA5DFDFBDCC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Actualizar Stagin Carrera"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Actualizar Stagin Carrera\dboCarrera"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="dboCarrera"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Carrera]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Stagin Carrera\dboCarrera.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[ID_Carrera]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].ExternalColumns[ID_Carrera]"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[ID_Carrera]"
+                      name="ID_Carrera"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[ID_Facultad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].ExternalColumns[ID_Facultad]"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[ID_Facultad]"
+                      name="ID_Facultad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
+                      length="300"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[Nombre]"
+                      name="Nombre"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].ExternalColumns[ID_Carrera]"
+                      dataType="i4"
+                      name="ID_Carrera" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].ExternalColumns[ID_Facultad]"
+                      dataType="i4"
+                      name="ID_Facultad" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="Nombre" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[ID_Carrera]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[ID_Carrera]"
+                      name="ID_Carrera" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[ID_Facultad]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[ID_Facultad]"
+                      name="ID_Facultad" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[Nombre]"
+                      name="Nombre" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Stagin Carrera\dboFacultad"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="dboFacultad"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Facultad]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Stagin Carrera\dboFacultad.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].Columns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
+                      length="600"
+                      lineageId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].Columns[Nombre]"
+                      name="Nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].Columns[ID_Facultad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].ExternalColumns[ID_Facultad]"
+                      lineageId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].Columns[ID_Facultad]"
+                      name="ID_Facultad"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="Nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].ExternalColumns[ID_Facultad]"
+                      dataType="i4"
+                      name="ID_Facultad" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output].Columns[ID_Facultad]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output].Columns[ID_Facultad]"
+                      name="ID_Facultad" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output].Columns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      lineageId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output].Columns[Nombre]"
+                      name="Nombre" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Stagin Carrera\Merge"
+              componentClassID="Microsoft.Merge"
+              contactInfo="Merge;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple sorted data flows into one sorted data flow. Unlike the Merge Join, all rows flow to the output. For example, combine two sorted lists of customers into a single sorted list. If sorting is not important, use the Union All transformation. "
+              name="Merge"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 1]"
+                  name="Merge Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 1].Columns[ID_Carrera]"
+                      cachedDataType="i4"
+                      cachedName="ID_Carrera"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[ID_Carrera]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Carrera]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 1].Columns[ID_Facultad]"
+                      cachedDataType="i4"
+                      cachedName="ID_Facultad"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[ID_Facultad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Facultad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 1].Columns[Nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="Nombre"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[Nombre]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[NombreCarrera]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 2]"
+                  name="Merge Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 2].Columns[ID_Facultad]"
+                      cachedDataType="i4"
+                      cachedName="ID_Facultad"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort 1.Outputs[Sort Output].Columns[ID_Facultad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Facultad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 2].Columns[Nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="600"
+                      cachedName="Nombre"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort 1.Outputs[Sort Output].Columns[Nombre]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[NombreFacultad]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1]"
+                  name="Merge Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Carrera]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Carrera]"
+                      name="ID_Carrera" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Facultad]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Facultad]"
+                      name="ID_Facultad" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[NombreCarrera]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      lineageId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[NombreCarrera]"
+                      name="NombreCarrera" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[NombreFacultad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="600"
+                      lineageId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[NombreFacultad]"
+                      name="NombreFacultad" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Stagin Carrera\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Actualizar Stagin Carrera\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort.Inputs[Sort Input].Columns[ID_Carrera]"
+                      cachedDataType="i4"
+                      cachedName="ID_Carrera"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[ID_Carrera]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort.Inputs[Sort Input].Columns[ID_Facultad]"
+                      cachedDataType="i4"
+                      cachedName="ID_Facultad"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[ID_Facultad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort.Inputs[Sort Input].Columns[Nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="Nombre"
+                      lineageId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[Nombre]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[ID_Carrera]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[ID_Carrera]"
+                      name="ID_Carrera"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[ID_Carrera]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[ID_Facultad]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[ID_Facultad]"
+                      name="ID_Facultad"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[ID_Facultad]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output].Columns[Nombre]"
+                      name="Nombre"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output].Columns[Nombre]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Stagin Carrera\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Actualizar Stagin Carrera\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort 1.Inputs[Sort Input].Columns[ID_Facultad]"
+                      cachedDataType="i4"
+                      cachedName="ID_Facultad"
+                      lineageId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].Columns[ID_Facultad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort 1.Inputs[Sort Input].Columns[Nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="600"
+                      cachedName="Nombre"
+                      lineageId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].Columns[Nombre]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Stagin Carrera\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort 1.Outputs[Sort Output].Columns[ID_Facultad]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort 1.Outputs[Sort Output].Columns[ID_Facultad]"
+                      name="ID_Facultad"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].Columns[ID_Facultad]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Sort 1.Outputs[Sort Output].Columns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="600"
+                      lineageId="Package\Actualizar Stagin Carrera\Sort 1.Outputs[Sort Output].Columns[Nombre]"
+                      name="Nombre"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output].Columns[Nombre]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Actualizar Stagin Carrera\Stagin Carrera"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stagin Carrera"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Staging].[Carrera]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].Columns[ID_Carrera]"
+                      cachedDataType="i4"
+                      cachedName="ID_Carrera"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[ID_Carrera]"
+                      lineageId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Carrera]" />
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].Columns[ID_Facultad]"
+                      cachedDataType="i4"
+                      cachedName="ID_Facultad"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[ID_Facultad]"
+                      lineageId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[ID_Facultad]" />
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].Columns[NombreCarrera]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="300"
+                      cachedName="NombreCarrera"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[NombreCarrera]"
+                      lineageId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[NombreCarrera]" />
+                    <inputColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].Columns[NombreFacultad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="600"
+                      cachedName="NombreFacultad"
+                      externalMetadataColumnId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[NombreFacultad]"
+                      lineageId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1].Columns[NombreFacultad]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[SK_Carrera]"
+                      dataType="i4"
+                      name="SK_Carrera" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[ID_Carrera]"
+                      dataType="i4"
+                      name="ID_Carrera" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[ID_Facultad]"
+                      dataType="i4"
+                      name="ID_Facultad" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[NombreCarrera]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="NombreCarrera" />
+                    <externalMetadataColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input].ExternalColumns[NombreFacultad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="300"
+                      name="NombreFacultad" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\Stagin Carrera.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Actualizar Stagin Carrera\Stagin Carrera.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Actualizar Stagin Carrera\Stagin Carrera.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Actualizar Stagin Carrera.Paths[Merge Output 1]"
+              endId="Package\Actualizar Stagin Carrera\Stagin Carrera.Inputs[OLE DB Destination Input]"
+              name="Merge Output 1"
+              startId="Package\Actualizar Stagin Carrera\Merge.Outputs[Merge Output 1]" />
+            <path
+              refId="Package\Actualizar Stagin Carrera.Paths[OLE DB Source Output]"
+              endId="Package\Actualizar Stagin Carrera\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin Carrera\dboCarrera.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Stagin Carrera.Paths[OLE DB Source Output1]"
+              endId="Package\Actualizar Stagin Carrera\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin Carrera\dboFacultad.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Stagin Carrera.Paths[Sort Output]"
+              endId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\Actualizar Stagin Carrera\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Actualizar Stagin Carrera.Paths[Sort Output1]"
+              endId="Package\Actualizar Stagin Carrera\Merge.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\Actualizar Stagin Carrera\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Crear Schema Stating"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -1852,13 +4077,13 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Crear Stagin Fecha"
+      DTS:refId="Package\Crear y Acatualizar Stagin Fecha"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{6DE9DF7F-40EE-43D7-A409-81B84593499B}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Crear Stagin Fecha"
+      DTS:ObjectName="Crear y Acatualizar Stagin Fecha"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -1892,15 +4117,31 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
       DTS:From="Package\Crear Stagin Carrera"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Crear Stagin Fecha" />
+      DTS:To="Package\Crear y Acatualizar Stagin Fecha" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{6EC02B55-B435-4833-9E2D-44E305EB5E5D}"
-      DTS:From="Package\Crear Stagin Fecha"
+      DTS:From="Package\Crear y Acatualizar Stagin Fecha"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Actualizar Dimension Fecha" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{9C9BDE76-3A3A-4CB5-8BC9-1BA851F51EB0}"
+      DTS:From="Package\Actualizar Dimension Fecha"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Actualizar Dimension Candidatos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{C71EB503-9C32-4879-B5D9-48C4B49D4E5C}"
+      DTS:From="Package\Crear Stagin Carrera"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Actualizar Stagin Carrera" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1995,8 +4236,8 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="168,42"
-          Id="Package\Crear Stagin Fecha"
+          Size="231,42"
+          Id="Package\Crear y Acatualizar Stagin Fecha"
           TopLeft="375,356" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
@@ -2004,9 +4245,9 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="119.5,65"
+              EndConnector="151,65"
               Start="0,0"
-              End="119.5,57.5">
+              End="151,57.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2017,13 +4258,13 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
                     Point2="0,32.5"
                     Point3="4,32.5" />
                   <mssgle:LineSegment
-                    End="115.5,32.5" />
+                    End="147,32.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="115.5,32.5"
-                    Point2="119.5,32.5"
-                    Point3="119.5,36.5" />
+                    Point1="147,32.5"
+                    Point2="151,32.5"
+                    Point3="151,36.5" />
                   <mssgle:LineSegment
-                    End="119.5,57.5" />
+                    End="151,57.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2038,13 +4279,13 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
           TopLeft="499,441" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="459,398">
+          TopLeft="490.5,398">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="144,43"
+              EndConnector="112.5,43"
               Start="0,0"
-              End="144,35.5">
+              End="112.5,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2055,13 +4296,77 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
                     Point2="0,21.5"
                     Point3="4,21.5" />
                   <mssgle:LineSegment
-                    End="140,21.5" />
+                    End="108.5,21.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="140,21.5"
-                    Point2="144,21.5"
-                    Point3="144,25.5" />
+                    Point1="108.5,21.5"
+                    Point2="112.5,21.5"
+                    Point3="112.5,25.5" />
                   <mssgle:LineSegment
-                    End="144,35.5" />
+                    End="112.5,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="232,42"
+          Id="Package\Actualizar Dimension Candidatos"
+          TopLeft="254,558" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="603,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-233,75"
+              Start="0,0"
+              End="-233,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="-4,37.5" />
+                  <mssgle:LineSegment
+                    End="-229,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-229,37.5"
+                    Point2="-233,37.5"
+                    Point3="-233,41.5" />
+                  <mssgle:LineSegment
+                    End="-233,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Actualizar Stagin Carrera"
+          TopLeft="589,249" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="427,270">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="162,0"
+              Start="0,0"
+              End="154.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="154.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2209,6 +4514,374 @@ where [refTable].[DateKey] = ? and [refTable].[Date] = ? and [refTable].[Day] = 
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Actualizar Dimension Candidatos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Actualizar Dimension Candidatos\Lookup"
+          TopLeft="361,226" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado"
+          TopLeft="221,378" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Actualizar Dimension Candidatos\Stagin Fecha"
+          TopLeft="259,74" />
+        <EdgeLayout
+          Id="Package\Actualizar Dimension Candidatos.Paths[OLE DB Source Output]"
+          TopLeft="328.5,116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89,110"
+              Start="0,0"
+              End="89,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51"
+                    Point2="0,55"
+                    Point3="4,55" />
+                  <mssgle:LineSegment
+                    End="85,55" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85,55"
+                    Point2="89,55"
+                    Point3="89,59" />
+                  <mssgle:LineSegment
+                    End="89,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Dimension Candidatos.Paths[Lookup No Match Output]"
+          TopLeft="417.5,268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-88.5,110"
+              Start="0,0"
+              End="-88.5,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51"
+                    Point2="0,55"
+                    Point3="-4,55" />
+                  <mssgle:LineSegment
+                    End="-84.5,55" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-84.5,55"
+                    Point2="-88.5,55"
+                    Point3="-88.5,59" />
+                  <mssgle:LineSegment
+                    End="-88.5,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-100.05638671875,60,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Candidatos\Lookup">
+    <Properties>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q2:string">[Staging].[Candidato]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q3:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q4:boolean">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Candidatos\Dimension Fecha Actualizado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Candidatos\Stagin Fecha">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Actualizar Stagin Carrera">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Actualizar Stagin Carrera\dboCarrera"
+          TopLeft="263,43" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Actualizar Stagin Carrera\dboFacultad"
+          TopLeft="457,42" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Actualizar Stagin Carrera\Sort"
+          TopLeft="292,153" />
+        <EdgeLayout
+          Id="Package\Actualizar Stagin Carrera.Paths[OLE DB Source Output]"
+          TopLeft="328.5,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,68"
+              Start="0,0"
+              End="12.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
+                  <mssgle:LineSegment
+                    End="8.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,34"
+                    Point2="12.5,34"
+                    Point3="12.5,38" />
+                  <mssgle:LineSegment
+                    End="12.5,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Actualizar Stagin Carrera\Stagin Carrera"
+          TopLeft="360,435" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Actualizar Stagin Carrera\Sort 1"
+          TopLeft="459,152" />
+        <EdgeLayout
+          Id="Package\Actualizar Stagin Carrera.Paths[OLE DB Source Output1]"
+          TopLeft="525,84">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5,68"
+              Start="0,0"
+              End="-12.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="-4,34" />
+                  <mssgle:LineSegment
+                    End="-8.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.5,34"
+                    Point2="-12.5,34"
+                    Point3="-12.5,38" />
+                  <mssgle:LineSegment
+                    End="-12.5,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Actualizar Stagin Carrera\Merge"
+          TopLeft="372,308" />
+        <EdgeLayout
+          Id="Package\Actualizar Stagin Carrera.Paths[Sort Output]"
+          TopLeft="341,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68.3333333333333,113"
+              Start="0,0"
+              End="68.3333333333333,105.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.8102189781022" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.8102189781022"
+                    Point2="0,66.8102189781022"
+                    Point3="4,66.8102189781022" />
+                  <mssgle:LineSegment
+                    End="64.3333333333333,66.8102189781022" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64.3333333333333,66.8102189781022"
+                    Point2="68.3333333333333,66.8102189781022"
+                    Point3="68.3333333333333,70.8102189781022" />
+                  <mssgle:LineSegment
+                    End="68.3333333333333,105.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Stagin Carrera.Paths[Sort Output1]"
+          TopLeft="512.5,194">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-69.8333333333334,114"
+              Start="0,0"
+              End="-69.8333333333334,106.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.4014598540146" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,63.4014598540146"
+                    Point2="0,67.4014598540146"
+                    Point3="-4,67.4014598540146" />
+                  <mssgle:LineSegment
+                    End="-65.8333333333334,67.4014598540146" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-65.8333333333334,67.4014598540146"
+                    Point2="-69.8333333333334,67.4014598540146"
+                    Point3="-69.8333333333334,71.4014598540146" />
+                  <mssgle:LineSegment
+                    End="-69.8333333333334,106.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Stagin Carrera.Paths[Merge Output 1]"
+          TopLeft="429.5,350">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,85"
+              Start="0,0"
+              End="0,77.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Stagin Carrera\dboCarrera">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Stagin Carrera\dboFacultad">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Stagin Carrera\Stagin Carrera">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
