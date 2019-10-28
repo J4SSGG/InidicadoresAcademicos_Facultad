@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\SSAS",
-    "\\SSAS\\Cubo"
+    "\\SSAS\\Cubo",
+    "\\SSIS",
+    "\\SSIS\\ModeloRelacionaAEsquemaEstrella"
   ],
-  "SelectedNode": "\\SSAS\\Cubo\\Cubo.sln",
+  "SelectedNode": "\\SSIS\\ModeloRelacionaAEsquemaEstrella\\ModeloRelacionaAEsquemaEstrella.sln",
   "PreviewInSolutionExplorer": false
 }
