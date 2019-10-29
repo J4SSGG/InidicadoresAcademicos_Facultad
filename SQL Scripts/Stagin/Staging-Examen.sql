@@ -1,9 +1,9 @@
 USE Admisiones_DWH;
 
-DROP TABLE IF EXISTS Dimension.Examen;
+DROP TABLE IF EXISTS Staging.Examen;
 
 
-CREATE TABLE Dimension.[Examen](
+CREATE TABLE Staging.[Examen](
 	[SK_Examen] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	[ID_Resultado] [dbo].[UDT_PK] NOT NULL,
 	[ID_ResultadoDetalle] [dbo].[UDT_PK] NULL,

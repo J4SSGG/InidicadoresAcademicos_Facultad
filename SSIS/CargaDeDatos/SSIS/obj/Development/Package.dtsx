@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{7D159D88-3150-400A-9D64-A8506F3136D2}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{96E8E7F2-51DF-45CF-911A-AA4EB5F61445}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="DESKTOP-V34TK8A.Admisiones">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-V34TK8A;Initial Catalog=Admisiones;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-5GAHTGL;Initial Catalog=Admisiones;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -43,7 +43,7 @@
       DTS:ObjectName="Reporte">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Akabane\Documents\Analisis de datos\Proyecto\Reporte de porcentaje de aciertos.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Abraham\Downloads\Reporte de porcentaje de aciertos.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -857,7 +857,7 @@
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="Genero"
-                          lineageId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Output].Columns[Genero]" />
+                          lineageId="Package\Carga de Candidatos\Carga Candidatos\1262:invalid" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -904,7 +904,7 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Output].Columns[Genero]}</property>
+                              name="SourceInputColumnLineageID">#{Package\Carga de Candidatos\Carga Candidatos\1262:invalid}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2309,16 +2309,6 @@
                           lineageId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Output].Columns[GRUPO DE ADMISIÓN]"
                           name="GRUPO DE ADMISIÓN"
                           truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Output].Columns[Genero]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Output].ExternalColumns[Genero]"
-                          length="255"
-                          lineageId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Output].Columns[Genero]"
-                          name="Genero"
-                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -2426,11 +2416,6 @@
                           refId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Output].ExternalColumns[ESP: QUÍMICA]"
                           dataType="r8"
                           name="ESP: QUÍMICA" />
-                        <externalMetadataColumn
-                          refId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Output].ExternalColumns[Genero]"
-                          dataType="wstr"
-                          length="255"
-                          name="Genero" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -2507,12 +2492,6 @@
                           length="255"
                           lineageId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Error Output].Columns[GRUPO DE ADMISIÓN]"
                           name="GRUPO DE ADMISIÓN" />
-                        <outputColumn
-                          refId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Error Output].Columns[Genero]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga de Candidatos\Carga Candidatos\Reporte.Outputs[Excel Source Error Output].Columns[Genero]"
-                          name="Genero" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -5827,59 +5806,59 @@
                   startId="Package\Carga de Candidatos\Carga Candidatos\Conditional Split.Outputs[No Repetidos]" />
                 <path
                   refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output3]"
-                  endId="Package\Carga de Candidatos\Carga Candidatos\Sort 6.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Carga de Candidatos\Carga Candidatos\Tabla Municipio.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output2]"
-                  endId="Package\Carga de Candidatos\Carga Candidatos\Transformacion 1.Inputs[Derived Column Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Carga de Candidatos\Carga Candidatos\Tabla Candidato.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output]"
-                  endId="Package\Carga de Candidatos\Carga Candidatos\Sort 2.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Carga de Candidatos\Carga Candidatos\Diversificado.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output1]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Sort 1.Inputs[Sort Input]"
                   name="OLE DB Source Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Colegio.Outputs[OLE DB Source Output]" />
                 <path
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output2]"
+                  endId="Package\Carga de Candidatos\Carga Candidatos\Sort 2.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Carga de Candidatos\Carga Candidatos\Diversificado.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output]"
+                  endId="Package\Carga de Candidatos\Carga Candidatos\Sort 6.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Carga de Candidatos\Carga Candidatos\Tabla Municipio.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output1]"
+                  endId="Package\Carga de Candidatos\Carga Candidatos\Transformacion 1.Inputs[Derived Column Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Carga de Candidatos\Carga Candidatos\Tabla Candidato.Outputs[OLE DB Source Output]" />
+                <path
                   refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output6]"
+                  endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 1.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Carga de Candidatos\Carga Candidatos\Sort 3.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Comparar Repetidos.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 4.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output1]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Comparar Repetidos.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 1 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output1]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output2]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output2]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output3]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 2.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 6.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output3]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output4]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output4]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output5]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 1.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 2.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output5]"
-                  endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 1.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Carga de Candidatos\Carga Candidatos\Sort 3.Outputs[Sort Output]" />
                 <path
                   refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output7]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 2.Inputs[Merge Join Left Input]"
@@ -15693,7 +15672,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Tables"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15709,7 +15688,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Delete Tables"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -22117,54 +22096,54 @@
                   startId="Package\Resultados\Carga Resultados\Merge Join 3.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output2]"
-                  endId="Package\Resultados\Carga Resultados\Sort 1.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Resultados\Carga Resultados\Carrera.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output]"
-                  endId="Package\Resultados\Carga Resultados\Sort 5.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Resultados\Carga Resultados\Condicion.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output1]"
                   endId="Package\Resultados\Carga Resultados\Transformacion 1.Inputs[Derived Column Input]"
                   name="OLE DB Source Output"
                   startId="Package\Resultados\Carga Resultados\Candidato.Outputs[OLE DB Source Output]" />
                 <path
+                  refId="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output]"
+                  endId="Package\Resultados\Carga Resultados\Sort 1.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Resultados\Carga Resultados\Carrera.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output1]"
+                  endId="Package\Resultados\Carga Resultados\Sort 5.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Resultados\Carga Resultados\Condicion.Outputs[OLE DB Source Output]" />
+                <path
                   refId="Package\Resultados\Carga Resultados.Paths[Sort Output6]"
+                  endId="Package\Resultados\Carga Resultados\Merge Join 2.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Resultados\Carga Resultados\Sort 6.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 3.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 4.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output1]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 1.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 3.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output1]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output2]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 1.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 2.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output2]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output3]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 3.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 7.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output3]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output4]"
                   endId="Package\Resultados\Carga Resultados\Merge Join.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output4]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output5]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 2.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 5.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output5]"
-                  endId="Package\Resultados\Carga Resultados\Merge Join 2.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Resultados\Carga Resultados\Sort 6.Outputs[Sort Output]" />
                 <path
                   refId="Package\Resultados\Carga Resultados.Paths[Sort Output7]"
                   endId="Package\Resultados\Carga Resultados\Merge Join.Inputs[Merge Join Right Input]"
@@ -26488,7 +26467,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Execute SQL Task"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -26504,7 +26483,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Insertar Examenes Area"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -26862,6 +26841,14 @@
           Id="Package\Resultados\Carga ResultadosDetalle Especificas"
           TopLeft="87,247" />
         <NodeLayout
+          Size="207,42"
+          Id="Package\Resultados\Carga ResultadosGenerales"
+          TopLeft="106,324" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Resultados\Execute SQL Task"
+          TopLeft="20,20" />
+        <NodeLayout
           Size="192,42"
           Id="Package\Resultados\Insertar Examenes Area"
           TopLeft="219,29" />
@@ -26955,10 +26942,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="207,42"
-          Id="Package\Resultados\Carga ResultadosGenerales"
-          TopLeft="106,324" />
         <EdgeLayout
           Id="Package\Resultados.PrecedenceConstraints[Constraint 3]"
           TopLeft="210,289">
@@ -26981,10 +26964,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Resultados\Execute SQL Task"
-          TopLeft="20,20" />
         <EdgeLayout
           Id="Package\Resultados.PrecedenceConstraints[Constraint 4]"
           TopLeft="100,62">
@@ -27219,7 +27198,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output1]"
           TopLeft="629.595238095238,740">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27255,7 +27234,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output6]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output]"
           TopLeft="408.595238095238,744">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27291,7 +27270,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output5]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output6]"
           TopLeft="424.345238095239,573.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27315,7 +27294,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output4]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output5]"
           TopLeft="218.928571428572,568.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27351,7 +27330,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output3]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output4]"
           TopLeft="296.928571428572,369.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27387,7 +27366,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output2]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output3]"
           TopLeft="743.5,1001">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27423,7 +27402,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output1]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output2]"
           TopLeft="511.428571428572,363.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27459,7 +27438,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output2]"
           TopLeft="218.428571428572,479.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27483,7 +27462,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output1]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output3]"
           TopLeft="294.928571428572,275.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27507,7 +27486,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output3]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output]"
           TopLeft="745.25,906">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27531,7 +27510,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output2]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output1]"
           TopLeft="632.797619047619,521">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30571,7 +30550,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output1]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output2]"
           TopLeft="472.5,437">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30605,7 +30584,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output1]"
           TopLeft="217.5,438">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30673,7 +30652,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output3]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output4]"
           TopLeft="372.5,211">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30707,7 +30686,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output1]"
+          Id="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output2]"
           TopLeft="218.25,211">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30729,7 +30708,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output2]"
+          Id="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output]"
           TopLeft="371.75,116">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30833,7 +30812,7 @@
           Id="Package\Resultados\Carga Resultados\Sort 5"
           TopLeft="588,505" />
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output]"
+          Id="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output1]"
           TopLeft="642,466">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30917,7 +30896,7 @@
           Id="Package\Resultados\Carga Resultados\Merge Join 2"
           TopLeft="652,650" />
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output4]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output5]"
           TopLeft="641.5,547">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30951,7 +30930,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output5]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output6]"
           TopLeft="834.5,620">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -30989,7 +30968,7 @@
           Id="Package\Resultados\Carga Resultados\Merge Join 3"
           TopLeft="328,727" />
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output6]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output]"
           TopLeft="399,682">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -31037,7 +31016,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output2]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output3]"
           TopLeft="671,746.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -31084,19 +31063,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Resultados\Carga Resultados\Reporte">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Resultados\Carga Resultados\Carrera">
     <Properties>
       <Property>
@@ -31111,6 +31077,45 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Resultados\Carga Resultados\ResultadoAdmision">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Resultados\Carga Resultados\Reporte">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Resultados\Carga Resultados\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Resultados\Carga Resultados\Condicion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -32082,32 +32087,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Resultados\Carga ResultadosGenerales\General">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Resultados\Carga Resultados\Condicion">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Resultados\Carga Resultados\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
