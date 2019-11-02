@@ -6,10 +6,79 @@
     <Name>Cubo.database</Name>
     <FullPath>Cubo.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Admisiones DWH.cube</Name>
+      <FullPath>Admisiones DWH.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Admisiones DWH.partitions</Name>
+          <FullPath>Admisiones DWH.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Fecha.dim</Name>
+      <FullPath>Fecha.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Candidato.dim</Name>
+      <FullPath>Candidato.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Colegios.dim</Name>
+      <FullPath>Colegios.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Regiones.dim</Name>
+      <FullPath>Regiones.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Carrera.dim</Name>
+      <FullPath>Carrera.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Examen.dim</Name>
+      <FullPath>Examen.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Resultado Admision.dim</Name>
+      <FullPath>Resultado Admision.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Admisiones DWH.ds</Name>
+      <FullPath>Admisiones DWH.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Admisiones DWH.dsv</Name>
+      <FullPath>Admisiones DWH.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Admisiones DWH</Id>
+            <Name>Admisiones DWH</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=Admisiones_DWH</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Admisiones DWH</Id>
+            <Name>Admisiones DWH</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>

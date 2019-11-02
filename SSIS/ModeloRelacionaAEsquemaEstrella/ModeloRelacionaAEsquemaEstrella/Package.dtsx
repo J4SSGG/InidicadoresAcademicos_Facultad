@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{29E4D725-9AA8-4F3F-94B0-786CBEC1AF27}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{F0434218-2BF1-495D-ACF4-9237CC64755A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -16468,25 +16468,40 @@ where [refTable].[DateKey] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Merge Join Output3]"
+              refId="Package\Actualizar Stagin Examen.Paths[Merge Join Output]"
               endId="Package\Actualizar Stagin Examen\Staging Examen.Inputs[OLE DB Destination Input]"
               name="Merge Join Output"
               startId="Package\Actualizar Stagin Examen\Merge Join 3.Outputs[Merge Join Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Merge Join Output]"
+              refId="Package\Actualizar Stagin Examen.Paths[Merge Join Output1]"
               endId="Package\Actualizar Stagin Examen\Sort 3.Inputs[Sort Input]"
               name="Merge Join Output"
               startId="Package\Actualizar Stagin Examen\Merge Join.Outputs[Merge Join Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Merge Join Output1]"
+              refId="Package\Actualizar Stagin Examen.Paths[Merge Join Output2]"
               endId="Package\Actualizar Stagin Examen\Sort 4.Inputs[Sort Input]"
               name="Merge Join Output"
               startId="Package\Actualizar Stagin Examen\Merge Join 1.Outputs[Merge Join Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Merge Join Output2]"
+              refId="Package\Actualizar Stagin Examen.Paths[Merge Join Output3]"
               endId="Package\Actualizar Stagin Examen\Sort 6.Inputs[Sort Input]"
               name="Merge Join Output"
               startId="Package\Actualizar Stagin Examen\Merge Join 2.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output3]"
+              endId="Package\Actualizar Stagin Examen\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin Examen\dbo ResultadoAdmisiones.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output2]"
+              endId="Package\Actualizar Stagin Examen\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin Examen\dbo ResultadoAdmisiones Detalle.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output4]"
+              endId="Package\Actualizar Stagin Examen\Sort 7.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin Examen\dbo Condicion.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output]"
               endId="Package\Actualizar Stagin Examen\Sort 5.Inputs[Sort Input]"
@@ -16498,55 +16513,40 @@ where [refTable].[DateKey] = ?</property>
               name="OLE DB Source Output"
               startId="Package\Actualizar Stagin Examen\dbo ExamenArea.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output2]"
-              endId="Package\Actualizar Stagin Examen\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin Examen\dbo ResultadoAdmisiones Detalle.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output4]"
-              endId="Package\Actualizar Stagin Examen\Sort.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin Examen\dbo ResultadoAdmisiones.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output3]"
-              endId="Package\Actualizar Stagin Examen\Sort 7.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin Examen\dbo Condicion.Outputs[OLE DB Source Output]" />
-            <path
               refId="Package\Actualizar Stagin Examen.Paths[Sort Output6]"
+              endId="Package\Actualizar Stagin Examen\Merge Join 2.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Actualizar Stagin Examen\Sort 5.Outputs[Sort Output]" />
+            <path
+              refId="Package\Actualizar Stagin Examen.Paths[Sort Output]"
               endId="Package\Actualizar Stagin Examen\Merge Join 3.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin Examen\Sort 7.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Sort Output5]"
+              refId="Package\Actualizar Stagin Examen.Paths[Sort Output1]"
               endId="Package\Actualizar Stagin Examen\Merge Join 3.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin Examen\Sort 6.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Sort Output3]"
+              refId="Package\Actualizar Stagin Examen.Paths[Sort Output2]"
               endId="Package\Actualizar Stagin Examen\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin Examen\Sort 4.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Sort Output2]"
+              refId="Package\Actualizar Stagin Examen.Paths[Sort Output3]"
               endId="Package\Actualizar Stagin Examen\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin Examen\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Sort Output1]"
+              refId="Package\Actualizar Stagin Examen.Paths[Sort Output4]"
               endId="Package\Actualizar Stagin Examen\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin Examen\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin Examen.Paths[Sort Output]"
+              refId="Package\Actualizar Stagin Examen.Paths[Sort Output5]"
               endId="Package\Actualizar Stagin Examen\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin Examen\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\Actualizar Stagin Examen.Paths[Sort Output4]"
-              endId="Package\Actualizar Stagin Examen\Merge Join 2.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Actualizar Stagin Examen\Sort 5.Outputs[Sort Output]" />
             <path
               refId="Package\Actualizar Stagin Examen.Paths[Sort Output7]"
               endId="Package\Actualizar Stagin Examen\Merge Join.Inputs[Merge Join Left Input]"
@@ -20972,79 +20972,79 @@ where [refTable].[DateKey] = ?</property>
               startId="Package\Actualizar Staging Candidato\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output4]"
-              endId="Package\Actualizar Staging Candidato\Sort 5.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Staging Candidato\dbo Departamento.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output3]"
-              endId="Package\Actualizar Staging Candidato\Sort 7.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Staging Candidato\dbo Pais.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output5]"
-              endId="Package\Actualizar Staging Candidato\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Staging Candidato\dbo ColegioCandidato.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output1]"
-              endId="Package\Actualizar Staging Candidato\Sort.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Staging Candidato\dbo Candidato.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output]"
               endId="Package\Actualizar Staging Candidato\Sort 3.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Actualizar Staging Candidato\dbo Diversificado.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output2]"
+              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output3]"
+              endId="Package\Actualizar Staging Candidato\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Staging Candidato\dbo Candidato.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output5]"
               endId="Package\Actualizar Staging Candidato\Sort 4.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Actualizar Staging Candidato\dbo Municipio.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output1]"
+              endId="Package\Actualizar Staging Candidato\Sort 7.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Staging Candidato\dbo Pais.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output]"
+              endId="Package\Actualizar Staging Candidato\Sort 5.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Staging Candidato\dbo Departamento.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output2]"
+              endId="Package\Actualizar Staging Candidato\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Staging Candidato\dbo ColegioCandidato.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Actualizar Staging Candidato.Paths[Sort Output8]"
+              endId="Package\Actualizar Staging Candidato\Merge Join 3.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Actualizar Staging Candidato\Sort 6.Outputs[Sort Output]" />
+            <path
+              refId="Package\Actualizar Staging Candidato.Paths[Sort Output]"
               endId="Package\Actualizar Staging Candidato\Merge Join 3.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Staging Candidato\Sort 7.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Staging Candidato.Paths[Sort Output]"
+              refId="Package\Actualizar Staging Candidato.Paths[Sort Output1]"
               endId="Package\Actualizar Staging Candidato\Merge Join 4.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Staging Candidato\Sort 8.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Staging Candidato.Paths[Sort Output1]"
+              refId="Package\Actualizar Staging Candidato.Paths[Sort Output2]"
               endId="Package\Actualizar Staging Candidato\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Staging Candidato\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Staging Candidato.Paths[Sort Output2]"
+              refId="Package\Actualizar Staging Candidato.Paths[Sort Output3]"
               endId="Package\Actualizar Staging Candidato\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Staging Candidato\Sort.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Staging Candidato.Paths[Sort Output3]"
+              refId="Package\Actualizar Staging Candidato.Paths[Sort Output4]"
               endId="Package\Actualizar Staging Candidato\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Staging Candidato\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Staging Candidato.Paths[Sort Output4]"
+              refId="Package\Actualizar Staging Candidato.Paths[Sort Output5]"
               endId="Package\Actualizar Staging Candidato\Merge Join 4.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Staging Candidato\Sort 9.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Staging Candidato.Paths[Sort Output5]"
+              refId="Package\Actualizar Staging Candidato.Paths[Sort Output6]"
               endId="Package\Actualizar Staging Candidato\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Staging Candidato\Sort 4.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Staging Candidato.Paths[Sort Output6]"
+              refId="Package\Actualizar Staging Candidato.Paths[Sort Output7]"
               endId="Package\Actualizar Staging Candidato\Merge Join 2.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Staging Candidato\Sort 5.Outputs[Sort Output]" />
-            <path
-              refId="Package\Actualizar Staging Candidato.Paths[Sort Output7]"
-              endId="Package\Actualizar Staging Candidato\Merge Join 3.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Actualizar Staging Candidato\Sort 6.Outputs[Sort Output]" />
             <path
               refId="Package\Actualizar Staging Candidato.Paths[Sort Output9]"
               endId="Package\Actualizar Staging Candidato\Merge Join 1.Inputs[Merge Join Right Input]"
@@ -21952,7 +21952,7 @@ where [refTable].[DateKey] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
-          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Candidato;&#xA;&#xA;CREATE TABLE [Staging].[Candidato](&#xA;&#x9;[SK_Candidato] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Colegio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Diversificado] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombreCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[ApellidoCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[Genero] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[FechaNacimiento] [dbo].[UDT_DateTime] NULL,&#xA;&#x9;[NombreColegio] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[NombreDiversificado] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[ID_Pais] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Departamento] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Municipio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombrePais] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[NombreDepartamento] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[NombreMunicipio] [dbo].[UDT_VarcharMediano] NULL);&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Candidato;&#xA;&#xA;CREATE TABLE [Staging].[Candidato](&#xA;&#x9;[SK_Candidato] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Colegio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Diversificado] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombreCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[ApellidoCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[Genero] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[FechaNacimiento] [dbo].[UDT_DateTime] NULL,&#xA;&#x9;[NombreColegio] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[NombreDiversificado] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[ID_Pais] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Departamento] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Municipio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombrePais] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[NombreDepartamento] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[NombreMunicipio] [dbo].[UDT_VarcharMediano] NULL);&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -22753,6 +22753,55 @@ where [refTable].[DateKey] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Examen\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Examen\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Dimension].[Examen]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Examen\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Actualizar Dimension Fecha">
     <LayoutInfo>
@@ -23343,7 +23392,7 @@ where [refTable].[DateKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato">
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -23356,7 +23405,7 @@ where [refTable].[DateKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha">
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -23521,7 +23570,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Sort Output]"
+          Id="Package\Actualizar Stagin Examen.Paths[Sort Output5]"
           TopLeft="513.5,361">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23555,7 +23604,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Merge Join Output]"
+          Id="Package\Actualizar Stagin Examen.Paths[Merge Join Output1]"
           TopLeft="380.75,494">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23577,7 +23626,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Sort Output1]"
+          Id="Package\Actualizar Stagin Examen.Paths[Sort Output4]"
           TopLeft="380.5,627">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23611,7 +23660,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Sort Output2]"
+          Id="Package\Actualizar Stagin Examen.Paths[Sort Output3]"
           TopLeft="622.5,626">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23645,7 +23694,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Merge Join Output1]"
+          Id="Package\Actualizar Stagin Examen.Paths[Merge Join Output2]"
           TopLeft="499,752">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23667,7 +23716,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Sort Output3]"
+          Id="Package\Actualizar Stagin Examen.Paths[Sort Output2]"
           TopLeft="502.5,876">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23701,7 +23750,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Sort Output4]"
+          Id="Package\Actualizar Stagin Examen.Paths[Sort Output6]"
           TopLeft="779.5,877">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23735,7 +23784,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output3]"
+          Id="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output4]"
           TopLeft="945.5,997">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23757,7 +23806,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Merge Join Output2]"
+          Id="Package\Actualizar Stagin Examen.Paths[Merge Join Output3]"
           TopLeft="639,1004">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23779,7 +23828,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Sort Output5]"
+          Id="Package\Actualizar Stagin Examen.Paths[Sort Output1]"
           TopLeft="638.5,1108">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23813,7 +23862,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Sort Output6]"
+          Id="Package\Actualizar Stagin Examen.Paths[Sort Output]"
           TopLeft="946.5,1107">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23847,7 +23896,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[Merge Join Output3]"
+          Id="Package\Actualizar Stagin Examen.Paths[Merge Join Output]"
           TopLeft="797,1246">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23873,7 +23922,7 @@ where [refTable].[DateKey] = ?</property>
           Id="Package\Actualizar Stagin Examen\Sort"
           TopLeft="152,321" />
         <EdgeLayout
-          Id="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output4]"
+          Id="Package\Actualizar Stagin Examen.Paths[OLE DB Source Output3]"
           TopLeft="198.25,268">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23931,6 +23980,19 @@ where [refTable].[DateKey] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Stagin Examen\Staging Examen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Actualizar Staging Candidato">
     <LayoutInfo>
@@ -24060,40 +24122,6 @@ where [refTable].[DateKey] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Actualizar Staging Candidato.Paths[Sort Output8]"
-          TopLeft="1274.5,512">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-113.166666666667,75.5"
-              Start="0,0"
-              End="-113.166666666667,68">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.7844950213371" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,40.7844950213371"
-                    Point2="0,44.7844950213371"
-                    Point3="-4,44.7844950213371" />
-                  <mssgle:LineSegment
-                    End="-109.166666666667,44.7844950213371" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-109.166666666667,44.7844950213371"
-                    Point2="-113.166666666667,44.7844950213371"
-                    Point3="-113.166666666667,48.7844950213371" />
-                  <mssgle:LineSegment
-                    End="-113.166666666667,68" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Sort Output7]"
           TopLeft="1047.5,507">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24127,7 +24155,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Sort Output6]"
+          Id="Package\Actualizar Staging Candidato.Paths[Sort Output7]"
           TopLeft="1180.5,257">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24161,7 +24189,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Sort Output5]"
+          Id="Package\Actualizar Staging Candidato.Paths[Sort Output6]"
           TopLeft="920.5,258">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24195,7 +24223,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Sort Output4]"
+          Id="Package\Actualizar Staging Candidato.Paths[Sort Output5]"
           TopLeft="1146.25,743.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24229,7 +24257,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Sort Output3]"
+          Id="Package\Actualizar Staging Candidato.Paths[Sort Output4]"
           TopLeft="378.5,505.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24263,7 +24291,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Sort Output2]"
+          Id="Package\Actualizar Staging Candidato.Paths[Sort Output3]"
           TopLeft="253,271">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24297,7 +24325,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Sort Output1]"
+          Id="Package\Actualizar Staging Candidato.Paths[Sort Output2]"
           TopLeft="509.75,266.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24331,7 +24359,7 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Sort Output]"
+          Id="Package\Actualizar Staging Candidato.Paths[Sort Output1]"
           TopLeft="530.5,751">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24365,73 +24393,41 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Actualizar Staging Candidato.Paths[Sort Output]"
+          TopLeft="1274.5,512">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-113.166666666667,75.5"
+              Start="0,0"
+              End="-113.166666666667,68">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.7844950213371" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.7844950213371"
+                    Point2="0,44.7844950213371"
+                    Point3="-4,44.7844950213371" />
+                  <mssgle:LineSegment
+                    End="-109.166666666667,44.7844950213371" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-109.166666666667,44.7844950213371"
+                    Point2="-113.166666666667,44.7844950213371"
+                    Point3="-113.166666666667,48.7844950213371" />
+                  <mssgle:LineSegment
+                    End="-113.166666666667,68" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output5]"
-          TopLeft="513.625,158">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.75"
-              Start="0,0"
-              End="0,59.25">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output4]"
-          TopLeft="1181,137">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,78"
-              Start="0,0"
-              End="0,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output3]"
-          TopLeft="1273,410">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output2]"
           TopLeft="918.25,141">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24453,7 +24449,29 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output1]"
+          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output4]"
+          TopLeft="658.25,402">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output3]"
           TopLeft="235.5,159">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24487,19 +24505,63 @@ where [refTable].[DateKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output]"
-          TopLeft="658.25,402">
+          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output2]"
+          TopLeft="513.625,158">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66"
+              EndConnector="0,66.75"
               Start="0,0"
-              End="0,58.5">
+              End="0,59.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.5" />
+                    End="0,59.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output1]"
+          TopLeft="1273,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Staging Candidato.Paths[OLE DB Source Output]"
+          TopLeft="1181,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24964,68 +25026,6 @@ where [refTable].[DateKey] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Actualizar Staging Carrera\Stagin Carrera">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Stagin Examen\Staging Examen">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Dimension Examen\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Dimension Examen\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Dimension].[Examen]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Dimension Examen\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

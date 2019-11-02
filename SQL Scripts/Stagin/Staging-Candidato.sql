@@ -9,7 +9,7 @@ CREATE TABLE [Staging].[Candidato](
 	[ID_Diversificado] [dbo].[UDT_PK] NULL,
 	[NombreCandidato] [dbo].[UDT_VarcharCorto] NULL,
 	[ApellidoCandidato] [dbo].[UDT_VarcharCorto] NULL,
-	[Genero] [dbo].[UDT_VarcharMediano] NULL,
+	[Genero] [dbo].[UDT_VarcharCorto] NULL,
 	[FechaNacimiento] [dbo].[UDT_DateTime] NULL,
 	[NombreColegio] [dbo].[UDT_VarcharLargo] NULL,
 	[NombreDiversificado] [dbo].[UDT_VarcharLargo] NULL,
