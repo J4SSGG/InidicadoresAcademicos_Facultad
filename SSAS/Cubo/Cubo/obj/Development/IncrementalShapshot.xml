@@ -75,7 +75,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>ZgAcFP6+ChncFhd/p4tW/9IDlAg=11/2/2019 12:23:46 AM11/2/2019 12:23:46 AMaaz/C2YReG+9qiaP922LHwXwScE=11/2/2019 12:23:46 AM11/2/2019 12:23:46 AM</TimeStamp>
+        <TimeStamp>ZgAcFP6+ChncFhd/p4tW/9IDlAg=11/2/2019 12:25:42 AM11/2/2019 12:23:46 AMaaz/C2YReG+9qiaP922LHwXwScE=11/2/2019 12:23:46 AM11/2/2019 12:23:46 AM</TimeStamp>
         <ID>
           <String>Admisiones DWH</String>
         </ID>
@@ -92,5 +92,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2019-11-02T06:23:55.99Z</LastDeployed>
+  <LastDeployed>2019-11-02T08:17:32.93Z</LastDeployed>
 </DeploymentSnapshot>

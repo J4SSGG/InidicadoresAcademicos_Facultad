@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="81"
-  DTS:VersionGUID="{143435BC-3433-41F7-BC79-8E0D8DE70DBD}">
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{A14B7DB1-5624-4282-A2EF-79A1EE86F146}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -13358,64 +13358,64 @@ where [refTable].[SK_Candidato] = ?</property>
               startId="Package\Actualizar Fact ResultadoAdmision\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output4]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Sort 6.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output2]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Sort 4.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output3]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Sort 7.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\DimensionRegion.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Examen.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output1]"
               endId="Package\Actualizar Fact ResultadoAdmision\Sort 2.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Dimension Carrera.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output2]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Sort 7.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\DimensionRegion.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output3]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Examen.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Sort 6.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output1]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Sort 4.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output6]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 2.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\Sort 5.Outputs[Sort Output]" />
+            <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 3.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 6.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output1]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output1]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output2]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 3.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 7.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output2]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output3]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output3]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output4]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output4]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output5]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 2.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 4.Outputs[Sort Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output5]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 2.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\Sort 5.Outputs[Sort Output]" />
             <path
               refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output7]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join.Inputs[Merge Join Right Input]"
@@ -15005,7 +15005,7 @@ where [refTable].[SK_Candidato] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the type of join to perform."
                   name="JoinType"
-                  typeConverter="JoinType">2</property>
+                  typeConverter="JoinType">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
@@ -15398,7 +15398,7 @@ where [refTable].[SK_Candidato] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the type of join to perform."
                   name="JoinType"
-                  typeConverter="JoinType">2</property>
+                  typeConverter="JoinType">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
@@ -18464,64 +18464,64 @@ where [refTable].[SK_Candidato] = ?</property>
               startId="Package\Actualizar Stagin ExamenArea\Merge Join 2.Outputs[Merge Join Output]" />
             <path
               refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output3]"
-              endId="Package\Actualizar Stagin ExamenArea\Sort 5.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin ExamenArea\dbo Descuento.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output2]"
-              endId="Package\Actualizar Stagin ExamenArea\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin ExamenArea\dbo ResultadoAdmisiones Detalle.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output4]"
-              endId="Package\Actualizar Stagin ExamenArea\Sort 7.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin ExamenArea\dbo Condicion.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output]"
               endId="Package\Actualizar Stagin ExamenArea\Sort.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Actualizar Stagin ExamenArea\dbo ResultadoAdmisiones.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output1]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output2]"
+              endId="Package\Actualizar Stagin ExamenArea\Sort 7.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin ExamenArea\dbo Condicion.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output4]"
               endId="Package\Actualizar Stagin ExamenArea\Sort 2.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Actualizar Stagin ExamenArea\dbo ExamenArea.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output]"
+              endId="Package\Actualizar Stagin ExamenArea\Sort 5.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin ExamenArea\dbo Descuento.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output1]"
+              endId="Package\Actualizar Stagin ExamenArea\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin ExamenArea\dbo ResultadoAdmisiones Detalle.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output6]"
+              endId="Package\Actualizar Stagin ExamenArea\Merge Join 2.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Actualizar Stagin ExamenArea\Sort 4.Outputs[Sort Output]" />
+            <path
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output1]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output1]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output2]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output2]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output3]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 2.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 5.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output3]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output4]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 3.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 7.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output4]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output5]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 3.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 6.Outputs[Sort Output]" />
-            <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output5]"
-              endId="Package\Actualizar Stagin ExamenArea\Merge Join 2.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Actualizar Stagin ExamenArea\Sort 4.Outputs[Sort Output]" />
             <path
               refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output7]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join.Inputs[Merge Join Left Input]"
@@ -23093,7 +23093,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
-          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Examen;&#xA;&#xA;&#xA;CREATE TABLE Staging.[Examen](&#xA;&#x9;[SK_Examen] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Resultado] [dbo].[UDT_PK] NOT NULL,&#xA;&#x9;[ID_ResultadoDetalle] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Carrera] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Descuento] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_ExamenArea] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Condicion] [dbo].[UDT_PK] NULL,&#xA;&#x9;[Condicion] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[Area] [dbo].[UDT_VarcharMediano] NOT NULL,&#xA;&#x9;[NotaArea] [dbo].[UDT_Decimal5.2] NULL,&#xA;&#x9;[Precio] [dbo].[UDT_Decimal6.2] NULL,&#xA;&#x9;[DescripcionDescuento] [dbo].[UDT_VarcharMediano] NOT NULL,&#xA;&#x9;[PorcentajeDescuento] [dbo].[UDT_Decimal6.2] NULL,&#xA;&#x9;[FechaPrueba] [datetime] NULL);&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Examen;&#xA;&#xA;&#xA;CREATE TABLE Staging.[Examen](&#xA;&#x9;[SK_Examen] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Resultado] [dbo].[UDT_PK] NOT NULL,&#xA;&#x9;[ID_ResultadoDetalle] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Carrera] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Descuento] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_ExamenArea] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Condicion] [dbo].[UDT_PK] NULL,&#xA;&#x9;[Condicion] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[Area] [dbo].[UDT_VarcharMediano] NOT NULL,&#xA;&#x9;[NotaArea] [dbo].[UDT_Decimal5.2] NULL,&#xA;&#x9;[Precio] [dbo].[UDT_Decimal6.2] NULL,&#xA;&#x9;[DescripcionDescuento] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[PorcentajeDescuento] [dbo].[UDT_Decimal6.2] NULL,&#xA;&#x9;[FechaPrueba] [datetime] NULL);&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -23312,6 +23312,10 @@ where [refTable].[SK_Candidato] = ?</property>
           Id="Package\Actualizar Dimension Fecha"
           TopLeft="45,598" />
         <NodeLayout
+          Size="213,42"
+          Id="Package\Actualizar Dimension Region"
+          TopLeft="37,841" />
+        <NodeLayout
           Size="240,42"
           Id="Package\Actualizar Fact ResultadoAdmision"
           TopLeft="421,921" />
@@ -23328,6 +23332,10 @@ where [refTable].[SK_Candidato] = ?</property>
           Id="Package\Actualizar Staging Carrera"
           TopLeft="344,232" />
         <NodeLayout
+          Size="199,42"
+          Id="Package\Actualizar Staging Region"
+          TopLeft="342,418" />
+        <NodeLayout
           Size="181,42"
           Id="Package\Crear Schema Stating"
           TopLeft="46,57" />
@@ -23343,6 +23351,10 @@ where [refTable].[SK_Candidato] = ?</property>
           Size="181,42"
           Id="Package\Crear Staging Carrera"
           TopLeft="44,238" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Crear Staging Region"
+          TopLeft="41,417" />
         <NodeLayout
           Size="237,42"
           Id="Package\Crear y Acatualizar Staging Fecha"
@@ -23392,6 +23404,28 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="146,804">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
           TopLeft="268,942">
           <EdgeLayout.Curve>
@@ -23405,6 +23439,84 @@ where [refTable].[SK_Candidato] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="145.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="220,438.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122,0"
+              Start="0,0"
+              End="114.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="114.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="441.5,460">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-295,58"
+              Start="0,0"
+              End="-295,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="-4,29" />
+                  <mssgle:LineSegment
+                    End="-291,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-291,29"
+                    Point2="-295,29"
+                    Point3="-295,33" />
+                  <mssgle:LineSegment
+                    End="-295,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 14]"
+          TopLeft="146,883">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23591,14 +23703,6 @@ where [refTable].[SK_Candidato] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Crear Staging Region"
-          TopLeft="41,417" />
-        <NodeLayout
-          Size="199,42"
-          Id="Package\Actualizar Staging Region"
-          TopLeft="342,418" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
           TopLeft="454.5,358">
@@ -23633,110 +23737,6 @@ where [refTable].[SK_Candidato] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="220,438.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="122,0"
-              Start="0,0"
-              End="114.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="114.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="441.5,460">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-295,58"
-              Start="0,0"
-              End="-295,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="-4,29" />
-                  <mssgle:LineSegment
-                    End="-291,29" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-291,29"
-                    Point2="-295,29"
-                    Point3="-295,33" />
-                  <mssgle:LineSegment
-                    End="-295,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="213,42"
-          Id="Package\Actualizar Dimension Region"
-          TopLeft="37,841" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="146,804">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="146,883">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -23746,6 +23746,10 @@ where [refTable].[SK_Candidato] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="113,42"
+          Id="Package\Actualizar Dimension Candidatos\Lookup"
+          TopLeft="270,221" />
+        <NodeLayout
           Size="159,42"
           Id="Package\Actualizar Dimension Candidatos\Stagin Candidato"
           TopLeft="240,71" />
@@ -23753,10 +23757,6 @@ where [refTable].[SK_Candidato] = ?</property>
           Size="235,42"
           Id="Package\Actualizar Dimension Candidatos\Dimension Candidato Actualizado"
           TopLeft="209,377" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Actualizar Dimension Candidatos\Lookup"
-          TopLeft="270,221" />
         <EdgeLayout
           Id="Package\Actualizar Dimension Candidatos.Paths[OLE DB Source Output]"
           TopLeft="323,113">
@@ -23776,7 +23776,9 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23807,6 +23809,29 @@ where [refTable].[SK_Candidato] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Candidatos\Lookup">
+    <Properties>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q2:string">[Dimension].[Candidato]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q3:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q4:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Actualizar Dimension Candidatos\Stagin Candidato">
     <Properties>
       <Property>
@@ -23829,29 +23854,6 @@ where [refTable].[SK_Candidato] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Dimension Candidatos\Lookup">
-    <Properties>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q2:string">[Dimension].[Candidato]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q3:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q4:boolean">false</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -24008,9 +24010,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -24207,50 +24207,135 @@ where [refTable].[SK_Candidato] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Actualizar Dimension Region">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Actualizar Dimension Region\OLE DB Source"
+          TopLeft="200,125" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Actualizar Dimension Region\OLE DB Destination"
+          TopLeft="194,450" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Actualizar Dimension Region\Lookup"
+          TopLeft="225,279" />
+        <EdgeLayout
+          Id="Package\Actualizar Dimension Region.Paths[OLE DB Source Output]"
+          TopLeft="278.25,167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,112"
+              Start="0,0"
+              End="0,104.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,104.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Dimension Region.Paths[Lookup No Match Output]"
+          TopLeft="280.5,321">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,129"
+              Start="0,0"
+              End="0,121.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,121.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,54.9453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Region\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Region\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Region\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Dimension].[Region]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Actualizar Fact ResultadoAdmision">
     <LayoutInfo>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="139,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Merge Join 1"
-          TopLeft="511,734" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Dimension Examen"
-          TopLeft="442,282" />
-        <NodeLayout
-          Size="139,42"
           Id="Package\Actualizar Fact ResultadoAdmision\Merge Join 2"
           TopLeft="658,1058" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Sort"
-          TopLeft="276,373" />
-        <NodeLayout
-          Size="206,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Fact ResultadosAdmisiones"
-          TopLeft="626,1268" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Sort 4"
-          TopLeft="781,849" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Lookup"
-          TopLeft="676,1157" />
         <NodeLayout
           Size="159,42"
           Id="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha"
           TopLeft="762,737" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Sort 5"
-          TopLeft="532,926" />
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato"
-          TopLeft="57,52" />
         <NodeLayout
           Size="130,42"
           Id="Package\Actualizar Fact ResultadoAdmision\Merge Join"
@@ -24261,12 +24346,12 @@ where [refTable].[SK_Candidato] = ?</property>
           TopLeft="668,600" />
         <NodeLayout
           Size="107,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Sort 1"
-          TopLeft="469,373" />
+          Id="Package\Actualizar Fact ResultadoAdmision\Sort 6"
+          TopLeft="96,156" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Data Conversion"
-          TopLeft="508,829" />
+          Size="107,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Sort 4"
+          TopLeft="781,849" />
         <NodeLayout
           Size="166,42"
           Id="Package\Actualizar Fact ResultadoAdmision\Dimension Carrera"
@@ -24275,6 +24360,436 @@ where [refTable].[SK_Candidato] = ?</property>
           Size="107,42"
           Id="Package\Actualizar Fact ResultadoAdmision\Sort 3"
           TopLeft="391,599" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Merge Join 3"
+          TopLeft="243,268" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Merge Join 1"
+          TopLeft="511,734" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Sort 5"
+          TopLeft="532,926" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Dimension Examen"
+          TopLeft="442,282" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Sort 7"
+          TopLeft="370,148" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato"
+          TopLeft="57,52" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\DimensionRegion"
+          TopLeft="346,54" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Fact ResultadosAdmisiones"
+          TopLeft="626,1268" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Sort"
+          TopLeft="276,373" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Lookup"
+          TopLeft="676,1157" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Sort 1"
+          TopLeft="469,373" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Actualizar Fact ResultadoAdmision\Data Conversion"
+          TopLeft="508,829" />
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output7]"
+          TopLeft="522.5,415">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-63.1666666666667,78"
+              Start="0,0"
+              End="-63.1666666666667,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.2310030395138" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.2310030395138"
+                    Point2="0,46.2310030395138"
+                    Point3="-4,46.2310030395138" />
+                  <mssgle:LineSegment
+                    End="-59.1666666666667,46.2310030395138" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.1666666666667,46.2310030395138"
+                    Point2="-63.1666666666667,46.2310030395138"
+                    Point3="-63.1666666666667,50.2310030395138" />
+                  <mssgle:LineSegment
+                    End="-63.1666666666667,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output]"
+          TopLeft="149.5,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="141.166666666667,70"
+              Start="0,0"
+              End="141.166666666667,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5220483641536" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5220483641536"
+                    Point2="0,41.5220483641536"
+                    Point3="4,41.5220483641536" />
+                  <mssgle:LineSegment
+                    End="137.166666666667,41.5220483641536" />
+                  <mssgle:CubicBezierSegment
+                    Point1="137.166666666667,41.5220483641536"
+                    Point2="141.166666666667,41.5220483641536"
+                    Point3="141.166666666667,45.5220483641536" />
+                  <mssgle:LineSegment
+                    End="141.166666666667,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output6]"
+          TopLeft="585.5,968">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.166666666667,90"
+              Start="0,0"
+              End="120.166666666667,82.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.3854907539117" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.3854907539117"
+                    Point2="0,53.3854907539117"
+                    Point3="4,53.3854907539117" />
+                  <mssgle:LineSegment
+                    End="116.166666666667,53.3854907539117" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116.166666666667,53.3854907539117"
+                    Point2="120.166666666667,53.3854907539117"
+                    Point3="120.166666666667,57.3854907539117" />
+                  <mssgle:LineSegment
+                    End="120.166666666667,82.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output5]"
+          TopLeft="834.5,891">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-85.1666666666666,167"
+              Start="0,0"
+              End="-85.1666666666666,159.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,95.0597439544808" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,95.0597439544808"
+                    Point2="0,99.0597439544808"
+                    Point3="-4,99.0597439544808" />
+                  <mssgle:LineSegment
+                    End="-81.1666666666666,99.0597439544808" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81.1666666666666,99.0597439544808"
+                    Point2="-85.1666666666666,99.0597439544808"
+                    Point3="-85.1666666666666,103.059743954481" />
+                  <mssgle:LineSegment
+                    End="-85.1666666666666,159.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output4]"
+          TopLeft="721.5,642">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-119.166666666667,92"
+              Start="0,0"
+              End="-119.166666666667,84.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5718349928875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.5718349928875"
+                    Point2="0,54.5718349928875"
+                    Point3="-4,54.5718349928875" />
+                  <mssgle:LineSegment
+                    End="-115.166666666667,54.5718349928875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-115.166666666667,54.5718349928875"
+                    Point2="-119.166666666667,54.5718349928875"
+                    Point3="-119.166666666667,58.5718349928875" />
+                  <mssgle:LineSegment
+                    End="-119.166666666667,84.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output3]"
+          TopLeft="444.5,641">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="114.166666666667,93"
+              Start="0,0"
+              End="114.166666666667,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.1650071123754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51.1650071123754"
+                    Point2="0,55.1650071123754"
+                    Point3="4,55.1650071123754" />
+                  <mssgle:LineSegment
+                    End="110.166666666667,55.1650071123754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="110.166666666667,55.1650071123754"
+                    Point2="114.166666666667,55.1650071123754"
+                    Point3="114.166666666667,59.1650071123754" />
+                  <mssgle:LineSegment
+                    End="114.166666666667,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output2]"
+          TopLeft="423.5,190">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-89.1666666666667,78"
+              Start="0,0"
+              End="-89.1666666666667,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.2674253200569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.2674253200569"
+                    Point2="0,46.2674253200569"
+                    Point3="-4,46.2674253200569" />
+                  <mssgle:LineSegment
+                    End="-85.1666666666667,46.2674253200569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-85.1666666666667,46.2674253200569"
+                    Point2="-89.1666666666667,46.2674253200569"
+                    Point3="-89.1666666666667,50.2674253200569" />
+                  <mssgle:LineSegment
+                    End="-89.1666666666667,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output1]"
+          TopLeft="325,415">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.6666666666667,78"
+              Start="0,0"
+              End="93.6666666666667,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.2310030395137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.2310030395137"
+                    Point2="0,46.2310030395137"
+                    Point3="4,46.2310030395137" />
+                  <mssgle:LineSegment
+                    End="89.6666666666667,46.2310030395137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.6666666666667,46.2310030395137"
+                    Point2="93.6666666666667,46.2310030395137"
+                    Point3="93.6666666666667,50.2310030395137" />
+                  <mssgle:LineSegment
+                    End="93.6666666666667,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output]"
+          TopLeft="148,94">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62"
+              Start="0,0"
+              End="0,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output2]"
+          TopLeft="424.75,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output1]"
+          TopLeft="838,779">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output4]"
+          TopLeft="722.25,533">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67"
+              Start="0,0"
+              End="0,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output3]"
+          TopLeft="524.5,324">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Actualizar Fact ResultadoAdmision.Paths[Merge Join Output3]"
           TopLeft="583.25,776">
@@ -24311,6 +24826,62 @@ where [refTable].[SK_Candidato] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Merge Join Output1]"
+          TopLeft="312.5,310">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,63"
+              Start="0,0"
+              End="12.5,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="4,31.5" />
+                  <mssgle:LineSegment
+                    End="8.5,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,31.5"
+                    Point2="12.5,31.5"
+                    Point3="12.5,35.5" />
+                  <mssgle:LineSegment
+                    End="12.5,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Merge Join Output]"
+          TopLeft="730,1100">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24365,465 +24936,63 @@ where [refTable].[SK_Candidato] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output5]"
-          TopLeft="585.5,968">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="120.166666666667,90"
-              Start="0,0"
-              End="120.166666666667,82.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.3854907539117" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,49.3854907539117"
-                    Point2="0,53.3854907539117"
-                    Point3="4,53.3854907539117" />
-                  <mssgle:LineSegment
-                    End="116.166666666667,53.3854907539117" />
-                  <mssgle:CubicBezierSegment
-                    Point1="116.166666666667,53.3854907539117"
-                    Point2="120.166666666667,53.3854907539117"
-                    Point3="120.166666666667,57.3854907539117" />
-                  <mssgle:LineSegment
-                    End="120.166666666667,82.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output4]"
-          TopLeft="834.5,891">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-85.1666666666666,167"
-              Start="0,0"
-              End="-85.1666666666666,159.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,95.0597439544808" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,95.0597439544808"
-                    Point2="0,99.0597439544808"
-                    Point3="-4,99.0597439544808" />
-                  <mssgle:LineSegment
-                    End="-81.1666666666666,99.0597439544808" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-81.1666666666666,99.0597439544808"
-                    Point2="-85.1666666666666,99.0597439544808"
-                    Point3="-85.1666666666666,103.059743954481" />
-                  <mssgle:LineSegment
-                    End="-85.1666666666666,159.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output3]"
-          TopLeft="721.5,642">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-119.166666666667,92"
-              Start="0,0"
-              End="-119.166666666667,84.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5718349928875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50.5718349928875"
-                    Point2="0,54.5718349928875"
-                    Point3="-4,54.5718349928875" />
-                  <mssgle:LineSegment
-                    End="-115.166666666667,54.5718349928875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-115.166666666667,54.5718349928875"
-                    Point2="-119.166666666667,54.5718349928875"
-                    Point3="-119.166666666667,58.5718349928875" />
-                  <mssgle:LineSegment
-                    End="-119.166666666667,84.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output2]"
-          TopLeft="444.5,641">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="114.166666666667,93"
-              Start="0,0"
-              End="114.166666666667,85.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.1650071123754" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.1650071123754"
-                    Point2="0,55.1650071123754"
-                    Point3="4,55.1650071123754" />
-                  <mssgle:LineSegment
-                    End="110.166666666667,55.1650071123754" />
-                  <mssgle:CubicBezierSegment
-                    Point1="110.166666666667,55.1650071123754"
-                    Point2="114.166666666667,55.1650071123754"
-                    Point3="114.166666666667,59.1650071123754" />
-                  <mssgle:LineSegment
-                    End="114.166666666667,85.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output7]"
-          TopLeft="522.5,415">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-63.1666666666667,78"
-              Start="0,0"
-              End="-63.1666666666667,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.2310030395138" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.2310030395138"
-                    Point2="0,46.2310030395138"
-                    Point3="-4,46.2310030395138" />
-                  <mssgle:LineSegment
-                    End="-59.1666666666667,46.2310030395138" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-59.1666666666667,46.2310030395138"
-                    Point2="-63.1666666666667,46.2310030395138"
-                    Point3="-63.1666666666667,50.2310030395138" />
-                  <mssgle:LineSegment
-                    End="-63.1666666666667,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output]"
-          TopLeft="325,415">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93.6666666666667,78"
-              Start="0,0"
-              End="93.6666666666667,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.2310030395137" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.2310030395137"
-                    Point2="0,46.2310030395137"
-                    Point3="4,46.2310030395137" />
-                  <mssgle:LineSegment
-                    End="89.6666666666667,46.2310030395137" />
-                  <mssgle:CubicBezierSegment
-                    Point1="89.6666666666667,46.2310030395137"
-                    Point2="93.6666666666667,46.2310030395137"
-                    Point3="93.6666666666667,50.2310030395137" />
-                  <mssgle:LineSegment
-                    End="93.6666666666667,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output2]"
-          TopLeft="838,779">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,70"
-              Start="0,0"
-              End="0,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output1]"
-          TopLeft="722.25,533">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,67"
-              Start="0,0"
-              End="0,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output]"
-          TopLeft="524.5,324">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49"
-              Start="0,0"
-              End="0,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Merge Join Output]"
-          TopLeft="730,1100">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\DimensionRegion"
-          TopLeft="346,54" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Sort 6"
-          TopLeft="96,156" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Sort 7"
-          TopLeft="370,148" />
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output3]"
-          TopLeft="424.75,96">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output4]"
-          TopLeft="148,94">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,62"
-              Start="0,0"
-              End="0,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Actualizar Fact ResultadoAdmision\Merge Join 3"
-          TopLeft="243,268" />
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output6]"
-          TopLeft="149.5,198">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="141.166666666667,70"
-              Start="0,0"
-              End="141.166666666667,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5220483641536" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.5220483641536"
-                    Point2="0,41.5220483641536"
-                    Point3="4,41.5220483641536" />
-                  <mssgle:LineSegment
-                    End="137.166666666667,41.5220483641536" />
-                  <mssgle:CubicBezierSegment
-                    Point1="137.166666666667,41.5220483641536"
-                    Point2="141.166666666667,41.5220483641536"
-                    Point3="141.166666666667,45.5220483641536" />
-                  <mssgle:LineSegment
-                    End="141.166666666667,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output1]"
-          TopLeft="423.5,190">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-89.1666666666667,78"
-              Start="0,0"
-              End="-89.1666666666667,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.2674253200569" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.2674253200569"
-                    Point2="0,46.2674253200569"
-                    Point3="-4,46.2674253200569" />
-                  <mssgle:LineSegment
-                    End="-85.1666666666667,46.2674253200569" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-85.1666666666667,46.2674253200569"
-                    Point2="-89.1666666666667,46.2674253200569"
-                    Point3="-89.1666666666667,50.2674253200569" />
-                  <mssgle:LineSegment
-                    End="-89.1666666666667,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Merge Join Output1]"
-          TopLeft="312.5,310">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12.5,63"
-              Start="0,0"
-              End="12.5,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.5"
-                    Point2="0,31.5"
-                    Point3="4,31.5" />
-                  <mssgle:LineSegment
-                    End="8.5,31.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.5,31.5"
-                    Point2="12.5,31.5"
-                    Point3="12.5,35.5" />
-                  <mssgle:LineSegment
-                    End="12.5,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Carrera">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Examen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\DimensionRegion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -24854,7 +25023,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -24871,50 +25040,11 @@ where [refTable].[SK_Candidato] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Carrera">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Actualizar Stagin ExamenArea">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="107,42"
           Id="Package\Actualizar Stagin ExamenArea\Sort 5"
@@ -25018,49 +25148,11 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output]"
-          TopLeft="380.5,627">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93.1666666666667,83"
-              Start="0,0"
-              End="93.1666666666667,75.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.2332859174964" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.2332859174964"
-                    Point2="0,49.2332859174964"
-                    Point3="4,49.2332859174964" />
-                  <mssgle:LineSegment
-                    End="89.1666666666667,49.2332859174964" />
-                  <mssgle:CubicBezierSegment
-                    Point1="89.1666666666667,49.2332859174964"
-                    Point2="93.1666666666667,49.2332859174964"
-                    Point3="93.1666666666667,53.2332859174964" />
-                  <mssgle:LineSegment
-                    End="93.1666666666667,75.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output6]"
           TopLeft="622.5,626">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25090,13 +25182,11 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output5]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output6]"
           TopLeft="502.5,876">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25126,13 +25216,11 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output4]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output5]"
           TopLeft="638.5,1108">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25162,13 +25250,11 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output3]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output4]"
           TopLeft="946.5,1107">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25198,13 +25284,11 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output2]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output3]"
           TopLeft="779.5,877">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25234,13 +25318,11 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output1]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output2]"
           TopLeft="513.5,361">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25270,85 +25352,45 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output1]"
+          TopLeft="380.5,627">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.1666666666667,83"
+              Start="0,0"
+              End="93.1666666666667,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.2332859174964" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.2332859174964"
+                    Point2="0,49.2332859174964"
+                    Point3="4,49.2332859174964" />
+                  <mssgle:LineSegment
+                    End="89.1666666666667,49.2332859174964" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.1666666666667,49.2332859174964"
+                    Point2="93.1666666666667,49.2332859174964"
+                    Point3="93.1666666666667,53.2332859174964" />
+                  <mssgle:LineSegment
+                    End="93.1666666666667,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output2]"
-          TopLeft="511,266">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output]"
-          TopLeft="198.25,268">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output1]"
-          TopLeft="623,484">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,100"
-              Start="0,0"
-              End="0,92.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,92.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output4]"
           TopLeft="945.5,997">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25366,13 +25408,11 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output3]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output]"
           TopLeft="776.5,748">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25390,9 +25430,73 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output1]"
+          TopLeft="511,266">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output4]"
+          TopLeft="623,484">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,100"
+              Start="0,0"
+              End="0,92.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output3]"
+          TopLeft="198.25,268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25414,9 +25518,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25438,9 +25540,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25462,9 +25562,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25486,9 +25584,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -25513,21 +25609,21 @@ where [refTable].[SK_Candidato] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="98,42"
-          Id="Package\Actualizar Staging Candidato\Sort"
-          TopLeft="204,229" />
-        <NodeLayout
           Size="107,42"
-          Id="Package\Actualizar Staging Candidato\Sort 3"
-          TopLeft="607,468" />
+          Id="Package\Actualizar Staging Candidato\Sort 1"
+          TopLeft="456.25,224.75" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Actualizar Staging Candidato\Merge Join"
+          TopLeft="301.25,361.25" />
         <NodeLayout
           Size="107,42"
           Id="Package\Actualizar Staging Candidato\Sort 2"
           TopLeft="325,463.75" />
         <NodeLayout
-          Size="130,42"
-          Id="Package\Actualizar Staging Candidato\Merge Join"
-          TopLeft="301.25,361.25" />
+          Size="107,42"
+          Id="Package\Actualizar Staging Candidato\Sort 3"
+          TopLeft="607,468" />
         <NodeLayout
           Size="160,42"
           Id="Package\Actualizar Staging Candidato\dbo Diversificado"
@@ -25537,21 +25633,77 @@ where [refTable].[SK_Candidato] = ?</property>
           Id="Package\Actualizar Staging Candidato\Stagin Candidato"
           TopLeft="424.428571428571,688.857142857143" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\Actualizar Staging Candidato\Sort 1"
-          TopLeft="456.25,224.75" />
-        <NodeLayout
           Size="181,42"
           Id="Package\Actualizar Staging Candidato\dbo ColegioCandidato"
           TopLeft="427,116" />
         <NodeLayout
-          Size="139,42"
-          Id="Package\Actualizar Staging Candidato\Merge Join 1"
-          TopLeft="430,586.25" />
+          Size="98,42"
+          Id="Package\Actualizar Staging Candidato\Sort"
+          TopLeft="204,229" />
         <NodeLayout
           Size="147,42"
           Id="Package\Actualizar Staging Candidato\dbo Candidato"
           TopLeft="162,117" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Actualizar Staging Candidato\Merge Join 1"
+          TopLeft="430,586.25" />
+        <EdgeLayout
+          Id="Package\Actualizar Staging Candidato.Paths[Merge Join Output1]"
+          TopLeft="501.714285714286,628.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.6071428571429"
+              Start="0,0"
+              End="0,53.1071428571429">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.1071428571429" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar Staging Candidato.Paths[Merge Join Output]"
+          TopLeft="366.25,403.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.25,60.5"
+              Start="0,0"
+              End="12.25,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.25"
+                    Point2="0,30.25"
+                    Point3="4,30.25" />
+                  <mssgle:LineSegment
+                    End="8.25,30.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.25,30.25"
+                    Point2="12.25,30.25"
+                    Point3="12.25,34.25" />
+                  <mssgle:LineSegment
+                    End="12.25,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Actualizar Staging Candidato.Paths[Sort Output3]"
           TopLeft="660.5,510">
@@ -25758,62 +25910,6 @@ where [refTable].[SK_Candidato] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,59.25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Merge Join Output]"
-          TopLeft="366.25,403.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12.25,60.5"
-              Start="0,0"
-              End="12.25,53">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.25"
-                    Point2="0,30.25"
-                    Point3="4,30.25" />
-                  <mssgle:LineSegment
-                    End="8.25,30.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.25,30.25"
-                    Point2="12.25,30.25"
-                    Point3="12.25,34.25" />
-                  <mssgle:LineSegment
-                    End="12.25,53" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Staging Candidato.Paths[Merge Join Output1]"
-          TopLeft="501.714285714286,628.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.6071428571429"
-              Start="0,0"
-              End="0,53.1071428571429">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.1071428571429" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26112,25 +26208,29 @@ where [refTable].[SK_Candidato] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="144,42"
-          Id="Package\Actualizar Staging Region\dbo Municipio"
-          TopLeft="133,102" />
+          Size="119,42"
+          Id="Package\Actualizar Staging Region\dbo Pais"
+          TopLeft="501,371" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Actualizar Staging Region\Stagin Candidato"
+          TopLeft="343,742" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Actualizar Staging Region\Sort 6"
+          TopLeft="283,468" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Actualizar Staging Region\Sort 5"
+          TopLeft="416,218" />
         <NodeLayout
           Size="139,42"
           Id="Package\Actualizar Staging Region\Merge Join 3"
           TopLeft="359,589.5" />
         <NodeLayout
-          Size="167,42"
-          Id="Package\Actualizar Staging Region\dbo Departamento"
-          TopLeft="387,98" />
-        <NodeLayout
-          Size="119,42"
-          Id="Package\Actualizar Staging Region\dbo Pais"
-          TopLeft="501,371" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Actualizar Staging Region\Sort 6"
-          TopLeft="283,468" />
+          Size="144,42"
+          Id="Package\Actualizar Staging Region\dbo Municipio"
+          TopLeft="133,102" />
         <NodeLayout
           Size="107,42"
           Id="Package\Actualizar Staging Region\Sort 4"
@@ -26140,17 +26240,35 @@ where [refTable].[SK_Candidato] = ?</property>
           Id="Package\Actualizar Staging Region\Sort 7"
           TopLeft="510,473" />
         <NodeLayout
-          Size="159,42"
-          Id="Package\Actualizar Staging Region\Stagin Candidato"
-          TopLeft="343,742" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Actualizar Staging Region\Sort 5"
-          TopLeft="416,218" />
-        <NodeLayout
           Size="139,42"
           Id="Package\Actualizar Staging Region\Merge Join 2"
           TopLeft="260.25,348" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Actualizar Staging Region\dbo Departamento"
+          TopLeft="387,98" />
+        <EdgeLayout
+          Id="Package\Actualizar Staging Region.Paths[Merge Join Output]"
+          TopLeft="333.125,390">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Actualizar Staging Region.Paths[Sort Output3]"
           TopLeft="209.5,261">
@@ -26354,28 +26472,6 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Staging Region.Paths[Merge Join Output]"
-          TopLeft="333.125,390">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,78"
-              Start="0,0"
-              End="0,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Actualizar Staging Region.Paths[Merge Join Output1]"
           TopLeft="425.5,631.5">
           <EdgeLayout.Curve>
@@ -26402,134 +26498,6 @@ where [refTable].[SK_Candidato] = ?</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Actualizar Staging Region\Stagin Candidato">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Actualizar Dimension Region">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Actualizar Dimension Region\OLE DB Destination"
-          TopLeft="194,450" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Actualizar Dimension Region\Lookup"
-          TopLeft="225,279" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Actualizar Dimension Region\OLE DB Source"
-          TopLeft="200,125" />
-        <EdgeLayout
-          Id="Package\Actualizar Dimension Region.Paths[OLE DB Source Output]"
-          TopLeft="278.25,167">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,112"
-              Start="0,0"
-              End="0,104.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,104.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Actualizar Dimension Region.Paths[Lookup No Match Output]"
-          TopLeft="280.5,321">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,129"
-              Start="0,0"
-              End="0,121.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,121.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,54.9453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Dimension Region\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Dimension Region\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Dimension].[Region]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Dimension Region\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\DimensionRegion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

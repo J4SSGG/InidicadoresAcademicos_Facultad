@@ -16,7 +16,7 @@ CREATE TABLE Dimension.[Examen](
 	[Area] [dbo].[UDT_VarcharMediano] NOT NULL,
 	[NotaArea] [dbo].[UDT_Decimal5.2] NULL,
 	[Precio] [dbo].[UDT_Decimal6.2] NULL,
-	[DescripcionDescuento] [dbo].[UDT_VarcharMediano] NOT NULL,
+	[DescripcionDescuento] [dbo].[UDT_VarcharMediano] NULL,
 	[PorcentajeDescuento] [dbo].[UDT_Decimal6.2] NULL,
 	[FechaPrueba] [datetime] NULL);
 

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-V34TK8A</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKcrBLrgF10GzlvXitqL0EgAAAAACAAAAAAAQZgAAAAEAACAAAAClm9HYr1pEe/zEHLMYf5GDOMjqJV5QohrFc07awKe7SwAAAAAOgAAAAAIAACAAAABOyfQaram4xPDW0gpK4tX4dYDXap/gItan/TT+sRLOq5AAAADG/jLJ5YInlLetoR6+A8D5USCTfVnOduztqPyL248Hv2FofRRxuRyaa7mExbfUqDMMZYig8XjGkiaN2AIo8gWi/a9/4gvWNTjXtRi/y8Itc9NMu+3myboTimocHfZJTs63gJJ5eNDI80ZNnYZebbiFllas8Oc0Y1QewIi44cub0TtJOF6c8o4eK0UXiFxTDuBAAAAA1cEM+o0cVraXwntWmFcXJXWPOH+NscApjyyga0GNLZSEOFpGZTy7FpHnQXnSZXa1BPVEXHVBKCjPYz+AixeEcg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKcrBLrgF10GzlvXitqL0EgAAAAACAAAAAAAQZgAAAAEAACAAAABRuGhMmQWiCvL+WsLIsmI7ElQO4E8chy/eFH0bb87bzQAAAAAOgAAAAAIAACAAAAB/Imo8RAi5Mo24ht77AtFNxpC6Hi1/ijPPzxoLQnv8OpAAAAAzSfujdAvidRkoUH0EkR8t2G8wUj7xU6B6XJ+tjqYKI5fYFGPPNpsoYoRHSVzTq0Ibval3BVnrErDLd6ctewzGcgTmWSwkGg7geEs0jxj1dVbnbVbf4CZlcQe6bt2ltLqQN8lBBAzohLc8TfteBvkHZ0fKvgGqXeo7Ki6Jy77MqkjCOmrcedSXKMQZjcLfIO1AAAAAYco0DwGWXpCvxM/YSYCPeXmTsS/ApzeTS5G1i8i1ruy5hcQUtKt9LSruX3gf7SFpA0J2RG7gM7sCd0Yo3h9O2g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">64</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">70</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{96E8E7F2-51DF-45CF-911A-AA4EB5F61445}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{64BACA7F-AA75-4FC1-9C94-718B0DAB3C01}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -181,7 +181,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Akabane\Documents\Analisis de datos\Proyecto\Status Candidatos B.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Abraham\Desktop\Status Candidatos B.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -196,7 +196,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\Akabane\Documents\Analisis de datos\Proyecto\Status Candidatos B.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Abraham\Desktop\Status Candidatos B.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -269,7 +269,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\Akabane\Documents\Analisis de datos\Proyecto\Status Candidatos B.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Abraham\Desktop\Status Candidatos B.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -298,7 +298,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Abraham\Downloads\Reporte de porcentaje de aciertos.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Abraham\Desktop\Reporte de porcentaje de aciertos.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -313,7 +313,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\Abraham\Downloads\Reporte de porcentaje de aciertos.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Abraham\Desktop\Reporte de porcentaje de aciertos.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -386,7 +386,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\Abraham\Downloads\Reporte de porcentaje de aciertos.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Abraham\Desktop\Reporte de porcentaje de aciertos.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
