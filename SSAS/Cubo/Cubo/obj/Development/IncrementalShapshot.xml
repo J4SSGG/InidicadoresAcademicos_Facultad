@@ -19,70 +19,63 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>zNoNZm9xzH74496kfWMeOf5mAVs=11/1/2019 4:40:40 PM11/1/2019 4:15:14 PM</TimeStamp>
+        <TimeStamp>8iVLj0rTgg6yI+Bz5p39aMkt7Eo=11/2/2019 12:20:46 AM11/2/2019 12:20:46 AM</TimeStamp>
         <ID>
           <String>Admisiones DWH</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>DJHhk+togx/FWlRFWl+wlnpGU8Y=11/1/2019 4:16:37 PM11/1/2019 4:16:37 PM</TimeStamp>
+        <TimeStamp>XedWwQURqyvalypTGEAxw6SWPoQ=11/2/2019 12:14:16 AM11/2/2019 12:14:16 AM</TimeStamp>
         <ID>
           <String>Admisiones DWH</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>Z/Dza46Y02G3dshXHAfSmmuVO8I=11/1/2019 4:45:17 PM11/1/2019 4:23:33 PM</TimeStamp>
+        <TimeStamp>t6p9ePdh7dO5hvdhdZMTsDcRyqw=11/2/2019 12:22:40 AM11/2/2019 12:15:09 AM</TimeStamp>
         <ID>
           <String>Fecha</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>bkVOjIgoG6+Z3KksMdcui2BSKvI=11/1/2019 8:25:30 PM11/1/2019 5:04:12 PM</TimeStamp>
+        <TimeStamp>pkR1HhLlTEPHGeX3g+Mr7XCvpMg=11/2/2019 12:17:04 AM11/2/2019 12:16:09 AM</TimeStamp>
         <ID>
           <String>Candidato</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>K3siKYESkjnaogUCxoZZeXd8U8k=11/1/2019 5:06:29 PM11/1/2019 5:04:59 PM</TimeStamp>
+        <TimeStamp>g9ofD6E0VhMAbjqFE7trrDQQ6sQ=11/2/2019 12:19:24 AM11/2/2019 12:17:18 AM</TimeStamp>
         <ID>
-          <String>Colegios</String>
+          <String>Region</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>mrmcl6dIQ+iEqMQyKWQj7EN0AO8=11/1/2019 5:06:29 PM11/1/2019 5:05:30 PM</TimeStamp>
-        <ID>
-          <String>Regiones</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>GrN1R/bxmB+bwO/YNhIJfmxYSFY=11/1/2019 5:07:06 PM11/1/2019 5:06:57 PM</TimeStamp>
+        <TimeStamp>OuQxoXaeloyV8XZ+K/MKU9uLvSU=11/2/2019 12:17:50 AM11/2/2019 12:17:43 AM</TimeStamp>
         <ID>
           <String>Carrera</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>BPuSa4scaZHickCcIVZYUSTirTs=11/1/2019 5:09:03 PM11/1/2019 5:07:40 PM</TimeStamp>
+        <TimeStamp>GinhZJAzCqsws9OdhtSm28k25yg=11/2/2019 12:18:53 AM11/2/2019 12:18:35 AM</TimeStamp>
         <ID>
           <String>Examen</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>ZIKrko6QLCkMy+IyQN4eFn2JNf4=11/1/2019 5:42:33 PM11/1/2019 5:42:33 PM</TimeStamp>
+        <TimeStamp>E17ifV9tiWNkA4BThQ0DWVju3bk=11/2/2019 12:23:46 AM11/2/2019 12:23:46 AM</TimeStamp>
         <ID>
           <String>Resultado Admision</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>BOErC9YIjsRC8Y4SGQxzl9PGLSc=11/1/2019 8:25:30 PM11/1/2019 6:24:00 PMDtSd5j5mrdk6cDUVNlKLrEtDiBw=11/1/2019 8:19:50 PM11/1/2019 6:24:00 PM</TimeStamp>
+        <TimeStamp>ZgAcFP6+ChncFhd/p4tW/9IDlAg=11/2/2019 12:23:46 AM11/2/2019 12:23:46 AMaaz/C2YReG+9qiaP922LHwXwScE=11/2/2019 12:23:46 AM11/2/2019 12:23:46 AM</TimeStamp>
         <ID>
           <String>Admisiones DWH</String>
         </ID>
@@ -99,5 +92,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2019-11-02T02:28:36.536667Z</LastDeployed>
+  <LastDeployed>2019-11-02T06:23:55.99Z</LastDeployed>
 </DeploymentSnapshot>

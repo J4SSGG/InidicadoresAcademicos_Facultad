@@ -19,10 +19,7 @@
         <ID>Candidato</ID>
       </Dimension>
       <Dimension>
-        <ID>Colegios</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Regiones</ID>
+        <ID>Region</ID>
       </Dimension>
       <Dimension>
         <ID>Carrera</ID>

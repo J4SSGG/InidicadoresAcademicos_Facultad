@@ -28,12 +28,8 @@
       <FullPath>Candidato.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Colegios.dim</Name>
-      <FullPath>Colegios.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Regiones.dim</Name>
-      <FullPath>Regiones.dim</FullPath>
+      <Name>Region.dim</Name>
+      <FullPath>Region.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Carrera.dim</Name>

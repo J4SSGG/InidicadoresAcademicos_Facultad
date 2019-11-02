@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4ed212bb-c2d9-441f-b1dc-9bdf83285a4b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="982f22f3-06c6-423f-aabf-cd5105675b0e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Examen</ID>
   <Name>Examen</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -68,181 +68,53 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8b3edbe8-2caf-4671-9f16-6726f27d7923">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8638c767-382e-4fa5-aa00-25f26c2fce80">
     <DataSourceViewID>Admisiones DWH</DataSourceViewID>
   </Source>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="261d95c3-b898-4058-a63c-4e3652e2ad76">
+  <ErrorConfiguration dwd:design-time-name="414b2e59-fdbc-4776-a2c4-c3657138cc98">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="c6fb4d7a-249c-4fa4-aaa0-480b1195a96d">
+    <Attribute dwd:design-time-name="80bcf7de-7bb3-4138-a699-334cf7b23f60">
       <ID>SK Examen</ID>
       <Name>SK Examen</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="fbb7931d-1d6e-44d5-94f8-50df987d4b40">
-          <NullProcessing>UnknownMember</NullProcessing>
+        <KeyColumn dwd:design-time-name="79bf0765-640a-47eb-8e74-a808b45b9b2f">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="e2a49f84-4a5c-45d8-8f3d-dc39463550ca">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="20ffc49d-f2f9-49af-8846-9a80c8f69c07">
             <TableID>Dimension_Examen</TableID>
             <ColumnID>SK_Examen</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="c56ba8de-3599-4416-9b9a-00e3b471b1d1">
-          <AttributeID>ID Resultado</AttributeID>
-          <Name>ID Resultado</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="eb522b74-dbed-4930-b3cd-a2d2a3ead04e">
-          <AttributeID>ID Resultado Detalle</AttributeID>
-          <Name>ID Resultado Detalle</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="dd2b51c9-42a5-4ac1-ba00-21f86d03c094">
-          <AttributeID>ID Candidato</AttributeID>
-          <Name>ID Candidato</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="c4c4bbb5-c5a5-47ab-9c6e-e7cac77c9e50">
-          <AttributeID>ID Carrera</AttributeID>
-          <Name>ID Carrera</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7526458e-0838-4da0-ac27-395fdbd58bc9">
-          <AttributeID>ID Examen Area</AttributeID>
-          <Name>ID Examen Area</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="52f88a0b-ffb7-40f4-bc6f-a34b2a8edddd">
-          <AttributeID>ID Condicion</AttributeID>
-          <Name>ID Condicion</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="c2ce2b13-2a3f-419e-a897-09b6914caa7c">
+        <AttributeRelationship dwd:design-time-name="77445d5c-38c9-441d-9759-ee03e032f796">
           <AttributeID>Condicion</AttributeID>
           <Name>Condicion</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7ce51146-2f01-44a7-b064-dde177587332">
+        <AttributeRelationship dwd:design-time-name="055e1503-7669-456a-abc2-a1daf4834f67">
           <AttributeID>Area</AttributeID>
           <Name>Area</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="b858771a-a288-4c4c-ab56-43d1821ee089">
-          <AttributeID>Nota Area</AttributeID>
-          <Name>Nota Area</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="f655383a-1269-4d05-a78f-3e68f92bbe79">
-          <AttributeID>Fecha Prueba</AttributeID>
-          <Name>Fecha Prueba</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="f7d8cc97-ab44-4d06-a3bb-2544043dfbf6">
-      <ID>ID Resultado</ID>
-      <Name>ID Resultado</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="351dc681-9e0e-4a16-8317-deaab59106fa">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="bdfcf9a6-9847-4bc6-91f9-8d81985eb797">
-            <TableID>Dimension_Examen</TableID>
-            <ColumnID>ID_Resultado</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="380cae1f-6f52-43c8-82df-66038ad498a0">
-      <ID>ID Resultado Detalle</ID>
-      <Name>ID Resultado Detalle</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="70309950-08c2-4e55-9069-afea8bbd40c9">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="8e824fdf-4bc0-4941-8ae8-3b9eba4fb7f5">
-            <TableID>Dimension_Examen</TableID>
-            <ColumnID>ID_ResultadoDetalle</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="35a3776b-06dc-4877-9fb8-a54e6eb7aaf9">
-      <ID>ID Candidato</ID>
-      <Name>ID Candidato</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="839bcee8-d599-41a3-87d7-3d5f24aea67b">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d42b5331-e62c-4645-96df-4e349c582a24">
-            <TableID>Dimension_Examen</TableID>
-            <ColumnID>ID_Candidato</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="f64f8d8b-1ebe-424d-aa00-5a642d1a24a1">
-      <ID>ID Carrera</ID>
-      <Name>ID Carrera</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="23d1ea45-a3db-47f6-a528-3403530ae0d1">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7ce2cb8c-af55-401a-ae5f-04edcfa16eca">
-            <TableID>Dimension_Examen</TableID>
-            <ColumnID>ID_Carrera</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="a0792eca-cb27-450d-83e6-c083ed502af2">
-      <ID>ID Examen Area</ID>
-      <Name>ID Examen Area</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="8955f9c3-f61b-407e-9811-aa061567e3d6">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="5fdf7af3-7651-44c5-b000-25ccca0d6d1d">
-            <TableID>Dimension_Examen</TableID>
-            <ColumnID>ID_ExamenArea</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="07e1a96d-d4ff-4596-a777-72e70c964457">
-      <ID>ID Condicion</ID>
-      <Name>ID Condicion</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="eed66511-dad2-4ca9-b9e0-b4d163115de2">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="16265698-e784-4b65-985f-9b9cde811b28">
-            <TableID>Dimension_Examen</TableID>
-            <ColumnID>ID_Condicion</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="9c3b8ee3-91a1-4519-91ae-c2e39f864a5e">
+    <Attribute dwd:design-time-name="81b30029-77be-4cc0-b6a3-472878d982cf">
       <ID>Condicion</ID>
       <Name>Condicion</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c4e31fc3-8bc6-4278-8332-7ec6c348d10f">
+        <KeyColumn dwd:design-time-name="a41c570a-eeb7-4b51-be55-e68577528b48">
           <DataType>WChar</DataType>
           <DataSize>300</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2879d07b-2977-4639-a246-35217f3559f6">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="388bcff2-f397-4a62-ba09-3b2d456bf377">
             <TableID>Dimension_Examen</TableID>
             <ColumnID>Condicion</ColumnID>
           </Source>
@@ -252,14 +124,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="629ac049-549c-4f9f-9770-f765d9d34f14">
+    <Attribute dwd:design-time-name="639f6c49-f8b7-4aed-92b4-651c4b82a69c">
       <ID>Area</ID>
       <Name>Area</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="2ca8755d-16f5-47af-b337-7ce5c6a93111">
+        <KeyColumn dwd:design-time-name="cbe51445-f155-4aaa-9f92-98e3b30a5d1d">
           <DataType>WChar</DataType>
           <DataSize>300</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="52ea1eb5-0eb2-4464-aba7-fe45c6a53205">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ea02f000-5ff2-41a6-8ee3-8fee1b816f69">
             <TableID>Dimension_Examen</TableID>
             <ColumnID>Area</ColumnID>
           </Source>
@@ -269,58 +141,21 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="20e5ffaf-6332-461c-8686-a71e650b5d98">
-      <ID>Nota Area</ID>
-      <Name>Nota Area</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="1c556c6d-21fc-4620-8547-e54759453d78">
-          <DataType>Double</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="af20fe96-953e-4e51-ae9a-7445dd4b5092">
-            <TableID>Dimension_Examen</TableID>
-            <ColumnID>NotaArea</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="7405d4a9-6fc7-4ed7-b9e7-c2316abcbf93">
-      <ID>Fecha Prueba</ID>
-      <Name>Fecha Prueba</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="b932abda-05c7-4d92-bb78-5e3261161a0e">
-          <DataType>Date</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a5f64150-5a14-4823-8981-924c6871da4f">
-            <TableID>Dimension_Examen</TableID>
-            <ColumnID>FechaPrueba</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="7af0b56c-d617-4bac-92c1-9d40fb0f6255">
+    <Hierarchy dwd:design-time-name="257bd88d-a04b-4bd9-8416-f741f2457fee">
       <ID>Hierarchy</ID>
       <Name>Hierarchy</Name>
       <Levels>
-        <Level dwd:design-time-name="4382d056-6901-4101-b356-19ce35d11c43">
+        <Level dwd:design-time-name="15288739-f246-4515-90a2-ff06ac20966b">
           <ID>Area</ID>
           <Name>Area</Name>
           <SourceAttributeID>Area</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="50241669-3076-4298-9575-37f0380dcfe9">
+        <Level dwd:design-time-name="9068949f-0a89-4a45-b232-e340f43b327b">
           <ID>Condicion</ID>
           <Name>Condicion</Name>
           <SourceAttributeID>Condicion</SourceAttributeID>
-        </Level>
-        <Level dwd:design-time-name="93eb1b6f-f4c5-4de6-803b-19be6cafc716">
-          <ID>ID Candidato</ID>
-          <Name>ID Candidato</Name>
-          <SourceAttributeID>ID Candidato</SourceAttributeID>
         </Level>
       </Levels>
     </Hierarchy>
