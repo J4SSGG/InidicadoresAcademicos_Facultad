@@ -40,7 +40,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>sI/X4UHDqgEBBFipnKPeO8Ee028=11/1/2019 5:06:29 PM11/1/2019 5:04:12 PM</TimeStamp>
+        <TimeStamp>bkVOjIgoG6+Z3KksMdcui2BSKvI=11/1/2019 8:25:30 PM11/1/2019 5:04:12 PM</TimeStamp>
         <ID>
           <String>Candidato</String>
         </ID>
@@ -82,7 +82,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>RAxbWbsQ/aLEEERQbaBu4cjPNOo=11/1/2019 6:24:01 PM11/1/2019 6:24:00 PMLNL1HC1INXaG6gcnPDKTSU8PbIc=11/1/2019 6:24:01 PM11/1/2019 6:24:00 PM</TimeStamp>
+        <TimeStamp>BOErC9YIjsRC8Y4SGQxzl9PGLSc=11/1/2019 8:25:30 PM11/1/2019 6:24:00 PMDtSd5j5mrdk6cDUVNlKLrEtDiBw=11/1/2019 8:19:50 PM11/1/2019 6:24:00 PM</TimeStamp>
         <ID>
           <String>Admisiones DWH</String>
         </ID>
@@ -99,5 +99,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2019-11-02T00:24:53.176667Z</LastDeployed>
+  <LastDeployed>2019-11-02T02:28:36.536667Z</LastDeployed>
 </DeploymentSnapshot>

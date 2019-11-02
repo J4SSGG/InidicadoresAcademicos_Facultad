@@ -1,11 +1,153 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="83ff1590-d14e-4bcb-97ce-4ba3ac9da12a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="14d8f2fb-e758-4653-aafa-07eb2cc9ede3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Admisiones DWH</ID>
   <Name>Admisiones DWH</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="10" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7296" scrolltop="-48" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="89" x="28152" y="16510" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ResultadoAdmision" left="6495" top="7400" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3016" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000c80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Fact_ResultadoAdmision" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Candidato" left="6019" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3969" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000810f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Dimension_Candidato" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Carrera" left="6363" top="14800" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3281" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000d10c00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Dimension_Carrera" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Examen" left="20" top="7400" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="4075" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000eb0f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Dimension_Examen" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fecha" left="11911" top="7400" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="4604" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000fc11000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Dimension_Fecha" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7604" top="12100" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__Resultado__SK_Ca__753864A1]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8003" y="14800" />
+              <point x="8003" y="12400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7604" top="4501" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__Resultado__SK_Ca__74444068]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="7" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8003" y="5000" />
+              <point x="8003" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9211" top="9501" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__Resultado__DateK__73501C2F]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="1" sourceattachpoint="26" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11911" y="9900" />
+              <point x="9511" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3795" top="9501" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__Resultado__SK_Ex__762C88DA]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="23" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4095" y="9900" />
+              <point x="6495" y="9900" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +163,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-7296</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-48</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -37,193 +179,202 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
-      <Value>100</Value>
+      <Value>89</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="a47d15e2-5cd0-42bf-a00d-e13ec816901e">
+    <Dimension dwd:design-time-name="ef2a1781-69a9-4f05-84d9-60d01c737113">
       <ID>Resultado Admision</ID>
       <Name>Resultado Admision</Name>
       <DimensionID>Resultado Admision</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="1cba7e28-012c-48d0-8816-35ac0943c14f">
+        <Attribute dwd:design-time-name="cc3781ca-bae2-46ef-b00c-0fe804d1f282">
           <AttributeID>SK Resultado</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="7b35f0d4-5fb0-433d-afb7-4e4c87c36568">
+        <Attribute dwd:design-time-name="55b99c1a-806d-4959-8680-f1bde82b9e64">
           <AttributeID>SK Examen</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="3d970e91-8098-4fdd-b570-029eb3942fe8">
+        <Attribute dwd:design-time-name="79f3be3e-f6a5-44e4-a792-fd52d835a8ac">
           <AttributeID>Date Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="831e61fb-9eb4-4d34-80e1-359d3650c1c0">
+        <Attribute dwd:design-time-name="89488112-6e66-4554-8eb9-8dcabf008945">
           <AttributeID>SK Candidato</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="6e79d6ae-9726-4a38-9936-4f73062a41c6">
+        <Attribute dwd:design-time-name="b4e8c64d-2924-4f44-9d9d-6c3bf301f257">
           <AttributeID>SK Carrera</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="8c026371-aecb-47d3-a4e7-575b2bd05534">
+    <Dimension dwd:design-time-name="cc99c4c1-f011-4f10-8c30-c420dd1dd33b">
       <ID>Examen</ID>
       <Name>Examen</Name>
       <DimensionID>Examen</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="942fb931-eea1-4099-b2a0-505e59a2fff1">
+        <Attribute dwd:design-time-name="33602296-4425-4e6e-b711-7bacdd4e4e3e">
           <AttributeID>SK Examen</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="feb6dfe3-17b9-4e99-97c5-32d66e2f5b32">
+        <Attribute dwd:design-time-name="93973c99-3db9-42ba-8426-6c23d77f5d52">
           <AttributeID>ID Resultado</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="45efef59-3f58-47be-b34a-b5b411ef4a67">
+        <Attribute dwd:design-time-name="d5f4f4aa-1fcf-4dc9-b807-9d8fc11795a7">
           <AttributeID>ID Resultado Detalle</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="7b399304-1ac0-43bf-be4b-c9ea48603930">
+        <Attribute dwd:design-time-name="b0740a4f-7598-4b1a-9bb8-b65e5ef4a9ca">
           <AttributeID>ID Candidato</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b333dda4-9240-46a7-91de-ef114c431be1">
+        <Attribute dwd:design-time-name="ce0dccf3-ad2d-4110-aa0f-e15eedc2883a">
           <AttributeID>ID Carrera</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="89bcd8d7-2b98-4a13-81a2-618462e98bf8">
+        <Attribute dwd:design-time-name="ef2e1bd0-8e0a-4024-b7af-5c0e739b85d4">
           <AttributeID>ID Examen Area</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b3bbf9da-1dd3-4a99-bc8d-011b662c1af6">
+        <Attribute dwd:design-time-name="86c1e7e0-b66f-475d-b9e2-d20bf372089f">
           <AttributeID>ID Condicion</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="7a1a3947-a36b-4518-b9e7-179fa8d24b68">
+        <Attribute dwd:design-time-name="dbdf56de-7277-4121-ad9e-ea3dfcc3290b">
           <AttributeID>Condicion</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="4b8f417d-440d-4634-8322-b5fea9b8c502">
+        <Attribute dwd:design-time-name="0b26464c-15d0-49e9-a943-17968a96b72b">
           <AttributeID>Area</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="bbb71dd6-b5ae-4717-a7e7-53265f1e9ad9">
+        <Attribute dwd:design-time-name="5bf0e6a9-3415-4662-a82f-56838177e2b5">
           <AttributeID>Nota Area</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5e8f5672-9f93-492b-ae4b-39070ab07fba">
+        <Attribute dwd:design-time-name="d8f4fb7f-9230-4011-89f3-5ceeb4481edc">
           <AttributeID>Fecha Prueba</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="f5e4f311-7a68-47c2-80b8-232ed24a4e50">
+        <Hierarchy dwd:design-time-name="da0b4dfc-83ec-4040-a1d3-e27d15db3d6f">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="9230a538-f881-427e-828b-2e4637fcd30f">
+    <Dimension dwd:design-time-name="b0092fa5-0ccf-40dd-8094-712b7e348117">
       <ID>Fecha</ID>
       <Name>Fecha</Name>
       <DimensionID>Fecha</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="7922dff5-1e4a-4810-8d0d-219aa17dea0a">
+        <Attribute dwd:design-time-name="73d9b21a-37f2-4922-9cdb-9642f04fc83b">
           <AttributeID>Date Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="a28b5428-3bb9-4ae4-9f65-5353c8d27585">
+        <Attribute dwd:design-time-name="dd653b75-43d3-4439-ad6c-892ed2000f8f">
           <AttributeID>Date</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="3f115658-0697-40f5-ba28-60661d1eec6a">
+        <Attribute dwd:design-time-name="0486ab0f-1257-41ea-9d95-8b860d92fb24">
           <AttributeID>Month</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="9ee2d642-e48c-4919-9f65-eaadae17ab33">
+        <Attribute dwd:design-time-name="f91a05a5-bfef-457e-9cd4-1106f77ffcc1">
           <AttributeID>Quarter</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="d86e0170-d7c3-405a-bfba-6787847b695d">
+        <Attribute dwd:design-time-name="915221ae-ca6d-4f49-b6c1-bf6a285f5da2">
           <AttributeID>Year</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5c7ec7e2-8ac3-4313-b0b4-2953ebcef129">
+        <Attribute dwd:design-time-name="035dbef0-b132-46ef-ad96-607c614e8c09">
           <AttributeID>Day</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="6b67ed43-7a7d-4b95-85f2-8545240b0d99">
+        <Hierarchy dwd:design-time-name="3ec35ab7-6341-4b4d-ac47-53a1ae10957d">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="7e2754d2-a404-45a2-894e-abac58ef9e82">
+    <Dimension dwd:design-time-name="d1e4c194-dd7f-4243-8b23-d903d65b2ca2">
       <ID>Candidato</ID>
       <Name>Candidato</Name>
       <DimensionID>Candidato</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="aa017ae0-06ea-4d53-a713-9fe3425f8e99">
+        <Attribute dwd:design-time-name="14ba1755-8275-414a-b858-c8c5291ccabc">
           <AttributeID>SK Candidato</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="991b81d3-4e78-4c43-9345-e697a7024590">
+        <Attribute dwd:design-time-name="1203223a-03ad-4b5e-af5d-cfe1a791c01e">
           <AttributeID>ID Candidato</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="1d167b4e-0a89-4e7b-8de2-ee3359e483ba">
+        <Attribute dwd:design-time-name="0552b0e0-8c9a-4729-a445-3248bb314872">
           <AttributeID>Nombre Candidato</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="72586f35-1161-4998-aabf-f8117efc75bc">
+        <Attribute dwd:design-time-name="7e56eae8-5d49-418f-ab74-f839003b4576">
           <AttributeID>Apellido Candidato</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="a83e4176-5444-4990-9f4d-8dd68d2a3dfb">
+        <Attribute dwd:design-time-name="524a4031-52c7-432a-a03c-19f5c4941547">
           <AttributeID>Genero</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="98d99c7d-a8ca-49ac-83b9-78fa8cafdbe4">
+        <Attribute dwd:design-time-name="b4e46b80-35c3-46a3-9d1c-2531b09cb24c">
           <AttributeID>Fecha Nacimiento</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c5a10630-8fbb-45f6-820f-db62aedce9e0">
+          <AttributeID>Nombre Pais</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4ed60d78-6a55-4154-a55b-dd76db4615d7">
+          <AttributeID>Nombre Departamento</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="48e6f369-1170-426f-8c76-369431f15caf">
+          <AttributeID>Nombre Municipio</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="36a638dd-34db-4235-9289-def5c3ce7365">
+        <Hierarchy dwd:design-time-name="4991f5a8-a13b-473b-834b-44c62a90df19">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="bfd70dcb-92c0-44fe-b0b4-b960aafaada1">
+    <Dimension dwd:design-time-name="739fccb7-30e6-4713-8f26-f3c8384d9f41">
       <ID>Carrera</ID>
       <Name>Carrera</Name>
       <DimensionID>Carrera</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="876cc71c-5904-4b4b-9bf9-315678b7268e">
+        <Attribute dwd:design-time-name="568ed379-a0d0-4098-ad5c-45873c827df1">
           <AttributeID>SK Carrera</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="2eb1a7ff-fa88-4011-92e1-6c579234c25d">
+        <Attribute dwd:design-time-name="962c1129-0999-4cea-9060-b217d07bb46b">
           <AttributeID>ID Carrera</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="1cb68511-7cfd-4206-9eca-52fe3eb0eaa6">
+        <Attribute dwd:design-time-name="e157e663-5c6c-4fd6-bb31-de1ae867448d">
           <AttributeID>ID Facultad</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="aeb96d69-dfd9-4980-98b9-9d8c2a82b71f">
+        <Attribute dwd:design-time-name="ab184781-2854-481b-a1c2-9d6ef3674260">
           <AttributeID>Nombre Carrera</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5153480d-bdb8-40ad-bfab-9129c0d7a8af">
+        <Attribute dwd:design-time-name="b69b3345-8b22-48a4-8f7e-e7a8abb79dc4">
           <AttributeID>Nombre Facultad</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="0f60f4c3-9e60-48f1-8ba3-0045caff70d1">
+        <Hierarchy dwd:design-time-name="936f79f2-c61e-449f-af43-891791e71b78">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="3630b91e-5c13-4387-8c2b-f28b616e8671">
+    <MeasureGroup dwd:design-time-name="768be65d-c99a-49e1-81a0-34ea9119af7d">
       <ID>Resultado Admision</ID>
       <Name>Resultado Admision</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="0006052c-c154-4380-95e4-2f51a66d0d5e">
+        <Measure dwd:design-time-name="d7852857-aba3-4c48-99d4-8dbc062f82c8">
           <ID>Nota Total</ID>
           <Name>Nota Total</Name>
-          <Source dwd:design-time-name="f0675944-b07e-4073-a153-29e6120b9044">
+          <Source dwd:design-time-name="1f3d7431-ac20-4f82-9a47-bed856977e27">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="e963620b-1b8e-4a58-b2be-095e2a6241ba">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="678857cc-1d52-411f-8a23-63053f9e4cfc">
               <TableID>Fact_ResultadoAdmision</TableID>
               <ColumnID>NotaTotal</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="48ffff7b-c373-4474-94c9-f66f1e262789">
+        <Measure dwd:design-time-name="9e20bba8-e5f3-4ab2-ac1b-62ab412a247b">
           <ID>Nota Area</ID>
           <Name>Nota Area</Name>
-          <Source dwd:design-time-name="4c6b2d59-3e2e-4035-8745-678c710dbd02">
+          <Source dwd:design-time-name="c85b0949-d75b-4899-a3f7-56f309d80813">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="0bc9900f-6efe-4e44-851f-39a0ce2b6490">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="36853a0f-390a-4828-98d7-c43aa10f47a1">
               <TableID>Fact_ResultadoAdmision</TableID>
               <ColumnID>NotaArea</ColumnID>
             </Source>
@@ -233,15 +384,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="47c0953e-20eb-47ac-aae7-1d147f764407">
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="23763ad4-1c10-4829-ad15-1b2b65d2abe7">
           <CubeDimensionID>Resultado Admision</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="ec30b893-155b-4f5e-bd8e-8ab8b0c17ca0">
+            <Attribute dwd:design-time-name="df3b538f-1916-46c8-a901-88376baab5c4">
               <AttributeID>SK Resultado</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="1d8d1616-3d8a-480a-a655-cc652a2493ac">
+                <KeyColumn dwd:design-time-name="b2096e95-9188-435c-95dd-a7bdde688196">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5f3ededd-ea52-4f5b-9240-eb3adeba2d76">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="456f2ad1-b3f6-48ef-ab86-eb61d32d6522">
                     <TableID>Fact_ResultadoAdmision</TableID>
                     <ColumnID>SK_Resultado</ColumnID>
                   </Source>
@@ -251,16 +402,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5bdb40e3-5480-41c4-a1ce-56b87edbc917">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0b7d3768-55ef-4b14-bc1e-4910cbfdc21f">
           <CubeDimensionID>Examen</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="f7b09781-b907-4546-b7cf-6718d5dc447b">
+            <Attribute dwd:design-time-name="b595b864-2627-42e4-87ca-50cd4de3e66a">
               <AttributeID>SK Examen</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="0d24df35-5948-40f0-b44a-350139731388">
-                  <NullProcessing>UnknownMember</NullProcessing>
+                <KeyColumn dwd:design-time-name="6fb127ff-5510-48a1-8b3f-04a6188c023c">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5073b81b-c3ba-4a3a-8d48-563bd3ab1a7f">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1ed26c36-940e-4fb7-a98a-b89974791230">
                     <TableID>Fact_ResultadoAdmision</TableID>
                     <ColumnID>SK_Examen</ColumnID>
                   </Source>
@@ -270,16 +421,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="640086e7-4049-4726-96db-6e63c7fc718f">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="57eafe5f-3e81-4879-a2bb-e59b97fc2e63">
           <CubeDimensionID>Fecha</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="baacf2b7-84d3-4ce5-960d-1ca138e77e69">
+            <Attribute dwd:design-time-name="699065c5-2888-46b2-8a0a-151926384010">
               <AttributeID>Date Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="e3df8a4f-0304-40d0-897e-e0a8671d8c25">
-                  <NullProcessing>UnknownMember</NullProcessing>
+                <KeyColumn dwd:design-time-name="3f9a8fbf-bf3e-43dd-9594-415aac2ad3c4">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="90c81ff3-e122-40da-8870-4ef5a238b54f">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="04a5918c-3820-483f-977d-7db4a1a293aa">
                     <TableID>Fact_ResultadoAdmision</TableID>
                     <ColumnID>DateKey</ColumnID>
                   </Source>
@@ -289,16 +440,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7784af7f-c0c6-433a-ac79-f65bea3c2da0">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c6b20e8a-6fe0-42b6-a11d-7714667cf946">
           <CubeDimensionID>Candidato</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="5af1aff7-a53f-45e1-bc19-c1a355c937b7">
+            <Attribute dwd:design-time-name="28f18c2b-3f8c-4291-b3be-be8f1b41852d">
               <AttributeID>SK Candidato</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="12a5ed48-6da1-43c4-9af5-8bc060c6720d">
-                  <NullProcessing>UnknownMember</NullProcessing>
+                <KeyColumn dwd:design-time-name="d4080c4a-d81e-4c50-a09d-59ff4e455251">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ad5a913b-d8cf-4dc2-b967-a68301e12d23">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="03dd5659-1eaa-4aa1-98cc-51fe622d3f87">
                     <TableID>Fact_ResultadoAdmision</TableID>
                     <ColumnID>SK_Candidato</ColumnID>
                   </Source>
@@ -308,16 +459,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="85c41d9d-ab28-49e0-86a4-9992209f6330">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ec3a689e-28b2-401c-b949-a9dc3b621148">
           <CubeDimensionID>Carrera</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="589b884f-5a8b-4e68-90b1-4ecc4d481a59">
+            <Attribute dwd:design-time-name="059aeb72-2f85-444d-87ee-201c619f3bc0">
               <AttributeID>SK Carrera</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="d6a878fa-c0fd-4180-a4ee-18e70eb9e47a">
-                  <NullProcessing>UnknownMember</NullProcessing>
+                <KeyColumn dwd:design-time-name="c9c0e7aa-a775-4734-bfd0-51121f4afa3d">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bfacd6c3-9267-4419-81e2-e44ea2beda2c">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="71066e81-d4ec-445f-8159-236816851124">
                     <TableID>Fact_ResultadoAdmision</TableID>
                     <ColumnID>SK_Carrera</ColumnID>
                   </Source>
@@ -331,7 +482,7 @@
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="ffb82a89-fe72-4ebc-8d99-1209295c9586">
+  <Source dwd:design-time-name="2b54fd46-9bd1-4195-ace8-91edf2440273">
     <DataSourceViewID>Admisiones DWH</DataSourceViewID>
   </Source>
 </Cube>
