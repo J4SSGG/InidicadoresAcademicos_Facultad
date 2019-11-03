@@ -13,10 +13,10 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Fecha</ID>
+        <ID>Candidato</ID>
       </Dimension>
       <Dimension>
-        <ID>Candidato</ID>
+        <ID>Fecha</ID>
       </Dimension>
       <Dimension>
         <ID>Region</ID>

@@ -9,6 +9,7 @@ CREATE TABLE [Fact].[ResultadoAdmision](
 	[SK_Region] [dbo].[UDT_SK] NULL,
 	[SK_Examen] [dbo].[UDT_SK] NULL,
 	[DateKey] [dbo].[UDT_PK] NULL,
+	[Clasificacion] [dbo].[UDT_VarcharCorto] NULL,
 	[Condicion] [dbo].[UDT_VarcharMediano] NULL,
 	[NotaTotal] [dbo].[UDT_Decimal5.2] NULL,
 	[NotaArea] [dbo].[UDT_Decimal5.2] NULL,

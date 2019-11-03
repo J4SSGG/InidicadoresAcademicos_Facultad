@@ -20,12 +20,12 @@
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Fecha.dim</Name>
-      <FullPath>Fecha.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Candidato.dim</Name>
       <FullPath>Candidato.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fecha.dim</Name>
+      <FullPath>Fecha.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Region.dim</Name>

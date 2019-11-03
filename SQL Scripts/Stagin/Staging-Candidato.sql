@@ -13,7 +13,9 @@ CREATE TABLE [Staging].[Candidato](
 	[Genero] [dbo].[UDT_VarcharCorto] NULL,
 	[FechaNacimiento] [dbo].[UDT_DateTime] NULL,
 	[NombreColegio] [dbo].[UDT_VarcharLargo] NULL,
-	[NombreDiversificado] [dbo].[UDT_VarcharLargo] NULL);
+	[NombreDiversificado] [dbo].[UDT_VarcharLargo] NULL,
+	[Nota] [dbo].[UDT_Decimal5.2] NULL,
+	[Clasificacion] [dbo].[UDT_VarcharCorto] NULL);
 
 
 
