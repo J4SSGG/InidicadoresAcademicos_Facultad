@@ -4,6 +4,8 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
+        <ServerName>40.117.179.53</ServerName>
+        <PathOnServer>/SSISDB/GRUPO1/CargaDeDatos</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

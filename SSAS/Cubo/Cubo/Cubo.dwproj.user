@@ -3,12 +3,14 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
-        <TargetDatabase>Cubo</TargetDatabase>
+        <TargetServer>40.117.179.53</TargetServer>
+        <TargetDatabase>GRUPO1</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>
         </StartObject>
+        <ProcessingOption>Full</ProcessingOption>
+        <DeploymentMode>DeployAll</DeploymentMode>
       </Options>
     </Configuration>
   </Configurations>
