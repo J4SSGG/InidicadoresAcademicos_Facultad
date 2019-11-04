@@ -1,0 +1,1078 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<workbook source-build='2019.3.0 (20193.19.0821.2225)' source-platform='win' version='18.1' xml:base='https://us-east-1.online.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <ISO8601PeriodTypes predowngraded='true' />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='ResultadosdeAdmisin' path='/t/analisisdedatos1erciclo2019/workbooks' revision='1.3' site='analisisdedatos1erciclo2019' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='FiltroAnios' datatype='date' default-format='*dddd, d mmmm, yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2019-11-01#'>
+        <calculation class='tableau' formula='#2019-11-01#' />
+        <range granularity='1' max='#2022-12-30#' min='#2016-01-01#' period-type='month' period-type-v2='month' />
+      </column>
+    </datasource>
+    <datasource caption='ResultadoAdmision (Fact.ResultadoAdmision)+ (Admisiones_DWH)' inline='true' name='federated.1v3ld2h1qdoekh193aewc0mb0zwy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='DESKTOP-AJV1RS0\ANALISISDEDATOS' name='sqlserver.1yktcls1lh02e6100pepv0lz8got'>
+            <connection authentication='sspi' class='sqlserver' dbname='Admisiones_DWH' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='.' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='40.117.179.53' name='sqlserver.1aa05zp0fuyubw11arehk17uznfx'>
+            <connection authentication='sqlserver' class='sqlserver' dbname='GRUPO1_DWH' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='40.117.179.53' server-oauth='' server-userid='692134' username='Grupo1' workgroup-auth-mode='prompt' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[ResultadoAdmision].[SK_Examen]' />
+              <expression op='[Examen].[SK_Examen]' />
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[ResultadoAdmision].[SK_Candidato]' />
+                <expression op='[Candidato].[SK_Candidato]' />
+              </expression>
+            </clause>
+            <relation connection='sqlserver.1yktcls1lh02e6100pepv0lz8got' name='ResultadoAdmision' table='[Fact].[ResultadoAdmision]' type='table' />
+            <relation connection='sqlserver.1yktcls1lh02e6100pepv0lz8got' name='Candidato' table='[Dimension].[Candidato]' type='table' />
+          </relation>
+          <relation connection='sqlserver.1yktcls1lh02e6100pepv0lz8got' name='Examen' table='[Dimension].[Examen]' type='table' />
+        </relation>
+        <cols>
+          <map key='[ApellidoCandidato]' value='[Candidato].[ApellidoCandidato]' />
+          <map key='[Area]' value='[Examen].[Area]' />
+          <map key='[Condicion (Examen)]' value='[Examen].[Condicion]' />
+          <map key='[Condicion]' value='[ResultadoAdmision].[Condicion]' />
+          <map key='[DateKey]' value='[ResultadoAdmision].[DateKey]' />
+          <map key='[DescripcionDescuento]' value='[Examen].[DescripcionDescuento]' />
+          <map key='[FechaNacimiento]' value='[Candidato].[FechaNacimiento]' />
+          <map key='[FechaPrueba]' value='[Examen].[FechaPrueba]' />
+          <map key='[Genero]' value='[Candidato].[Genero]' />
+          <map key='[ID_Candidato (Examen)]' value='[Examen].[ID_Candidato]' />
+          <map key='[ID_Candidato]' value='[Candidato].[ID_Candidato]' />
+          <map key='[ID_Carrera]' value='[Examen].[ID_Carrera]' />
+          <map key='[ID_Colegio]' value='[Candidato].[ID_Colegio]' />
+          <map key='[ID_Condicion]' value='[Examen].[ID_Condicion]' />
+          <map key='[ID_Descuento]' value='[Examen].[ID_Descuento]' />
+          <map key='[ID_Diversificado]' value='[Candidato].[ID_Diversificado]' />
+          <map key='[ID_ExamenArea]' value='[Examen].[ID_ExamenArea]' />
+          <map key='[ID_Municipio]' value='[Candidato].[ID_Municipio]' />
+          <map key='[ID_ResultadoDetalle]' value='[Examen].[ID_ResultadoDetalle]' />
+          <map key='[ID_Resultado]' value='[Examen].[ID_Resultado]' />
+          <map key='[NombreArea]' value='[ResultadoAdmision].[NombreArea]' />
+          <map key='[NombreCandidato]' value='[Candidato].[NombreCandidato]' />
+          <map key='[NombreColegio]' value='[Candidato].[NombreColegio]' />
+          <map key='[NombreDiversificado]' value='[Candidato].[NombreDiversificado]' />
+          <map key='[NotaArea (Examen)]' value='[Examen].[NotaArea]' />
+          <map key='[NotaArea]' value='[ResultadoAdmision].[NotaArea]' />
+          <map key='[NotaTotal]' value='[ResultadoAdmision].[NotaTotal]' />
+          <map key='[PorcentajeDescuento]' value='[Examen].[PorcentajeDescuento]' />
+          <map key='[Precio]' value='[Examen].[Precio]' />
+          <map key='[SK_Candidato (Candidato)]' value='[Candidato].[SK_Candidato]' />
+          <map key='[SK_Candidato]' value='[ResultadoAdmision].[SK_Candidato]' />
+          <map key='[SK_Carrera]' value='[ResultadoAdmision].[SK_Carrera]' />
+          <map key='[SK_Examen (Examen)]' value='[Examen].[SK_Examen]' />
+          <map key='[SK_Examen]' value='[ResultadoAdmision].[SK_Examen]' />
+          <map key='[SK_Region]' value='[ResultadoAdmision].[SK_Region]' />
+          <map key='[SK_Resultado]' value='[ResultadoAdmision].[SK_Resultado]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>SK_Resultado</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[SK_Resultado]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>SK_Resultado</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SK_Candidato</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[SK_Candidato]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>SK_Candidato</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SK_Carrera</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[SK_Carrera]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>SK_Carrera</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SK_Region</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[SK_Region]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>SK_Region</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SK_Examen</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[SK_Examen]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>SK_Examen</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DateKey</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[DateKey]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>DateKey</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Condicion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Condicion]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>Condicion</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>300</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NotaTotal</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[NotaTotal]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>NotaTotal</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NotaArea</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[NotaArea]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>NotaArea</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NombreArea</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NombreArea]</local-name>
+            <parent-name>[ResultadoAdmision]</parent-name>
+            <remote-alias>NombreArea</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>300</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SK_Candidato</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[SK_Candidato (Candidato)]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>SK_Candidato</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Candidato</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Candidato]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>ID_Candidato</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Municipio</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Municipio]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>ID_Municipio</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Colegio</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Colegio]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>ID_Colegio</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Diversificado</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Diversificado]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>ID_Diversificado</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NombreCandidato</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NombreCandidato]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>NombreCandidato</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ApellidoCandidato</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ApellidoCandidato]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>ApellidoCandidato</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Genero</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Genero]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>Genero</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FechaNacimiento</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[FechaNacimiento]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>FechaNacimiento</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NombreColegio</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NombreColegio]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>NombreColegio</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>600</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NombreDiversificado</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NombreDiversificado]</local-name>
+            <parent-name>[Candidato]</parent-name>
+            <remote-alias>NombreDiversificado</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>600</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SK_Examen</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[SK_Examen (Examen)]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>SK_Examen</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Resultado</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Resultado]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>ID_Resultado</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_ResultadoDetalle</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_ResultadoDetalle]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>ID_ResultadoDetalle</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Candidato</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Candidato (Examen)]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>ID_Candidato</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Carrera</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Carrera]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>ID_Carrera</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Descuento</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Descuento]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>ID_Descuento</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_ExamenArea</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_ExamenArea]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>ID_ExamenArea</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_Condicion</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID_Condicion]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>ID_Condicion</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Condicion</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Condicion (Examen)]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>Condicion</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>300</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>Area</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>300</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NotaArea</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[NotaArea (Examen)]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>NotaArea</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Precio</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Precio]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>Precio</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DescripcionDescuento</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DescripcionDescuento]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>DescripcionDescuento</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>300</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PorcentajeDescuento</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[PorcentajeDescuento]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>PorcentajeDescuento</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FechaPrueba</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[FechaPrueba]</local-name>
+            <parent-name>[Examen]</parent-name>
+            <remote-alias>FechaPrueba</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Apellido Candidato' datatype='string' name='[ApellidoCandidato]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Date Key' datatype='integer' name='[DateKey]' role='dimension' type='ordinal' />
+      <column caption='Descripcion Descuento' datatype='string' name='[DescripcionDescuento]' role='dimension' type='nominal' />
+      <column caption='Fecha Nacimiento' datatype='datetime' name='[FechaNacimiento]' role='dimension' type='ordinal' />
+      <column caption='Fecha Prueba' datatype='datetime' name='[FechaPrueba]' role='dimension' type='ordinal' />
+      <column caption='ID Candidato (Examen)' datatype='integer' name='[ID_Candidato (Examen)]' role='dimension' type='ordinal' />
+      <column caption='ID Candidato' datatype='integer' name='[ID_Candidato]' role='dimension' type='ordinal' />
+      <column caption='ID Carrera' datatype='integer' name='[ID_Carrera]' role='dimension' type='ordinal' />
+      <column caption='ID Colegio' datatype='integer' name='[ID_Colegio]' role='dimension' type='ordinal' />
+      <column caption='ID Condicion' datatype='integer' name='[ID_Condicion]' role='dimension' type='ordinal' />
+      <column caption='ID Descuento' datatype='integer' name='[ID_Descuento]' role='dimension' type='ordinal' />
+      <column caption='ID Diversificado' datatype='integer' name='[ID_Diversificado]' role='dimension' type='ordinal' />
+      <column caption='ID ExamenArea' datatype='integer' name='[ID_ExamenArea]' role='dimension' type='ordinal' />
+      <column caption='ID Municipio' datatype='integer' name='[ID_Municipio]' role='dimension' type='ordinal' />
+      <column caption='ID ResultadoDetalle' datatype='integer' name='[ID_ResultadoDetalle]' role='dimension' type='ordinal' />
+      <column caption='ID Resultado' datatype='integer' name='[ID_Resultado]' role='dimension' type='ordinal' />
+      <column caption='Nombre Area' datatype='string' name='[NombreArea]' role='dimension' type='nominal' />
+      <column caption='Nombre Candidato' datatype='string' name='[NombreCandidato]' role='dimension' type='nominal' />
+      <column caption='Nombre Colegio' datatype='string' name='[NombreColegio]' role='dimension' type='nominal' />
+      <column caption='Nombre Diversificado' datatype='string' name='[NombreDiversificado]' role='dimension' type='nominal' />
+      <column caption='Nota Area' datatype='real' name='[NotaArea]' role='measure' type='quantitative' />
+      <column caption='Nota Total' datatype='real' name='[NotaTotal]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Porcentaje Descuento' datatype='real' name='[PorcentajeDescuento]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='SK Candidato (Candidato)' datatype='integer' name='[SK_Candidato (Candidato)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='SK Candidato' datatype='integer' name='[SK_Candidato]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='SK Carrera' datatype='integer' name='[SK_Carrera]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='SK Examen (Examen)' datatype='integer' name='[SK_Examen (Examen)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='SK Examen' datatype='integer' name='[SK_Examen]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='SK Region' datatype='integer' name='[SK_Region]' role='dimension' type='ordinal' />
+      <column caption='SK Resultado' datatype='integer' name='[SK_Resultado]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Fechas' />
+        <drill-path name='Pais, Departamento, Municipio' />
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.657106' measure-ordering='alphabetic' measure-percentage='0.191656' parameter-percentage='0.151239' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='%null%' />
+        <semantic-value key='[County].[Name]' value='%null%' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='alpha-per-table' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 10'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Promedio de notas por Condicion</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ResultadoAdmision (Fact.ResultadoAdmision)+ (Admisiones_DWH)' name='federated.1v3ld2h1qdoekh193aewc0mb0zwy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1v3ld2h1qdoekh193aewc0mb0zwy'>
+            <column datatype='string' name='[Condicion]' role='dimension' type='nominal' />
+            <column caption='Nota Total' datatype='real' name='[NotaTotal]' role='measure' type='quantitative' />
+            <column-instance column='[NotaTotal]' derivation='Avg' name='[avg:NotaTotal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Condicion]' derivation='None' name='[none:Condicion:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[avg:NotaTotal:qk]</rows>
+        <cols>[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Condicion:nk]</cols>
+      </table>
+      <simple-id uuid='{4D65A796-B67D-45FD-991A-D8597CEBC918}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Nota por Genero</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ResultadoAdmision (Fact.ResultadoAdmision)+ (Admisiones_DWH)' name='federated.1v3ld2h1qdoekh193aewc0mb0zwy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1v3ld2h1qdoekh193aewc0mb0zwy'>
+            <column datatype='string' name='[Genero]' role='dimension' type='nominal' />
+            <column caption='Nota Total' datatype='real' name='[NotaTotal]' role='measure' type='quantitative' />
+            <column-instance column='[NotaTotal]' derivation='Avg' name='[avg:NotaTotal:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Genero]' derivation='None' name='[none:Genero:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Genero:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[avg:NotaTotal:qk]</rows>
+        <cols>[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Genero:nk]</cols>
+      </table>
+      <simple-id uuid='{1C1C7045-BDA0-4CAB-9897-C638D28A94F8}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='3' name='Sheet 9' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='9' name='Sheet 10' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='8250' id='8' name='Sheet 9' pane-specification-id='0' param='[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Genero:nk]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='12' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='13' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Sheet 9' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8250' id='8' name='Sheet 9' pane-specification-id='0' param='[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Genero:nk]' type='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='9' is-fixed='true' name='Sheet 10' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9AC82222-7F98-40FC-BDBD-DE4D6764E6AC}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 10'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 9'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Genero:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{9CAAF8A0-B075-40FB-8AEB-FE52987B71BF}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Condicion:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6C36FD51-BF2E-4A27-9CCD-BCBA721AA5B4}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Genero:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1v3ld2h1qdoekh193aewc0mb0zwy].[none:Genero:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8ED84088-F02E-4D45-97CA-482A2F40A503}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
