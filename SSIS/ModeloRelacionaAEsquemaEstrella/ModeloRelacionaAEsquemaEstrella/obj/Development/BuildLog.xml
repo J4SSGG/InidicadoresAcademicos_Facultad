@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ModeloRelacionaAEsquemaEstrella</Name>
-    <LastWriteTime>2019-10-29T04:04:52.8534373Z</LastWriteTime>
+    <LastWriteTime>2019-11-03T14:48:49.689461Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2019-11-03T05:01:37.5776064Z</LastWriteTime>
+      <LastWriteTime>2019-11-03T16:20:40.0818637Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -1,14 +1,14 @@
 ﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
   <Target>
-    <Database>Cubo</Database>
-    <Server>localhost</Server>
-    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+    <Database>GRUPO1</Database>
+    <Server>40.117.179.53</Server>
+    <ConnectionString>Data Source=40.117.179.53;Timeout=0</ConnectionString>
   </Target>
   <Options>
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>Default</ProcessingOption>
+    <ProcessingOption>Full</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -19,7 +19,7 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>YZW/MJ6YdN2hCQxRVniYBM3vomk=11/2/2019 11:08:12 PM11/2/2019 11:08:12 PM</TimeStamp>
+        <TimeStamp>Zdyua3PJy2S/HGS9LfCXL9z0H7Y=11/3/2019 8:41:59 AM11/2/2019 11:08:12 PM</TimeStamp>
         <ID>
           <String>Admisiones DWH</String>
         </ID>
@@ -85,12 +85,12 @@
       <Type>Microsoft.AnalysisServices.Database</Type>
       <TimeStamp>htMv873p1eZOZG3SBHEO6gpPMTY=10/20/2019 7:57:05 PM10/20/2019 7:57:05 PM</TimeStamp>
       <ID>
-        <String>Cubo</String>
+        <String>GRUPO1</String>
       </ID>
     </DatabaseSnapshot>
     <Granularity>Coarse</Granularity>
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2019-11-03T06:07:47.843333Z</LastDeployed>
+  <LastDeployed>2019-11-03T18:26:26.546667Z</LastDeployed>
 </DeploymentSnapshot>

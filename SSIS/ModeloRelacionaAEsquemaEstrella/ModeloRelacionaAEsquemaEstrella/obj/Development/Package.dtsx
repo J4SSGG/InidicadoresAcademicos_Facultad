@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="89"
-  DTS:VersionGUID="{C39E9B55-F218-443C-B61A-98FDA5E57D6A}">
+  DTS:VersionBuild="92"
+  DTS:VersionGUID="{D5842396-A3F1-41AC-83D4-8DED6651381C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="LocalHost.Admisiones">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=Admisiones;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GRUPO1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -33,7 +33,7 @@
       DTS:ObjectName="LocalHost.Admisiones_DWH">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=Admisiones_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GRUPO1_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -13944,64 +13944,64 @@ where [refTable].[SK_Candidato] = ?</property>
               startId="Package\Actualizar Fact ResultadoAdmision\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output4]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Sort 7.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\DimensionRegion.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output2]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Sort 6.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output3]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Sort 2.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Carrera.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Sort 4.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output1]"
               endId="Package\Actualizar Fact ResultadoAdmision\Sort 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Dimension Examen.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output2]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Sort 2.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Carrera.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output3]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Sort 4.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Sort 7.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\DimensionRegion.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output1]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Sort 6.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\Dimension Candidato.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output6]"
+              endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Actualizar Fact ResultadoAdmision\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output1]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 2.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 4.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output1]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output2]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 5.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output2]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output3]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 3.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 6.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output3]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output4]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output4]"
+              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output5]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 3.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Fact ResultadoAdmision\Sort 7.Outputs[Sort Output]" />
-            <path
-              refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output5]"
-              endId="Package\Actualizar Fact ResultadoAdmision\Merge Join 1.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Actualizar Fact ResultadoAdmision\Sort 3.Outputs[Sort Output]" />
             <path
               refId="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output7]"
               endId="Package\Actualizar Fact ResultadoAdmision\Merge Join.Inputs[Merge Join Right Input]"
@@ -19056,64 +19056,64 @@ where [refTable].[SK_Candidato] = ?</property>
               startId="Package\Actualizar Stagin ExamenArea\Merge Join 2.Outputs[Merge Join Output]" />
             <path
               refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output3]"
-              endId="Package\Actualizar Stagin ExamenArea\Sort.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin ExamenArea\dbo ResultadoAdmisiones.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output2]"
-              endId="Package\Actualizar Stagin ExamenArea\Sort 1.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin ExamenArea\dbo ResultadoAdmisiones Detalle.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output4]"
-              endId="Package\Actualizar Stagin ExamenArea\Sort 7.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Actualizar Stagin ExamenArea\dbo Condicion.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output]"
               endId="Package\Actualizar Stagin ExamenArea\Sort 5.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Actualizar Stagin ExamenArea\dbo Descuento.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output1]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output2]"
+              endId="Package\Actualizar Stagin ExamenArea\Sort 7.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin ExamenArea\dbo Condicion.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output4]"
               endId="Package\Actualizar Stagin ExamenArea\Sort 2.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Actualizar Stagin ExamenArea\dbo ExamenArea.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output]"
+              endId="Package\Actualizar Stagin ExamenArea\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin ExamenArea\dbo ResultadoAdmisiones.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output1]"
+              endId="Package\Actualizar Stagin ExamenArea\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Actualizar Stagin ExamenArea\dbo ResultadoAdmisiones Detalle.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output6]"
+              endId="Package\Actualizar Stagin ExamenArea\Merge Join 2.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Actualizar Stagin ExamenArea\Sort 5.Outputs[Sort Output]" />
+            <path
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 3.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 7.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output1]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 3.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 6.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output1]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output2]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 4.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output2]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output3]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output3]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output4]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output4]"
+              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output5]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Actualizar Stagin ExamenArea\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output5]"
-              endId="Package\Actualizar Stagin ExamenArea\Merge Join 2.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Actualizar Stagin ExamenArea\Sort 5.Outputs[Sort Output]" />
             <path
               refId="Package\Actualizar Stagin ExamenArea.Paths[Sort Output7]"
               endId="Package\Actualizar Stagin ExamenArea\Merge Join.Inputs[Merge Join Left Input]"
@@ -24716,7 +24716,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
-          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;IF NOT EXISTS ( SELECT  *&#xA;                FROM    sys.schemas&#xA;                WHERE   name = N'Staging' )&#xA;    EXEC('CREATE SCHEMA [Staging]');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE GRUPO1_DWH;&#xA;IF NOT EXISTS ( SELECT  *&#xA;                FROM    sys.schemas&#xA;                WHERE   name = N'Staging' )&#xA;    EXEC('CREATE SCHEMA [Staging]');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -24732,7 +24732,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
-          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Examen;&#xA;&#xA;&#xA;CREATE TABLE Staging.[Examen](&#xA;&#x9;[SK_Examen] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Resultado] [dbo].[UDT_PK] NOT NULL,&#xA;&#x9;[ID_ResultadoDetalle] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Carrera] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Descuento] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_ExamenArea] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Condicion] [dbo].[UDT_PK] NULL,&#xA;&#x9;[Condicion] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[Area] [dbo].[UDT_VarcharMediano] NOT NULL,&#xA;&#x9;[NotaArea] [dbo].[UDT_Decimal5.2] NULL,&#xA;&#x9;[Precio] [dbo].[UDT_Decimal6.2] NULL,&#xA;&#x9;[DescripcionDescuento] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[PorcentajeDescuento] [dbo].[UDT_Decimal6.2] NULL,&#xA;&#x9;[FechaPrueba] [datetime] NULL);&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE GRUPO1_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Examen;&#xA;&#xA;&#xA;CREATE TABLE Staging.[Examen](&#xA;&#x9;[SK_Examen] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Resultado] [dbo].[UDT_PK] NOT NULL,&#xA;&#x9;[ID_ResultadoDetalle] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Carrera] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Descuento] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_ExamenArea] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Condicion] [dbo].[UDT_PK] NULL,&#xA;&#x9;[Condicion] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[Area] [dbo].[UDT_VarcharMediano] NOT NULL,&#xA;&#x9;[NotaArea] [dbo].[UDT_Decimal5.2] NULL,&#xA;&#x9;[Precio] [dbo].[UDT_Decimal6.2] NULL,&#xA;&#x9;[DescripcionDescuento] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[PorcentajeDescuento] [dbo].[UDT_Decimal6.2] NULL,&#xA;&#x9;[FechaPrueba] [datetime] NULL);&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -24748,7 +24748,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
-          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Candidato;&#xA;&#xA;CREATE TABLE [Staging].[Candidato](&#xA;&#x9;[SK_Candidato] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Municipio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Colegio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Diversificado] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombreCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[ApellidoCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[Genero] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[FechaNacimiento] [dbo].[UDT_DateTime] NULL,&#xA;&#x9;[NombreColegio] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[NombreDiversificado] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[Nota] [dbo].[UDT_Decimal5.2] NULL,&#xA;&#x9;[Clasificacion] [dbo].[UDT_VarcharCorto] NULL);&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE GRUPO1_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Candidato;&#xA;&#xA;CREATE TABLE [Staging].[Candidato](&#xA;&#x9;[SK_Candidato] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Candidato] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Municipio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Colegio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Diversificado] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombreCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[ApellidoCandidato] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[Genero] [dbo].[UDT_VarcharCorto] NULL,&#xA;&#x9;[FechaNacimiento] [dbo].[UDT_DateTime] NULL,&#xA;&#x9;[NombreColegio] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[NombreDiversificado] [dbo].[UDT_VarcharLargo] NULL,&#xA;&#x9;[Nota] [dbo].[UDT_Decimal5.2] NULL,&#xA;&#x9;[Clasificacion] [dbo].[UDT_VarcharCorto] NULL);&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -24764,7 +24764,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
-          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Carrera;&#xA;&#xA;&#xA;&#xA;CREATE TABLE [Staging].[Carrera](&#xA;&#x9;[SK_Carrera] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Carrera] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Facultad] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombreCarrera] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[NombreFacultad] [dbo].[UDT_VarcharMediano] NULL);&#xA;&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE GRUPO1_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Carrera;&#xA;&#xA;&#xA;&#xA;CREATE TABLE [Staging].[Carrera](&#xA;&#x9;[SK_Carrera] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Carrera] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Facultad] [dbo].[UDT_PK] NULL,&#xA;&#x9;[NombreCarrera] [dbo].[UDT_VarcharMediano] NULL,&#xA;&#x9;[NombreFacultad] [dbo].[UDT_VarcharMediano] NULL);&#xA;&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -24780,7 +24780,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
-          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Region;&#xA;&#xA;CREATE TABLE Staging.[Region](&#xA;&#x9;[SK_Region] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Pais] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Departamento] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Municipio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[Pais] [varchar](300) NOT NULL,&#xA;&#x9;[Departamento] [varchar](300) NOT NULL,&#xA;&#x9;[Municipio] [varchar](300) NOT NULL);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE GRUPO1_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Region;&#xA;&#xA;CREATE TABLE Staging.[Region](&#xA;&#x9;[SK_Region] [dbo].[UDT_SK] IDENTITY(1,1) NOT NULL PRIMARY KEY,&#xA;&#x9;[ID_Pais] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Departamento] [dbo].[UDT_PK] NULL,&#xA;&#x9;[ID_Municipio] [dbo].[UDT_PK] NULL,&#xA;&#x9;[Pais] [varchar](300) NOT NULL,&#xA;&#x9;[Departamento] [varchar](300) NOT NULL,&#xA;&#x9;[Municipio] [varchar](300) NOT NULL);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -24796,7 +24796,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F9C6B50C-672C-48B6-B5B9-B277B9BC0C72}"
-          SQLTask:SqlStatementSource="USE Admisiones_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Fecha;&#xA;&#xA;CREATE TABLE Staging.[Fecha](&#xA;&#x9;[DateKey] [int] NOT NULL PRIMARY KEY,&#xA;&#x9;[Date] [date] NOT NULL,&#xA;&#x9;[Day] [tinyint] NOT NULL,&#xA;&#x9;[DaySuffix] [char](2) NOT NULL,&#xA;&#x9;[Weekday] [tinyint] NOT NULL,&#xA;&#x9;[WeekDayName] [varchar](10) NOT NULL,&#xA;&#x9;[WeekDayName_Short] [char](3) NOT NULL,&#xA;&#x9;[WeekDayName_FirstLetter] [char](1) NOT NULL,&#xA;&#x9;[DOWInMonth] [tinyint] NOT NULL,&#xA;&#x9;[DayOfYear] [smallint] NOT NULL,&#xA;&#x9;[WeekOfMonth] [tinyint] NOT NULL,&#xA;&#x9;[WeekOfYear] [tinyint] NOT NULL,&#xA;&#x9;[Month] [tinyint] NOT NULL,&#xA;&#x9;[MonthName] [varchar](10) NOT NULL,&#xA;&#x9;[MonthName_Short] [char](3) NOT NULL,&#xA;&#x9;[MonthName_FirstLetter] [char](1) NOT NULL,&#xA;&#x9;[Quarter] [tinyint] NOT NULL,&#xA;&#x9;[QuarterName] [varchar](6) NOT NULL,&#xA;&#x9;[Year] [int] NOT NULL,&#xA;&#x9;[MMYYYY] [char](6) NOT NULL,&#xA;&#x9;[MonthYear] [char](7) NOT NULL,&#xA;&#x9;[IsWeekend] [bit] NOT NULL);&#xA;&#xA;DECLARE @INICIO DATE = '2016-01-01';&#xA;DECLARE @ACTUAL DATE = '2022-12-31';&#xA;&#xA;WHILE (@INICIO &lt; @ACTUAL)&#xA;&#x9;BEGIN&#xA;&#x9;&#x9;INSERT INTO Staging.Fecha&#xA;                ([DateKey], &#xA;                 [Date], &#xA;                 [Day], &#xA;                 [DaySuffix], &#xA;                 [Weekday], &#xA;                 [WeekDayName], &#xA;                 [WeekDayName_Short], &#xA;                 [WeekDayName_FirstLetter], &#xA;                 [DOWInMonth], &#xA;                 [DayOfYear], &#xA;                 [WeekOfMonth], &#xA;                 [WeekOfYear], &#xA;                 [Month], &#xA;                 [MonthName], &#xA;                 [MonthName_Short], &#xA;                 [MonthName_FirstLetter], &#xA;                 [Quarter], &#xA;                 [QuarterName], &#xA;                 [Year], &#xA;                 [MMYYYY], &#xA;                 [MonthYear], &#xA;                 [IsWeekend]&#xA;                )&#xA;                       SELECT DateKey = YEAR(@INICIO) * 10000 + MONTH(@INICIO) * 100 + DAY(@INICIO), &#xA;                              DATE = @INICIO, &#xA;                              Day = DAY(@INICIO), &#xA;                              [DaySuffix] = CASE&#xA;                                                WHEN DAY(@INICIO) = 1&#xA;                                                     OR DAY(@INICIO) = 21&#xA;                                                     OR DAY(@INICIO) = 31&#xA;                                                THEN 'st'&#xA;                                                WHEN DAY(@INICIO) = 2&#xA;                                                     OR DAY(@INICIO) = 22&#xA;                                                THEN 'nd'&#xA;                                                WHEN DAY(@INICIO) = 3&#xA;                                                     OR DAY(@INICIO) = 23&#xA;                                                THEN 'rd'&#xA;                                                ELSE 'th'&#xA;                                            END, &#xA;                              WEEKDAY = DATEPART(dw, @INICIO), &#xA;                              WeekDayName = DATENAME(dw, @INICIO), &#xA;                              WeekDayName_Short = UPPER(LEFT(DATENAME(dw, @INICIO), 3)), &#xA;                              WeekDayName_FirstLetter = LEFT(DATENAME(dw, @INICIO), 1), &#xA;                              [DOWInMonth] = DAY(@INICIO), &#xA;                              [DayOfYear] = DATENAME(dy, @INICIO), &#xA;                              [WeekOfMonth] = DATEPART(WEEK, @INICIO) - DATEPART(WEEK, DATEADD(MM, DATEDIFF(MM, 0, @INICIO), 0)) + 1, &#xA;                              [WeekOfYear] = DATEPART(wk, @INICIO), &#xA;                              [Month] = MONTH(@INICIO), &#xA;                              [MonthName] = DATENAME(mm, @INICIO), &#xA;                              [MonthName_Short] = UPPER(LEFT(DATENAME(mm, @INICIO), 3)), &#xA;                              [MonthName_FirstLetter] = LEFT(DATENAME(mm, @INICIO), 1), &#xA;                              [Quarter] = DATEPART(q, @INICIO), &#xA;                              [QuarterName] = CASE&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 1&#xA;                                                  THEN 'First'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 2&#xA;                                                  THEN 'Second'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 3&#xA;                                                  THEN 'Third'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 4&#xA;                                                  THEN 'Fourth'&#xA;                                              END, &#xA;                              [Year] = YEAR(@INICIO), &#xA;                              [MMYYYY] = RIGHT('0' + CAST(MONTH(@INICIO) AS VARCHAR(2)), 2) + CAST(YEAR(@INICIO) AS VARCHAR(4)), &#xA;                              [MonthYear] = CAST(YEAR(@INICIO) AS VARCHAR(4)) + UPPER(LEFT(DATENAME(mm, @INICIO), 3)), &#xA;                              [IsWeekend] = CASE&#xA;                                                WHEN DATENAME(dw, @INICIO) = 'Sunday'&#xA;                                                     OR DATENAME(dw, @INICIO) = 'Saturday'&#xA;                                                THEN 1&#xA;                                                ELSE 0&#xA;                                            END     ;&#xA;                SET @INICIO = DATEADD(DD, 1, @INICIO);&#xA;&#x9;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="USE GRUPO1_DWH;&#xA;&#xA;DROP TABLE IF EXISTS Staging.Fecha;&#xA;&#xA;CREATE TABLE Staging.[Fecha](&#xA;&#x9;[DateKey] [int] NOT NULL PRIMARY KEY,&#xA;&#x9;[Date] [date] NOT NULL,&#xA;&#x9;[Day] [tinyint] NOT NULL,&#xA;&#x9;[DaySuffix] [char](2) NOT NULL,&#xA;&#x9;[Weekday] [tinyint] NOT NULL,&#xA;&#x9;[WeekDayName] [varchar](10) NOT NULL,&#xA;&#x9;[WeekDayName_Short] [char](3) NOT NULL,&#xA;&#x9;[WeekDayName_FirstLetter] [char](1) NOT NULL,&#xA;&#x9;[DOWInMonth] [tinyint] NOT NULL,&#xA;&#x9;[DayOfYear] [smallint] NOT NULL,&#xA;&#x9;[WeekOfMonth] [tinyint] NOT NULL,&#xA;&#x9;[WeekOfYear] [tinyint] NOT NULL,&#xA;&#x9;[Month] [tinyint] NOT NULL,&#xA;&#x9;[MonthName] [varchar](10) NOT NULL,&#xA;&#x9;[MonthName_Short] [char](3) NOT NULL,&#xA;&#x9;[MonthName_FirstLetter] [char](1) NOT NULL,&#xA;&#x9;[Quarter] [tinyint] NOT NULL,&#xA;&#x9;[QuarterName] [varchar](6) NOT NULL,&#xA;&#x9;[Year] [int] NOT NULL,&#xA;&#x9;[MMYYYY] [char](6) NOT NULL,&#xA;&#x9;[MonthYear] [char](7) NOT NULL,&#xA;&#x9;[IsWeekend] [bit] NOT NULL);&#xA;&#xA;DECLARE @INICIO DATE = '2016-01-01';&#xA;DECLARE @ACTUAL DATE = '2022-12-31';&#xA;&#xA;WHILE (@INICIO &lt; @ACTUAL)&#xA;&#x9;BEGIN&#xA;&#x9;&#x9;INSERT INTO Staging.Fecha&#xA;                ([DateKey], &#xA;                 [Date], &#xA;                 [Day], &#xA;                 [DaySuffix], &#xA;                 [Weekday], &#xA;                 [WeekDayName], &#xA;                 [WeekDayName_Short], &#xA;                 [WeekDayName_FirstLetter], &#xA;                 [DOWInMonth], &#xA;                 [DayOfYear], &#xA;                 [WeekOfMonth], &#xA;                 [WeekOfYear], &#xA;                 [Month], &#xA;                 [MonthName], &#xA;                 [MonthName_Short], &#xA;                 [MonthName_FirstLetter], &#xA;                 [Quarter], &#xA;                 [QuarterName], &#xA;                 [Year], &#xA;                 [MMYYYY], &#xA;                 [MonthYear], &#xA;                 [IsWeekend]&#xA;                )&#xA;                       SELECT DateKey = YEAR(@INICIO) * 10000 + MONTH(@INICIO) * 100 + DAY(@INICIO), &#xA;                              DATE = @INICIO, &#xA;                              Day = DAY(@INICIO), &#xA;                              [DaySuffix] = CASE&#xA;                                                WHEN DAY(@INICIO) = 1&#xA;                                                     OR DAY(@INICIO) = 21&#xA;                                                     OR DAY(@INICIO) = 31&#xA;                                                THEN 'st'&#xA;                                                WHEN DAY(@INICIO) = 2&#xA;                                                     OR DAY(@INICIO) = 22&#xA;                                                THEN 'nd'&#xA;                                                WHEN DAY(@INICIO) = 3&#xA;                                                     OR DAY(@INICIO) = 23&#xA;                                                THEN 'rd'&#xA;                                                ELSE 'th'&#xA;                                            END, &#xA;                              WEEKDAY = DATEPART(dw, @INICIO), &#xA;                              WeekDayName = DATENAME(dw, @INICIO), &#xA;                              WeekDayName_Short = UPPER(LEFT(DATENAME(dw, @INICIO), 3)), &#xA;                              WeekDayName_FirstLetter = LEFT(DATENAME(dw, @INICIO), 1), &#xA;                              [DOWInMonth] = DAY(@INICIO), &#xA;                              [DayOfYear] = DATENAME(dy, @INICIO), &#xA;                              [WeekOfMonth] = DATEPART(WEEK, @INICIO) - DATEPART(WEEK, DATEADD(MM, DATEDIFF(MM, 0, @INICIO), 0)) + 1, &#xA;                              [WeekOfYear] = DATEPART(wk, @INICIO), &#xA;                              [Month] = MONTH(@INICIO), &#xA;                              [MonthName] = DATENAME(mm, @INICIO), &#xA;                              [MonthName_Short] = UPPER(LEFT(DATENAME(mm, @INICIO), 3)), &#xA;                              [MonthName_FirstLetter] = LEFT(DATENAME(mm, @INICIO), 1), &#xA;                              [Quarter] = DATEPART(q, @INICIO), &#xA;                              [QuarterName] = CASE&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 1&#xA;                                                  THEN 'First'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 2&#xA;                                                  THEN 'Second'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 3&#xA;                                                  THEN 'Third'&#xA;                                                  WHEN DATENAME(qq, @INICIO) = 4&#xA;                                                  THEN 'Fourth'&#xA;                                              END, &#xA;                              [Year] = YEAR(@INICIO), &#xA;                              [MMYYYY] = RIGHT('0' + CAST(MONTH(@INICIO) AS VARCHAR(2)), 2) + CAST(YEAR(@INICIO) AS VARCHAR(4)), &#xA;                              [MonthYear] = CAST(YEAR(@INICIO) AS VARCHAR(4)) + UPPER(LEFT(DATENAME(mm, @INICIO), 3)), &#xA;                              [IsWeekend] = CASE&#xA;                                                WHEN DATENAME(dw, @INICIO) = 'Sunday'&#xA;                                                     OR DATENAME(dw, @INICIO) = 'Saturday'&#xA;                                                THEN 1&#xA;                                                ELSE 0&#xA;                                            END     ;&#xA;                SET @INICIO = DATEADD(DD, 1, @INICIO);&#xA;&#x9;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -25446,6 +25446,19 @@ where [refTable].[SK_Candidato] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Dimension Candidatos\Stagin Candidato">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Actualizar Dimension Candidatos\Lookup">
     <Properties>
       <Property>
@@ -25464,20 +25477,7 @@ where [refTable].[SK_Candidato] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q4:boolean">false</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Dimension Candidatos\Stagin Candidato">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
+          type="q4:string">false</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -25647,9 +25647,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25764,9 +25762,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26082,7 +26078,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output1]"
           TopLeft="834.5,891">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26116,7 +26112,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output6]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output]"
           TopLeft="721.5,642">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26150,7 +26146,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output5]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output6]"
           TopLeft="444.5,641">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26184,7 +26180,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output4]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output5]"
           TopLeft="423.5,190">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26218,7 +26214,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output3]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output4]"
           TopLeft="325,415">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26252,7 +26248,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output2]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output3]"
           TopLeft="149.5,198">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26286,7 +26282,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output1]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[Sort Output2]"
           TopLeft="585.5,968">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26320,7 +26316,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output3]"
           TopLeft="838,779">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26342,7 +26338,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output2]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output1]"
           TopLeft="148,94">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26364,7 +26360,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output1]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output4]"
           TopLeft="524.5,324">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26386,7 +26382,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output4]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output]"
           TopLeft="424.75,96">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26408,7 +26404,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output3]"
+          Id="Package\Actualizar Fact ResultadoAdmision.Paths[OLE DB Source Output2]"
           TopLeft="722.25,533">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26579,19 +26575,6 @@ where [refTable].[SK_Candidato] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Carrera">
     <Properties>
       <Property>
@@ -26606,6 +26589,42 @@ where [refTable].[SK_Candidato] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Examen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Fact].[ResultadoAdmision]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\Fact ResultadosAdmisiones">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -26644,7 +26663,7 @@ where [refTable].[SK_Candidato] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\Fact ResultadosAdmisiones">
+    design-time-name="Package\Actualizar Fact ResultadoAdmision\Dimension Fecha">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -26653,29 +26672,6 @@ where [refTable].[SK_Candidato] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Actualizar Fact ResultadoAdmision\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Fact].[ResultadoAdmision]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -26757,7 +26753,7 @@ where [refTable].[SK_Candidato] = ?</property>
           Id="Package\Actualizar Stagin ExamenArea\Sort"
           TopLeft="152,321" />
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output1]"
           TopLeft="638.5,1108">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26793,7 +26789,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output6]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output]"
           TopLeft="946.5,1107">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26829,7 +26825,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output5]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output6]"
           TopLeft="779.5,877">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26865,7 +26861,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output4]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output5]"
           TopLeft="513.5,361">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26901,7 +26897,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output3]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output4]"
           TopLeft="380.5,627">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26937,7 +26933,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output2]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output3]"
           TopLeft="622.5,626">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26973,7 +26969,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output1]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[Sort Output2]"
           TopLeft="502.5,876">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27009,7 +27005,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output2]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output1]"
           TopLeft="511,266">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27033,7 +27029,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output3]"
           TopLeft="776.5,748">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27057,7 +27053,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output1]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output4]"
           TopLeft="623,484">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27081,7 +27077,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output4]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output2]"
           TopLeft="945.5,997">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27105,7 +27101,7 @@ where [refTable].[SK_Candidato] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output3]"
+          Id="Package\Actualizar Stagin ExamenArea.Paths[OLE DB Source Output]"
           TopLeft="198.25,268">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -28093,7 +28089,7 @@ where [refTable].[SK_Candidato] = ?</property>
     design-time-name="Package\Actualizar Staging Region">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="119,42"
           Id="Package\Actualizar Staging Region\dbo Pais"
@@ -28153,9 +28149,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28189,9 +28183,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28225,9 +28217,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28261,9 +28251,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28297,9 +28285,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28321,9 +28307,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28345,9 +28329,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28369,9 +28351,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28393,9 +28373,7 @@ where [refTable].[SK_Candidato] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

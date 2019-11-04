@@ -64,7 +64,7 @@
           <ConfigurationSetting>
             <Id>Admisiones DWH</Id>
             <Name>Admisiones DWH</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=Admisiones_DWH</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=GRUPO1_DWH</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
