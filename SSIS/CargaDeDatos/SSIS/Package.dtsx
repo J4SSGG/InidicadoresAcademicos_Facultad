@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="103"
-  DTS:VersionGUID="{3D549C73-48C8-4663-831D-594FD28BE736}">
+  DTS:VersionBuild="104"
+  DTS:VersionGUID="{E5022EE4-8F34-417F-A44D-BAAA2753FBB8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5851,59 +5851,59 @@
                   startId="Package\Carga de Candidatos\Carga Candidatos\Conditional Split.Outputs[No Repetidos]" />
                 <path
                   refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output3]"
-                  endId="Package\Carga de Candidatos\Carga Candidatos\Sort 6.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Carga de Candidatos\Carga Candidatos\Tabla Municipio.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output2]"
-                  endId="Package\Carga de Candidatos\Carga Candidatos\Transformacion 1.Inputs[Derived Column Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Carga de Candidatos\Carga Candidatos\Tabla Candidato.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output]"
-                  endId="Package\Carga de Candidatos\Carga Candidatos\Sort 2.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Carga de Candidatos\Carga Candidatos\Diversificado.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output1]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Sort 1.Inputs[Sort Input]"
                   name="OLE DB Source Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Colegio.Outputs[OLE DB Source Output]" />
                 <path
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output2]"
+                  endId="Package\Carga de Candidatos\Carga Candidatos\Sort 2.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Carga de Candidatos\Carga Candidatos\Diversificado.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output]"
+                  endId="Package\Carga de Candidatos\Carga Candidatos\Sort 6.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Carga de Candidatos\Carga Candidatos\Tabla Municipio.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output1]"
+                  endId="Package\Carga de Candidatos\Carga Candidatos\Transformacion 1.Inputs[Derived Column Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Carga de Candidatos\Carga Candidatos\Tabla Candidato.Outputs[OLE DB Source Output]" />
+                <path
                   refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output6]"
+                  endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 1.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Carga de Candidatos\Carga Candidatos\Sort 2.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 1.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 3.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output1]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Comparar Repetidos.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 4.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output1]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output2]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Comparar Repetidos.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 1 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output2]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output3]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output3]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output4]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 2.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 6.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output4]"
+                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output5]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Carga de Candidatos\Carga Candidatos\Sort 1.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output5]"
-                  endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 1.Inputs[Merge Join Left Input]"
-                  name="Sort Output"
-                  startId="Package\Carga de Candidatos\Carga Candidatos\Sort 2.Outputs[Sort Output]" />
                 <path
                   refId="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output7]"
                   endId="Package\Carga de Candidatos\Carga Candidatos\Merge Join 2.Inputs[Merge Join Left Input]"
@@ -22358,24 +22358,24 @@ where [refTable].[ID_Resultado] = ?</property>
                   startId="Package\Resultados\Carga Resultados\Lookup.Outputs[Lookup No Match Output]" />
                 <path
                   refId="Package\Resultados\Carga Resultados.Paths[Merge Join Output2]"
-                  endId="Package\Resultados\Carga Resultados\Lookup.Inputs[Lookup Input]"
-                  name="Merge Join Output"
-                  startId="Package\Resultados\Carga Resultados\Merge Join 3.Outputs[Merge Join Output]" />
-                <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Merge Join Output3]"
-                  endId="Package\Resultados\Carga Resultados\Sort 7.Inputs[Sort Input]"
-                  name="Merge Join Output"
-                  startId="Package\Resultados\Carga Resultados\Merge Join 2.Outputs[Merge Join Output]" />
-                <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Merge Join Output]"
                   endId="Package\Resultados\Carga Resultados\Data Conversion.Inputs[Data Conversion Input]"
                   name="Merge Join Output"
                   startId="Package\Resultados\Carga Resultados\Merge Join 1.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Merge Join Output1]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Merge Join Output3]"
                   endId="Package\Resultados\Carga Resultados\Sort 2.Inputs[Sort Input]"
                   name="Merge Join Output"
                   startId="Package\Resultados\Carga Resultados\Merge Join.Outputs[Merge Join Output]" />
+                <path
+                  refId="Package\Resultados\Carga Resultados.Paths[Merge Join Output]"
+                  endId="Package\Resultados\Carga Resultados\Lookup.Inputs[Lookup Input]"
+                  name="Merge Join Output"
+                  startId="Package\Resultados\Carga Resultados\Merge Join 3.Outputs[Merge Join Output]" />
+                <path
+                  refId="Package\Resultados\Carga Resultados.Paths[Merge Join Output1]"
+                  endId="Package\Resultados\Carga Resultados\Sort 7.Inputs[Sort Input]"
+                  name="Merge Join Output"
+                  startId="Package\Resultados\Carga Resultados\Merge Join 2.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Resultados\Carga Resultados.Paths[OLE DB Source Output]"
                   endId="Package\Resultados\Carga Resultados\Sort 1.Inputs[Sort Input]"
@@ -22393,39 +22393,39 @@ where [refTable].[ID_Resultado] = ?</property>
                   startId="Package\Resultados\Carga Resultados\Condicion.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Resultados\Carga Resultados.Paths[Sort Output6]"
+                  endId="Package\Resultados\Carga Resultados\Merge Join 2.Inputs[Merge Join Right Input]"
+                  name="Sort Output"
+                  startId="Package\Resultados\Carga Resultados\Sort 6.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 3.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 4.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output1]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 1.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 3.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output1]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output2]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 1.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 2.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output2]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output3]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 3.Inputs[Merge Join Right Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 7.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output3]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output4]"
                   endId="Package\Resultados\Carga Resultados\Merge Join.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output4]"
+                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output5]"
                   endId="Package\Resultados\Carga Resultados\Merge Join 2.Inputs[Merge Join Left Input]"
                   name="Sort Output"
                   startId="Package\Resultados\Carga Resultados\Sort 5.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Resultados\Carga Resultados.Paths[Sort Output5]"
-                  endId="Package\Resultados\Carga Resultados\Merge Join 2.Inputs[Merge Join Right Input]"
-                  name="Sort Output"
-                  startId="Package\Resultados\Carga Resultados\Sort 6.Outputs[Sort Output]" />
                 <path
                   refId="Package\Resultados\Carga Resultados.Paths[Sort Output7]"
                   endId="Package\Resultados\Carga Resultados\Merge Join.Inputs[Merge Join Right Input]"
@@ -22523,7 +22523,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Naturales.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Naturales.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
@@ -22535,8 +22535,9 @@ where [refTable].[ID_Resultado] = ?</property>
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 4.Outputs[Derived Column Output].Columns[ID]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Naturales.Inputs[OLE DB Destination Input].Columns[CIENCIAS NATURALES]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="CIENCIAS NATURALES"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Naturales.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[CIENCIAS NATURALES]" />
                       </inputColumns>
@@ -22662,7 +22663,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Sociales.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Sociales.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
@@ -22674,8 +22675,9 @@ where [refTable].[ID_Resultado] = ?</property>
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 5.Outputs[Derived Column Output].Columns[ID]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Sociales.Inputs[OLE DB Destination Input].Columns[CIENCIAS SOCIALES]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="CIENCIAS SOCIALES"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Sociales.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[CIENCIAS SOCIALES]" />
                       </inputColumns>
@@ -22742,7 +22744,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -22844,7 +22846,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 1.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -22946,7 +22948,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 2.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -23048,7 +23050,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 3.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -23150,7 +23152,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 4.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -23252,7 +23254,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 5.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -23413,7 +23415,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Español.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Español.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
@@ -23425,8 +23427,9 @@ where [refTable].[ID_Resultado] = ?</property>
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 2.Outputs[Derived Column Output].Columns[ID]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Español.Inputs[OLE DB Destination Input].Columns[ESPAÑOL]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="ESPAÑOL"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Español.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[ESPAÑOL]" />
                       </inputColumns>
@@ -23552,7 +23555,7 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Cuantitativas.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Cuantitativas.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
@@ -23564,8 +23567,9 @@ where [refTable].[ID_Resultado] = ?</property>
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 1.Outputs[Derived Column Output].Columns[ID]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Cuantitativas.Inputs[OLE DB Destination Input].Columns[HABILIDADES CUANTITATIVAS]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="HABILIDADES CUANTITATIVAS"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Cuantitativas.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[HABILIDADES CUANTITATIVAS]" />
                       </inputColumns>
@@ -23691,14 +23695,15 @@ where [refTable].[ID_Resultado] = ?</property>
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Verbales.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Verbales.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Verbales.Inputs[OLE DB Destination Input].Columns[HABILIDADES VERBALES]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="HABILIDADES VERBALES"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Verbales.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[HABILIDADES VERBALES]" />
                         <inputColumn
@@ -24772,7 +24777,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Matematicas.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Matematicas.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
@@ -24784,8 +24789,9 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 3.Outputs[Derived Column Output].Columns[ID]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Matematicas.Inputs[OLE DB Destination Input].Columns[MATEMÁTICAS]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="MATEMÁTICAS"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Matematicas.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[MATEMÁTICAS]" />
                       </inputColumns>
@@ -24967,7 +24973,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]"
-                          dataType="r8"
+                          dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].ExternalColumns[NUMERO]"
@@ -25101,57 +25107,63 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[HABILIDADES VERBALES]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].ExternalColumns[HABILIDADES VERBALES]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[HABILIDADES VERBALES]"
                           name="HABILIDADES VERBALES"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[HABILIDADES CUANTITATIVAS]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].ExternalColumns[HABILIDADES CUANTITATIVAS]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[HABILIDADES CUANTITATIVAS]"
                           name="HABILIDADES CUANTITATIVAS"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[ESPAÑOL]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].ExternalColumns[ESPAÑOL]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[ESPAÑOL]"
                           name="ESPAÑOL"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[MATEMÁTICAS]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].ExternalColumns[MATEMÁTICAS]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[MATEMÁTICAS]"
                           name="MATEMÁTICAS"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[CIENCIAS NATURALES]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].ExternalColumns[CIENCIAS NATURALES]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[CIENCIAS NATURALES]"
                           name="CIENCIAS NATURALES"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[CIENCIAS SOCIALES]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].ExternalColumns[CIENCIAS SOCIALES]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[CIENCIAS SOCIALES]"
                           name="CIENCIAS SOCIALES"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[ESP: MATEMÁTICA PARA EL CÁLCULO]"
@@ -25459,7 +25471,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Basicas\Separar Null.Inputs[Conditional Split Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -25577,34 +25589,34 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                   startId="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte.Outputs[Excel Source Output]" />
                 <path
                   refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output5]"
-                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Naturales.Inputs[OLE DB Destination Input]"
+                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Sociales.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
-                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 4.Outputs[Lookup No Match Output]" />
+                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 5.Outputs[Lookup No Match Output]" />
                 <path
                   refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output4]"
-                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Cuantitativas.Inputs[OLE DB Destination Input]"
-                  name="Lookup No Match Output"
-                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 1.Outputs[Lookup No Match Output]" />
-                <path
-                  refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output3]"
-                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Español.Inputs[OLE DB Destination Input]"
-                  name="Lookup No Match Output"
-                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 2.Outputs[Lookup No Match Output]" />
-                <path
-                  refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output1]"
-                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Matematicas.Inputs[OLE DB Destination Input]"
-                  name="Lookup No Match Output"
-                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 3.Outputs[Lookup No Match Output]" />
-                <path
-                  refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output]"
                   endId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Verbales.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
                   startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup.Outputs[Lookup No Match Output]" />
                 <path
-                  refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output2]"
-                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Sociales.Inputs[OLE DB Destination Input]"
+                  refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output3]"
+                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Matematicas.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
-                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 5.Outputs[Lookup No Match Output]" />
+                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 3.Outputs[Lookup No Match Output]" />
+                <path
+                  refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output1]"
+                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Cuantitativas.Inputs[OLE DB Destination Input]"
+                  name="Lookup No Match Output"
+                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 1.Outputs[Lookup No Match Output]" />
+                <path
+                  refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output]"
+                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Ciencias Naturales.Inputs[OLE DB Destination Input]"
+                  name="Lookup No Match Output"
+                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 4.Outputs[Lookup No Match Output]" />
+                <path
+                  refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output2]"
+                  endId="Package\Resultados\Carga ResultadosDetalle Basicas\Español.Inputs[OLE DB Destination Input]"
+                  name="Lookup No Match Output"
+                  startId="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 2.Outputs[Lookup No Match Output]" />
                 <path
                   refId="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Multicast Output 1]"
                   endId="Package\Resultados\Carga ResultadosDetalle Basicas\Derived Column 4.Inputs[Derived Column Input]"
@@ -25668,7 +25680,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Derived Column.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -25770,7 +25782,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Derived Column 1.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -25872,7 +25884,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Derived Column 2.Inputs[Derived Column Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -26033,7 +26045,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Fisica.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Fisica.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
@@ -26045,8 +26057,9 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Derived Column 1.Outputs[Derived Column Output].Columns[ID]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Fisica.Inputs[OLE DB Destination Input].Columns[ESP: FÍSICA]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="ESP: FÍSICA"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Fisica.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: FÍSICA]" />
                       </inputColumns>
@@ -26643,7 +26656,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Matematica para el calculo.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Matematica para el calculo.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
@@ -26655,8 +26668,9 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Derived Column.Outputs[Derived Column Output].Columns[ID]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Matematica para el calculo.Inputs[OLE DB Destination Input].Columns[ESP: MATEMÁTICA PARA EL CÁLCULO]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="ESP: MATEMÁTICA PARA EL CÁLCULO"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Matematica para el calculo.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: MATEMÁTICA PARA EL CÁLCULO]" />
                       </inputColumns>
@@ -26827,7 +26841,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Quimica.Inputs[OLE DB Destination Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Quimica.Inputs[OLE DB Destination Input].ExternalColumns[ID_Resultado]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
@@ -26839,8 +26853,9 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Derived Column 2.Outputs[Derived Column Output].Columns[ID]" />
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Quimica.Inputs[OLE DB Destination Input].Columns[ESP: QUÍMICA]"
-                          cachedDataType="r8"
+                          cachedDataType="numeric"
                           cachedName="ESP: QUÍMICA"
+                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Quimica.Inputs[OLE DB Destination Input].ExternalColumns[NotaArea]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: QUÍMICA]" />
                       </inputColumns>
@@ -26956,7 +26971,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]"
-                          dataType="r8"
+                          dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].ExternalColumns[NUMERO]"
@@ -27144,30 +27159,33 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: MATEMÁTICA PARA EL CÁLCULO]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].ExternalColumns[ESP: MATEMÁTICA PARA EL CÁLCULO]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: MATEMÁTICA PARA EL CÁLCULO]"
                           name="ESP: MATEMÁTICA PARA EL CÁLCULO"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: FÍSICA]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].ExternalColumns[ESP: FÍSICA]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: FÍSICA]"
                           name="ESP: FÍSICA"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: QUÍMICA]"
-                          dataType="r8"
+                          dataType="numeric"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].ExternalColumns[ESP: QUÍMICA]"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[ESP: QUÍMICA]"
                           name="ESP: QUÍMICA"
+                          precision="18"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[Genero]"
@@ -27464,7 +27482,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                       <inputColumns>
                         <inputColumn
                           refId="Package\Resultados\Carga ResultadosDetalle Especificas\Separar Null.Inputs[Conditional Split Input].Columns[NUMERO]"
-                          cachedDataType="r8"
+                          cachedDataType="i4"
                           cachedName="NUMERO"
                           lineageId="Package\Resultados\Carga ResultadosDetalle Especificas\Reporte.Outputs[Excel Source Output].Columns[NUMERO]" />
                       </inputColumns>
@@ -29186,7 +29204,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output6]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output]"
           TopLeft="424.345238095239,573.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29210,7 +29228,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output5]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output6]"
           TopLeft="218.928571428572,568.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29246,7 +29264,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output4]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output5]"
           TopLeft="296.928571428572,369.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29282,7 +29300,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output3]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output4]"
           TopLeft="743.5,1001">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29318,7 +29336,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output2]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output3]"
           TopLeft="511.428571428572,363.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29354,7 +29372,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output1]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output2]"
           TopLeft="629.595238095238,740">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29390,7 +29408,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[Sort Output1]"
           TopLeft="408.595238095238,744">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29426,7 +29444,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output3]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output]"
           TopLeft="745.25,906">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29450,7 +29468,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output2]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output1]"
           TopLeft="632.797619047619,521">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29474,7 +29492,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output1]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output3]"
           TopLeft="294.928571428572,275.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -29498,7 +29516,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output]"
+          Id="Package\Carga de Candidatos\Carga Candidatos.Paths[OLE DB Source Output2]"
           TopLeft="218.428571428572,479.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32428,17 +32446,13 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           Id="Package\Resultados\Carga Resultados\Merge Join 1"
           TopLeft="327,483" />
         <NodeLayout
-          Size="146,42"
-          Id="Package\Resultados\Carga Resultados\Separar Null 1"
-          TopLeft="761,496" />
-        <NodeLayout
           Size="114,42"
           Id="Package\Resultados\Carga Resultados\Carrera"
           TopLeft="314,74" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\Resultados\Carga Resultados\Sort 5"
-          TopLeft="588,505" />
+          Size="146,42"
+          Id="Package\Resultados\Carga Resultados\Separar Null 1"
+          TopLeft="761,496" />
         <NodeLayout
           Size="107,42"
           Id="Package\Resultados\Carga Resultados\Sort 7"
@@ -32448,9 +32462,17 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           Id="Package\Resultados\Carga Resultados\Merge Join"
           TopLeft="409,291" />
         <NodeLayout
+          Size="107,42"
+          Id="Package\Resultados\Carga Resultados\Sort 5"
+          TopLeft="588,505" />
+        <NodeLayout
           Size="139,42"
           Id="Package\Resultados\Carga Resultados\Merge Join 3"
           TopLeft="328,727" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Resultados\Carga Resultados\Sort 4"
+          TopLeft="347,640" />
         <NodeLayout
           Size="107,42"
           Id="Package\Resultados\Carga Resultados\Sort 1"
@@ -32460,21 +32482,13 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           Id="Package\Resultados\Carga Resultados\Separar Null"
           TopLeft="496,97" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Resultados\Carga Resultados\ResultadoAdmision"
-          TopLeft="319,811" />
-        <NodeLayout
           Size="139,42"
           Id="Package\Resultados\Carga Resultados\Merge Join 2"
           TopLeft="652,650" />
         <NodeLayout
-          Size="125,42"
-          Id="Package\Resultados\Carga Resultados\Condicion"
-          TopLeft="580,424" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Resultados\Carga Resultados\Transformacion 1"
-          TopLeft="135,287" />
+          Size="168,42"
+          Id="Package\Resultados\Carga Resultados\ResultadoAdmision"
+          TopLeft="319,811" />
         <NodeLayout
           Size="139,42"
           Id="Package\Resultados\Carga Resultados\Excel Source"
@@ -32484,35 +32498,73 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           Id="Package\Resultados\Carga Resultados\Sort 3"
           TopLeft="164,396" />
         <NodeLayout
-          Size="107,42"
-          Id="Package\Resultados\Carga Resultados\Sort 4"
-          TopLeft="347,640" />
-        <NodeLayout
           Size="98,42"
           Id="Package\Resultados\Carga Resultados\Sort"
           TopLeft="512,177" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Resultados\Carga Resultados\Transformacion 1"
+          TopLeft="135,287" />
         <NodeLayout
           Size="113,42"
           Id="Package\Resultados\Carga Resultados\Lookup"
           TopLeft="193,775" />
         <NodeLayout
+          Size="125,42"
+          Id="Package\Resultados\Carga Resultados\Condicion"
+          TopLeft="580,424" />
+        <NodeLayout
           Size="118,42"
           Id="Package\Resultados\Carga Resultados\Reporte"
           TopLeft="500,29" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Resultados\Carga Resultados\Sort 6"
-          TopLeft="781,578" />
         <NodeLayout
           Size="126,42"
           Id="Package\Resultados\Carga Resultados\Candidato"
           TopLeft="158,169" />
         <NodeLayout
+          Size="107,42"
+          Id="Package\Resultados\Carga Resultados\Sort 6"
+          TopLeft="781,578" />
+        <NodeLayout
           Size="156,42"
           Id="Package\Resultados\Carga Resultados\Data Conversion"
           TopLeft="324,555" />
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output5]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output7]"
+          TopLeft="561,219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66.6666666666667,72"
+              Start="0,0"
+              End="-66.6666666666667,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.6747720364742" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.6747720364742"
+                    Point2="0,42.6747720364742"
+                    Point3="-4,42.6747720364742" />
+                  <mssgle:LineSegment
+                    End="-62.6666666666667,42.6747720364742" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62.6666666666667,42.6747720364742"
+                    Point2="-66.6666666666667,42.6747720364742"
+                    Point3="-66.6666666666667,46.6747720364742" />
+                  <mssgle:LineSegment
+                    End="-66.6666666666667,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output6]"
           TopLeft="834.5,620">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32546,7 +32598,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output4]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output5]"
           TopLeft="641.5,547">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32580,7 +32632,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output3]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output4]"
           TopLeft="372.5,211">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32614,7 +32666,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output2]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output3]"
           TopLeft="671,746.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32636,7 +32688,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output1]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output2]"
           TopLeft="472.5,437">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32670,7 +32722,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output]"
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output1]"
           TopLeft="217.5,438">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32695,6 +32747,28 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                     Point3="157.166666666667,30.6927453769559" />
                   <mssgle:LineSegment
                     End="157.166666666667,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Resultados\Carga Resultados.Paths[Sort Output]"
+          TopLeft="399,682">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45"
+              Start="0,0"
+              End="0,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -32771,56 +32845,6 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Resultados\Carga Resultados.Paths[Merge Join Output3]"
-          TopLeft="723,692">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Merge Join Output2]"
-          TopLeft="328,748">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-78.5,27"
-              Start="0,0"
-              End="-78.5,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-74.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-74.5,0"
-                    Point2="-78.5,0"
-                    Point3="-78.5,4" />
-                  <mssgle:LineSegment
-                    End="-78.5,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Merge Join Output1]"
           TopLeft="473.25,333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32842,7 +32866,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Merge Join Output]"
+          Id="Package\Resultados\Carga Resultados.Paths[Merge Join Output2]"
           TopLeft="399.25,525">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -32855,6 +32879,56 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Resultados\Carga Resultados.Paths[Merge Join Output1]"
+          TopLeft="723,692">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Resultados\Carga Resultados.Paths[Merge Join Output]"
+          TopLeft="328,748">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-78.5,27"
+              Start="0,0"
+              End="-78.5,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-74.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-74.5,0"
+                    Point2="-78.5,0"
+                    Point3="-78.5,4" />
+                  <mssgle:LineSegment
+                    End="-78.5,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -33029,62 +33103,6 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output7]"
-          TopLeft="561,219">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-66.6666666666667,72"
-              Start="0,0"
-              End="-66.6666666666667,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.6747720364742" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.6747720364742"
-                    Point2="0,42.6747720364742"
-                    Point3="-4,42.6747720364742" />
-                  <mssgle:LineSegment
-                    End="-62.6666666666667,42.6747720364742" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-62.6666666666667,42.6747720364742"
-                    Point2="-66.6666666666667,42.6747720364742"
-                    Point3="-66.6666666666667,46.6747720364742" />
-                  <mssgle:LineSegment
-                    End="-66.6666666666667,64.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Resultados\Carga Resultados.Paths[Sort Output6]"
-          TopLeft="399,682">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45"
-              Start="0,0"
-              End="0,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -33103,19 +33121,6 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Resultados\Carga Resultados\ResultadoAdmision">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Resultados\Carga Resultados\Condicion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -33164,6 +33169,19 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Resultados\Carga Resultados\Condicion">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Resultados\Carga Resultados\Reporte">
     <Properties>
       <Property>
@@ -33202,6 +33220,10 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           Size="118,42"
           Id="Package\Resultados\Carga ResultadosDetalle Basicas\Reporte"
           TopLeft="598,14" />
+        <NodeLayout
+          Size="137,42"
+          Id="Package\Resultados\Carga ResultadosDetalle Basicas\Separar Null"
+          TopLeft="584,93" />
         <NodeLayout
           Size="113,42"
           Id="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 2"
@@ -33262,10 +33284,6 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           Size="113,42"
           Id="Package\Resultados\Carga ResultadosDetalle Basicas\Lookup 1"
           TopLeft="320,388" />
-        <NodeLayout
-          Size="137,42"
-          Id="Package\Resultados\Carga ResultadosDetalle Basicas\Separar Null"
-          TopLeft="584,93" />
         <NodeLayout
           Size="197,42"
           Id="Package\Resultados\Carga ResultadosDetalle Basicas\Habilidades Cuantitativas"
@@ -33484,78 +33502,6 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output5]"
-          TopLeft="902.5,436">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48"
-              Start="0,0"
-              End="0,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,14.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output4]"
-          TopLeft="375,430">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,16.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output3]"
-          TopLeft="545.5,435">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48"
-              Start="0,0"
-              End="0,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,14.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output2]"
           TopLeft="1082.75,438">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33579,7 +33525,31 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output1]"
+          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output4]"
+          TopLeft="173.75,431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,15.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output3]"
           TopLeft="717.75,435">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -33603,26 +33573,74 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output]"
-          TopLeft="173.75,431">
+          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output2]"
+          TopLeft="545.5,435">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50"
+              EndConnector="0,48"
               Start="0,0"
-              End="0,42.5">
+              End="0,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.5" />
+                    End="0,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,15.4453125,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,14.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output1]"
+          TopLeft="375,430">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,16.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Resultados\Carga ResultadosDetalle Basicas.Paths[Lookup No Match Output]"
+          TopLeft="902.5,436">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,14.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -33993,9 +34011,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34089,9 +34105,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34113,9 +34127,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34137,9 +34149,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34161,9 +34171,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34221,9 +34229,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -34257,9 +34263,7 @@ where [refTable].[ID_ExamenArea] = ? and [refTable].[ID_Resultado] = ?</property
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

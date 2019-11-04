@@ -5,7 +5,7 @@
       <Name>Development</Name>
       <Options>
         <ServerName>40.117.179.53</ServerName>
-        <PathOnServer>/SSISDB/GRUPO1/CargaDeDatos</PathOnServer>
+        <PathOnServer>/SSISDB/GRUPO1/CargaDeDatos2</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
