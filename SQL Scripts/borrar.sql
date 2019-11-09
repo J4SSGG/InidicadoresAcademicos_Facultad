@@ -69,7 +69,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Candidato](
-	[ID_Candidato] [int] IDENTITY(1,1) NOT NULL,
+	[ID_Candidato] [int] NOT NULL,
 	[ID_Colegio] [int] NULL,
 	[ID_Diversificado] [int] NULL,
 	[Nombre] [varchar](300) NOT NULL,
