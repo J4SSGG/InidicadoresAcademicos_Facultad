@@ -11,11 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{92674F5D-B08D-46F5-876A-0B6C986A3795}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{80ADE2A7-2BC8-4085-AAAD-9B748A9CB16B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Admisiones]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{82DB6274-05DC-413B-A2EE-719C54EA14F4}"
+      DTS:ObjectName="LocalHost.Admisiones">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GRUPO1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.Admisiones_DWH]"
       DTS:CreationName="OLEDB"
@@ -30,17 +40,17 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Create"
+      DTS:refId="Package\Create DWH"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
       DTS:DTSID="{ACFCB69F-BB8C-4644-A166-62B03590BD74}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Create">
+      DTS:ObjectName="Create DWH">
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Create\Dim Candidatos"
+          DTS:refId="Package\Create DWH\Dim Candidatos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{d6f1abfe-217f-4843-bfc4-180d1c9c1891}"
@@ -56,7 +66,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Create\Dim Carrera"
+          DTS:refId="Package\Create DWH\Dim Carrera"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{d9527198-ea4d-459f-b1e2-70cdd96b6358}"
@@ -72,7 +82,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Create\Dim Examen"
+          DTS:refId="Package\Create DWH\Dim Examen"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{28c68018-b7df-42e6-ace1-9760c3fe88d2}"
@@ -88,7 +98,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Create\Dim Fecha"
+          DTS:refId="Package\Create DWH\Dim Fecha"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{9a598cbd-d3b6-4846-b652-62e367b4a356}"
@@ -104,7 +114,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Create\Dim Region"
+          DTS:refId="Package\Create DWH\Dim Region"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{b1b01cf1-0435-4b1f-9c47-dfc082958bf0}"
@@ -120,7 +130,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Create\Fact Notas"
+          DTS:refId="Package\Create DWH\Fact Notas"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{bd813c44-a691-46e2-9baa-c032ef0cb835}"
@@ -138,59 +148,87 @@
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Create.PrecedenceConstraints[Constraint]"
+          DTS:refId="Package\Create DWH.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
           DTS:DTSID="{273BE37C-67E9-40A2-BD09-4F207C9B1FEC}"
-          DTS:From="Package\Create\Dim Region"
+          DTS:From="Package\Create DWH\Dim Region"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\Create\Fact Notas" />
+          DTS:To="Package\Create DWH\Fact Notas" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Create.PrecedenceConstraints[Constraint 1]"
+          DTS:refId="Package\Create DWH.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
           DTS:DTSID="{4e59a2a2-105e-4f1b-8a52-926610a74047}"
-          DTS:From="Package\Create\Dim Candidatos"
+          DTS:From="Package\Create DWH\Dim Candidatos"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Create\Dim Carrera" />
+          DTS:To="Package\Create DWH\Dim Carrera" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Create.PrecedenceConstraints[Constraint 2]"
+          DTS:refId="Package\Create DWH.PrecedenceConstraints[Constraint 2]"
           DTS:CreationName=""
           DTS:DTSID="{670f78cc-062d-4bba-a635-340b8f75637c}"
-          DTS:From="Package\Create\Dim Carrera"
+          DTS:From="Package\Create DWH\Dim Carrera"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
-          DTS:To="Package\Create\Dim Examen" />
+          DTS:To="Package\Create DWH\Dim Examen" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Create.PrecedenceConstraints[Constraint 3]"
+          DTS:refId="Package\Create DWH.PrecedenceConstraints[Constraint 3]"
           DTS:CreationName=""
           DTS:DTSID="{28ea49bf-ff59-4cd7-8f21-bbaa931b2749}"
-          DTS:From="Package\Create\Dim Examen"
+          DTS:From="Package\Create DWH\Dim Examen"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 3"
-          DTS:To="Package\Create\Dim Fecha" />
+          DTS:To="Package\Create DWH\Dim Fecha" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Create.PrecedenceConstraints[Constraint 4]"
+          DTS:refId="Package\Create DWH.PrecedenceConstraints[Constraint 4]"
           DTS:CreationName=""
           DTS:DTSID="{aa629830-840f-4fb5-8da8-b1818b4835d6}"
-          DTS:From="Package\Create\Dim Fecha"
+          DTS:From="Package\Create DWH\Dim Fecha"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 4"
-          DTS:To="Package\Create\Dim Region" />
+          DTS:To="Package\Create DWH\Dim Region" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Delete"
+      DTS:refId="Package\Delete &amp; Create Admisiones"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{DB60EAF5-D2E1-41C4-9BAB-FE5DBE3D832B}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete &amp; Create Admisiones">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Delete &amp; Create Admisiones\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{b42ae1bc-d5fc-489d-b6a8-9d0b47ca504c}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{82DB6274-05DC-413B-A2EE-719C54EA14F4}"
+              SQLTask:SqlStatementSource="ALTER TABLE  [ResultadoAdmision] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [ResultadoAdmision_detalle] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [Municipio] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [Departamento] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [Carrera] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [Candidato] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE [Pais] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [Facultad] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [ExamenArea] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [Diversificado] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [DescuentoExamen] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [Condicion] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;ALTER TABLE  [ColegioCandidato] NOCHECK CONSTRAINT ALL&#xA;GO&#xA;/****** Object:  Table [ResultadoAdmision_detalle]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [ResultadoAdmision_detalle]&#xA;GO&#xA;/****** Object:  Table [ResultadoAdmision]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [ResultadoAdmision]&#xA;GO&#xA;/****** Object:  Table [Candidato]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [Candidato]&#xA;GO&#xA;/****** Object:  Table [Municipio]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [Municipio]&#xA;GO&#xA;/****** Object:  Table [Departamento]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [Departamento]&#xA;GO&#xA;/****** Object:  Table [Pais]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [Pais]&#xA;GO&#xA;/****** Object:  Table [Diversificado]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [Diversificado]&#xA;GO&#xA;/****** Object:  Table [DescuentoExamen]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [DescuentoExamen]&#xA;GO&#xA;/****** Object:  Table [ExamenArea]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [ExamenArea]&#xA;GO&#xA;/****** Object:  Table [Condicion]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [Condicion]&#xA;GO&#xA;/****** Object:  Table [ColegioCandidato]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [ColegioCandidato]&#xA;GO&#xA;/****** Object:  Table [Carrera]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [Carrera]&#xA;GO&#xA;/****** Object:  Table [Facultad]    Script Date: 11/3/2019 8:23:21 AM ******/&#xA;DROP TABLE IF EXISTS [Facultad]&#xA;GO&#xA;/****** Object:  Table [Candidato]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [Candidato](&#xA;&#x9;[ID_Candidato] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[ID_Colegio] [int] NULL,&#xA;&#x9;[ID_Diversificado] [int] NULL,&#xA;&#x9;[Nombre] [varchar](300) NOT NULL,&#xA;&#x9;[Apellido] [varchar](300) NOT NULL,&#xA;&#x9;[Genero] [char](1) NOT NULL,&#xA;&#x9;[FechaNacimiento] [datetime] NULL,&#xA;&#x9;[ID_Municipio] [int] NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Candidato] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [Carrera]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [Carrera](&#xA;&#x9;[ID_Carrera] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[ID_Facultad] [int] NULL,&#xA;&#x9;[Nombre] [varchar](300) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Carrera] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [ColegioCandidato]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [ColegioCandidato](&#xA;&#x9;[ID_Colegio] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[Nombre] [varchar](600) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Colegio] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [Condicion]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [Condicion](&#xA;&#x9;[ID_Condicion] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[Status] [varchar](50) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Condicion] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [Departamento]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [Departamento](&#xA;&#x9;[ID_Departamento] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[ID_Pais] [int] NULL,&#xA;&#x9;[Nombre] [varchar](300) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Departamento] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [DescuentoExamen]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [DescuentoExamen](&#xA;&#x9;[ID_Descuento] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[Descripcion] [varchar](300) NOT NULL,&#xA;&#x9;[PorcentajeDescuento] [decimal](6, 2) NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Descuento] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [Diversificado]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [Diversificado](&#xA;&#x9;[ID_Diversificado] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[Nombre] [varchar](600) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Diversificado] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [ExamenArea]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [ExamenArea](&#xA;&#x9;[ID_ExamenArea] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[NombreArea] [varchar](300) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_ExamenArea] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [Facultad]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [Facultad](&#xA;&#x9;[ID_Facultad] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[Nombre] [varchar](300) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Facultad] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [Municipio]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [Municipio](&#xA;&#x9;[ID_Municipio] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[ID_Departamento] [int] NULL,&#xA;&#x9;[Nombre] [varchar](300) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Municipio] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [Pais]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [Pais](&#xA;&#x9;[ID_Pais] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[Nombre] [varchar](300) NOT NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Pais] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [ResultadoAdmision]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [ResultadoAdmision](&#xA;&#x9;[ID_Resultado] [int] NOT NULL,&#xA;&#x9;[ID_Candidato] [int] NULL,&#xA;&#x9;[ID_Carrera] [int] NULL,&#xA;&#x9;[ID_Descuento] [int] NULL,&#xA;&#x9;[FechaPrueba] [datetime] NULL,&#xA;&#x9;[Precio] [decimal](6, 2) NULL,&#xA;&#x9;[GrupoAdmision] [char](1) NULL,&#xA;&#x9;[TotalPreguntas] [int] NULL,&#xA;&#x9;[PreguntasAcertadas] [int] NULL,&#xA;&#x9;[FechaComienzo] [int] NULL,&#xA;&#x9;[ID_Condicion] [int] NULL,&#xA;&#x9;[Nota] [decimal](5, 2) NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_Resultado] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;/****** Object:  Table [ResultadoAdmision_detalle]    Script Date: 11/3/2019 8:23:22 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;CREATE TABLE [ResultadoAdmision_detalle](&#xA;&#x9;[ID_ResultadoDetalle] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[ID_Resultado] [int] NULL,&#xA;&#x9;[ID_ExamenArea] [int] NULL,&#xA;&#x9;[NotaArea] [decimal](5, 2) NULL,&#xA;PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[ID_ResultadoDetalle] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;ALTER TABLE [ResultadoAdmision] ADD CONSTRAINT [DF__Resultado__Fecha] DEFAULT (getdate()) FOR [FechaPrueba]&#xA;GO&#xA;ALTER TABLE [Candidato]  WITH CHECK ADD CONSTRAINT [FK__Candidato__ID_Co] FOREIGN KEY([ID_Colegio])&#xA;REFERENCES [ColegioCandidato] ([ID_Colegio])&#xA;GO&#xA;ALTER TABLE [Candidato]  WITH CHECK ADD CONSTRAINT [FK__Candidato__ID_Di] FOREIGN KEY([ID_Diversificado])&#xA;REFERENCES [Diversificado] ([ID_Diversificado])&#xA;GO&#xA;ALTER TABLE [Candidato]  WITH CHECK ADD CONSTRAINT [FK__Candidato__ID_Mu] FOREIGN KEY([ID_Municipio])&#xA;REFERENCES [Municipio] ([ID_Municipio])&#xA;GO&#xA;ALTER TABLE [Carrera]  WITH CHECK ADD CONSTRAINT [FK__Carrera__ID_Facu] FOREIGN KEY([ID_Facultad])&#xA;REFERENCES [Facultad] ([ID_Facultad])&#xA;GO&#xA;ALTER TABLE [Departamento]  WITH CHECK ADD CONSTRAINT [FK__Departame__ID_Pa] FOREIGN KEY([ID_Pais])&#xA;REFERENCES [Pais] ([ID_Pais])&#xA;GO&#xA;ALTER TABLE [Municipio]  WITH CHECK ADD CONSTRAINT [FK__Municipio__ID_De] FOREIGN KEY([ID_Departamento])&#xA;REFERENCES [Departamento] ([ID_Departamento])&#xA;GO&#xA;ALTER TABLE [ResultadoAdmision]  WITH CHECK ADD CONSTRAINT [FK__Resultado__ID_Cand] FOREIGN KEY([ID_Candidato])&#xA;REFERENCES [Candidato] ([ID_Candidato])&#xA;GO&#xA;ALTER TABLE [ResultadoAdmision]  WITH CHECK ADD CONSTRAINT [FK__Resultado__ID_Carr] FOREIGN KEY([ID_Carrera])&#xA;REFERENCES [Carrera] ([ID_Carrera])&#xA;GO&#xA;ALTER TABLE [ResultadoAdmision]  WITH CHECK ADD CONSTRAINT [FK__Resultado__ID_Co] FOREIGN KEY([ID_Condicion])&#xA;REFERENCES [Condicion] ([ID_Condicion])&#xA;GO&#xA;ALTER TABLE [ResultadoAdmision]  WITH CHECK ADD CONSTRAINT [FK__Resultado__ID_De] FOREIGN KEY([ID_Descuento])&#xA;REFERENCES [DescuentoExamen] ([ID_Descuento])&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Delete DWH"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
       DTS:DTSID="{0D528EEB-818A-4A2E-B6DD-D73B7C20490B}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Delete">
+      DTS:ObjectName="Delete DWH">
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Delete\Dim Candidatos"
+          DTS:refId="Package\Delete DWH\Dim Candidatos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{b50ddaa2-ae12-47c8-b93e-df9bd8757cc6}"
@@ -206,7 +244,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Delete\Dim Carrera"
+          DTS:refId="Package\Delete DWH\Dim Carrera"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{42d3a4f5-cceb-459f-999d-962d68a60972}"
@@ -222,7 +260,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Delete\Dim Examen"
+          DTS:refId="Package\Delete DWH\Dim Examen"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{98902f3f-8fd1-4b11-a652-81ac696ad5fb}"
@@ -238,7 +276,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Delete\Dim Fecha"
+          DTS:refId="Package\Delete DWH\Dim Fecha"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{f23e8a94-cd64-442d-bfe8-912384641411}"
@@ -254,7 +292,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Delete\Dim Region"
+          DTS:refId="Package\Delete DWH\Dim Region"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{f6329279-d435-462f-9c14-cf5499aba235}"
@@ -270,7 +308,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Delete\Fact Notas"
+          DTS:refId="Package\Delete DWH\Fact Notas"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{fd8f04fd-f60d-4e7b-803b-d2208ab3a4e7}"
@@ -288,45 +326,45 @@
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Delete.PrecedenceConstraints[Constraint]"
+          DTS:refId="Package\Delete DWH.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
           DTS:DTSID="{6ff7ccc5-528d-419a-99cd-44ca1fb898a5}"
-          DTS:From="Package\Delete\Fact Notas"
+          DTS:From="Package\Delete DWH\Fact Notas"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\Delete\Dim Candidatos" />
+          DTS:To="Package\Delete DWH\Dim Candidatos" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Delete.PrecedenceConstraints[Constraint 1]"
+          DTS:refId="Package\Delete DWH.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
           DTS:DTSID="{2f356c80-7be6-46b4-aeb5-28faa95f3a5e}"
-          DTS:From="Package\Delete\Dim Candidatos"
+          DTS:From="Package\Delete DWH\Dim Candidatos"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Delete\Dim Carrera" />
+          DTS:To="Package\Delete DWH\Dim Carrera" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Delete.PrecedenceConstraints[Constraint 2]"
+          DTS:refId="Package\Delete DWH.PrecedenceConstraints[Constraint 2]"
           DTS:CreationName=""
           DTS:DTSID="{e142d0b0-1db7-4eb7-ba8c-e3623ef782be}"
-          DTS:From="Package\Delete\Dim Carrera"
+          DTS:From="Package\Delete DWH\Dim Carrera"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
-          DTS:To="Package\Delete\Dim Examen" />
+          DTS:To="Package\Delete DWH\Dim Examen" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Delete.PrecedenceConstraints[Constraint 3]"
+          DTS:refId="Package\Delete DWH.PrecedenceConstraints[Constraint 3]"
           DTS:CreationName=""
           DTS:DTSID="{e0d05080-ce0f-469d-85e4-53b0b6b295de}"
-          DTS:From="Package\Delete\Dim Examen"
+          DTS:From="Package\Delete DWH\Dim Examen"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 3"
-          DTS:To="Package\Delete\Dim Fecha" />
+          DTS:To="Package\Delete DWH\Dim Fecha" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Delete.PrecedenceConstraints[Constraint 4]"
+          DTS:refId="Package\Delete DWH.PrecedenceConstraints[Constraint 4]"
           DTS:CreationName=""
           DTS:DTSID="{eb763bf3-8853-46b0-a5dd-ae6ddc0aee8c}"
-          DTS:From="Package\Delete\Dim Fecha"
+          DTS:From="Package\Delete DWH\Dim Fecha"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 4"
-          DTS:To="Package\Delete\Dim Region" />
+          DTS:To="Package\Delete DWH\Dim Region" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
@@ -335,10 +373,18 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{CA40312A-587F-4CA1-ABFD-D2C0D4DF98D3}"
-      DTS:From="Package\Delete"
+      DTS:From="Package\Delete DWH"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Create" />
+      DTS:To="Package\Create DWH" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{7FCA18A6-2457-4910-BCE3-666920A47B93}"
+      DTS:From="Package\Delete &amp; Create Admisiones"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Delete DWH" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -354,30 +400,30 @@
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="153,42"
-          Id="Package\Delete\Dim Candidatos"
+          Id="Package\Delete DWH\Dim Candidatos"
           TopLeft="124,128" />
         <NodeLayout
           Size="136,42"
-          Id="Package\Delete\Dim Carrera"
+          Id="Package\Delete DWH\Dim Carrera"
           TopLeft="205,204" />
         <NodeLayout
           Size="138,42"
-          Id="Package\Delete\Dim Examen"
+          Id="Package\Delete DWH\Dim Examen"
           TopLeft="262,285" />
         <NodeLayout
           Size="129,42"
-          Id="Package\Delete\Dim Fecha"
+          Id="Package\Delete DWH\Dim Fecha"
           TopLeft="324,368" />
         <NodeLayout
           Size="133,42"
-          Id="Package\Delete\Dim Region"
+          Id="Package\Delete DWH\Dim Region"
           TopLeft="382,454" />
         <NodeLayout
           Size="129,42"
-          Id="Package\Delete\Fact Notas"
+          Id="Package\Delete DWH\Fact Notas"
           TopLeft="60,60" />
         <EdgeLayout
-          Id="Package\Delete.PrecedenceConstraints[Constraint]"
+          Id="Package\Delete DWH.PrecedenceConstraints[Constraint]"
           TopLeft="124.5,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -411,7 +457,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Delete.PrecedenceConstraints[Constraint 1]"
+          Id="Package\Delete DWH.PrecedenceConstraints[Constraint 1]"
           TopLeft="200.5,170">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -445,7 +491,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Delete.PrecedenceConstraints[Constraint 2]"
+          Id="Package\Delete DWH.PrecedenceConstraints[Constraint 2]"
           TopLeft="273,246">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -479,7 +525,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Delete.PrecedenceConstraints[Constraint 3]"
+          Id="Package\Delete DWH.PrecedenceConstraints[Constraint 3]"
           TopLeft="331,327">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -513,7 +559,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Delete.PrecedenceConstraints[Constraint 4]"
+          Id="Package\Delete DWH.PrecedenceConstraints[Constraint 4]"
           TopLeft="388.5,410">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -551,34 +597,34 @@
           IsExpanded="True"
           PanelSize="682,547"
           Size="682,590"
-          Id="Package\Delete"
+          Id="Package\Delete DWH"
           TopLeft="63,266" />
         <NodeLayout
           Size="153,42"
-          Id="Package\Create\Dim Candidatos"
+          Id="Package\Create DWH\Dim Candidatos"
           TopLeft="43,24" />
         <NodeLayout
           Size="136,42"
-          Id="Package\Create\Dim Carrera"
+          Id="Package\Create DWH\Dim Carrera"
           TopLeft="152,109" />
         <NodeLayout
           Size="138,42"
-          Id="Package\Create\Dim Examen"
+          Id="Package\Create DWH\Dim Examen"
           TopLeft="242,196" />
         <NodeLayout
           Size="129,42"
-          Id="Package\Create\Dim Fecha"
+          Id="Package\Create DWH\Dim Fecha"
           TopLeft="343,270" />
         <NodeLayout
           Size="133,42"
-          Id="Package\Create\Dim Region"
+          Id="Package\Create DWH\Dim Region"
           TopLeft="461,347" />
         <NodeLayout
           Size="129,42"
-          Id="Package\Create\Fact Notas"
+          Id="Package\Create DWH\Fact Notas"
           TopLeft="524,446" />
         <EdgeLayout
-          Id="Package\Create.PrecedenceConstraints[Constraint 1]"
+          Id="Package\Create DWH.PrecedenceConstraints[Constraint 1]"
           TopLeft="119.5,66">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -612,7 +658,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create.PrecedenceConstraints[Constraint 2]"
+          Id="Package\Create DWH.PrecedenceConstraints[Constraint 2]"
           TopLeft="220,151">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -646,7 +692,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create.PrecedenceConstraints[Constraint 3]"
+          Id="Package\Create DWH.PrecedenceConstraints[Constraint 3]"
           TopLeft="311,238">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -680,7 +726,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create.PrecedenceConstraints[Constraint 4]"
+          Id="Package\Create DWH.PrecedenceConstraints[Constraint 4]"
           TopLeft="407.5,312">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -714,7 +760,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create.PrecedenceConstraints[Constraint]"
+          Id="Package\Create DWH.PrecedenceConstraints[Constraint]"
           TopLeft="527.5,389">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -752,17 +798,17 @@
           IsExpanded="True"
           PanelSize="734,573"
           Size="734,616"
-          Id="Package\Create"
-          TopLeft="815,262" />
+          Id="Package\Create DWH"
+          TopLeft="815,261" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="745,561">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70,9"
+              EndConnector="70,8"
               Start="0,0"
-              End="62.5,9">
+              End="62.5,8">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -773,13 +819,58 @@
                     Point2="35,0"
                     Point3="35,4" />
                   <mssgle:LineSegment
-                    End="35,5" />
+                    End="35,4" />
                   <mssgle:CubicBezierSegment
-                    Point1="35,5"
-                    Point2="35,9"
-                    Point3="39,9" />
+                    Point1="35,4"
+                    Point2="35,8"
+                    Point3="39,8" />
                   <mssgle:LineSegment
-                    End="62.5,9" />
+                    End="62.5,8" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Delete &amp; Create Admisiones\Execute SQL Task"
+          TopLeft="57,58" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="293,157"
+          Size="293,200"
+          Id="Package\Delete &amp; Create Admisiones"
+          TopLeft="101,41" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="247.5,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="156.5,25"
+              Start="0,0"
+              End="156.5,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="4,12.5" />
+                  <mssgle:LineSegment
+                    End="152.5,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="152.5,12.5"
+                    Point2="156.5,12.5"
+                    Point3="156.5,16.5" />
+                  <mssgle:LineSegment
+                    End="156.5,17.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
