@@ -8,7 +8,7 @@
     <SheetIdentifierTracking ignorable='true' predowngraded='true' />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
-  <repository-location id='ResultadosdeAdmisin' path='/t/analisisdedatos1erciclo2019/workbooks' revision='1.3' site='analisisdedatos1erciclo2019' />
+  <repository-location id='ResultadosporGeneroyCondicion' path='/t/analisisdedatos1erciclo2019/workbooks' revision='1.0' site='analisisdedatos1erciclo2019' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -738,7 +738,7 @@
         <drill-path name='Fechas' />
         <drill-path name='Pais, Departamento, Municipio' />
       </drill-paths>
-      <layout dim-ordering='alphabetic' dim-percentage='0.657106' measure-ordering='alphabetic' measure-percentage='0.191656' parameter-percentage='0.151239' show-structure='true' user-set-layout='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.656171' measure-ordering='alphabetic' measure-percentage='0.192695' parameter-percentage='0.151134' show-structure='true' user-set-layout='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='%null%' />
         <semantic-value key='[County].[Name]' value='%null%' />
@@ -870,8 +870,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='12' type='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='13' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='16' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='17' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
                 <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Sheet 9' w='82400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
