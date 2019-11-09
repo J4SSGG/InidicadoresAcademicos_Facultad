@@ -4,8 +4,8 @@
     "\\SSAS",
     "\\SSAS\\Cubo",
     "\\SSIS",
-    "\\SSIS\\ModeloRelacionaAEsquemaEstrella"
+    "\\SSIS\\ReiniciarTablas"
   ],
-  "SelectedNode": "\\SSIS\\ModeloRelacionaAEsquemaEstrella\\ModeloRelacionaAEsquemaEstrella.sln",
+  "SelectedNode": "\\SSIS\\ReiniciarTablas\\ReiniciarTablas.sln",
   "PreviewInSolutionExplorer": false
 }
